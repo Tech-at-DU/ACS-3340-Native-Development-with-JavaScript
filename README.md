@@ -1,4 +1,4 @@
-# FEW 2.4
+# ACS 3340
 
 ## Course Description
 
@@ -10,13 +10,13 @@ If your goal is to make the best possible user experiences and products having t
 
 ## Prerequisites:  
 
-- [FEW 2.3](https://github.com/Make-School-Courses/FEW-2.3-Single-Page-Web-Applications)
+- [ACS 3330](https://github.com/Tech-at-DU/ACS-3330-Single-Page-Web-Applications)
 
-## Course Specifics
+<!-- ## Course Specifics
 
 **Course Delivery**: online | 7 weeks | 14 sessions
 
-**Course Credits**: 3 units | 37.5 Seat Hours | 75 Total Hours
+**Course Credits**: 3 units | 37.5 Seat Hours | 75 Total Hours -->
 
 ## Learning Outcomes
 
@@ -29,33 +29,32 @@ Students by the end of the course will be able to:
 
 ## Schedule
 
-**Course Dates:** Monday, May 31 – Friday, July 16, 2021 (7 weeks)
+**Course Dates:** January 18, 2022 to March 4, 2022
 
-**Class Times:** Monday, Wednesday, Friday at 9:30am–11:15am (19 class sessions)
+**Class Times:** Monday, Wednesday, Friday 5:40 PM to 7:30 PM
 
 | Class |    Date       |   Topics   |  Assignment |
 |:-----:|:-------------:|:----------:|:-----------:|
-|  -    |  Mon, May 31  | **No Class - Memorial Day** | - |
-|  1    |  Wed, June 2  | [Lesson 1]  | [Assignment 1 React/Redux Tutorial](Assignments/Assignment-1-react-redux.md) |
-|  2    |  Fri, June 4  | [Lesson 2]  | - |
-|  3    |  Mon, June 7  | [Lesson 3]  | - |
-|  4    |  Wed, June 9  | [Lesson 4]  | - |
-|  5    |  Fri, June 11 | [Lesson 5]  | - |
-|  6    |  Mon, June 14 | [Lesson 6]  | [Assignment 2 Desktop Application](Assignments/Assignment-2-desktop-app.md) |
-|  7    |  Wed, June 16 | [Lesson 7]  | - |
-|  8    |  Fri, June 18 | [Lesson 8]  | - |
-|  9    |  Mon, June 21 | [Lesson 9]  | [By Breed](Assignments/Assignment-4-mobile-app.md) |
-| 10    |  Wed, June 23 | [Lesson 10] | - |
-| 11    |  Fri, June 25 | [Lesson 11] | - |
-| 12    |  Mon, June 28 | [Lesson 12] | [Assignment 4 Final Project](Assignments/Assignment-final-project.md) |
-| 13    |  Wed, June 30 | [Lesson 13] | - |
-| 14    |  Fri, July 2  | [Lesson 14] | - |
-| -     |  Mon, July 5  | **No Class - Independence Day Observed** | - |
-| 15    |  Wed, July 7  | [Lesson 15] | - |
-| 16    |  Fri, July 9  | [Lesson 16] | - |
-| 17    |  Mon, July 12 | [Lesson 17] | - |
-| 18    |  Wed, July 14 | [Lesson 18] | - |
-| 19    |  Fri, July 16 | Final Exam/Presentations | - |
+|  1    |  Wed, Jan 19 | [Lesson 1]  | [Assignment 1 React/Redux Tutorial](Assignments/Assignment-1-react-redux.md) |
+|  2    |  Fri, Jan 21 | [Lesson 2]  | - |
+|  3    |  Mon, Jan 24 | [Lesson 3]  | - |
+|  4    |  Wed, Jan 26 | [Lesson 4]  | - |
+|  5    |  Fri, Jan 28 | [Lesson 5]  | - |
+|  6    |  Mon, Jan 31 | [Lesson 6]  | [Assignment 2 Desktop Application](Assignments/Assignment-2-desktop-app.md) |
+|  7    |  Wed, Feb  2 | [Lesson 7]  | - |
+|  8    |  Fri, Feb  4 | [Lesson 8]  | - |
+|  9    |  Mon, Feb  7 | [Lesson 9]  | [By Breed](Assignments/Assignment-4-mobile-app.md) |
+| 10    |  Wed, Feb  9 | [Lesson 10] | - |
+| 11    |  Fri, Feb 11 | [Lesson 11] | - |
+| 12    |  Mon, Feb 14 | [Lesson 12] | [Assignment 4 Final Project](Assignments/Assignment-final-project.md) |
+| 13    |  Wed, Feb 16 | [Lesson 13] | - |
+| 14    |  Fri, Feb 18 | [Lesson 14] | - |
+| -     |  Mon, Feb 21 | **No Class - Independence Day Observed** | - |
+| 15    |  Wed, Feb 23 | [Lesson 15] | - |
+| 16    |  Fri, Feb 25 | [Lesson 16] | - |
+| 17    |  Mon, Feb 28 | [Lesson 17] | - |
+| 18    |  Wed, Mar  2 | [Lesson 18] | - |
+| 19    |  Fri, Mar  4 | Final Exam/Presentations | - |
 
 [Lesson 1]: Lessons/Lesson-01.md
 [Lesson 2]: Lessons/Lesson-02.md
