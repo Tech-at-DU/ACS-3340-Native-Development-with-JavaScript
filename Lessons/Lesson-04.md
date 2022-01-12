@@ -142,7 +142,7 @@ Your goal is to build a desktop application from your React project. Follow the 
 
 ## After Class
 
-
+Build your Electron app. This will conclude the first assignment. 
 
 ## Resources
 

@@ -2,9 +2,11 @@
 
 ## Review 
 
+
+
 ## Learning Competencies 
 
-- 
+- Use Native Components
 
 ## Native Components 
 

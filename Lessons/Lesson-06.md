@@ -1,4 +1,4 @@
-# FEW 2.4 class 4 - Native Components Part 1
+# FEW 2.4 class 4 - React Native
 
 Mobile is the land of small screens in portrait orientation, tall and narrow. This is a different environment from the desktop where screens are large and wide. Building mobile apps require developers to think differently to make applications that work in small spaces.
 

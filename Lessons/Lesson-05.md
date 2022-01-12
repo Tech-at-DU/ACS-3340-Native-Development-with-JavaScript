@@ -1,4 +1,4 @@
-# FEW 2.4 Class 4 - Electron Lab
+# FEW 2.4 Class 4 - Electron Main and Rendering Process
 
 Debugging Electron. 
 
@@ -21,28 +21,21 @@ Communication between the Main Process and rendering Processes.
 
 ## Main Process vs Rendering Process
 
+Electron apps are built on Chrome. This is similar to building web apps. The difference is that web apps run in the browser. With an electron app you also are in control of the browser itself. 
+
+With web apps you as a web developer are in control of a single process that is your web page. As the developer of an Electron app you can run one process in each browser tab or window and another called the Main process that runs underneath all of the others. 
+
+Read this page from the Electron docs: https://www.electronjs.org/docs/latest/tutorial/process-model It explains the process model used by Electron. 
+
+Answer these questions when you're done:
+
 - What is the main process? 
 - What is the rendering process? 
-- Creating communication between the two
-
-## Review CSS Grid and Flexbox
-
-Use Grid for two dimensional layouts and Flexbox for arranging things on a single axis. 
-
-Both are applied to a parent container and affect the children. 
-
-You can use Flex box inside a grid or one grid within another grid. 
-
-- Use Grid for two dimensional layouts.
-- Use `grid-template-area` for arbitrary layouts use `grid-template-columns` for dynamic content. 
-
-- Use Flexbox for one dimensional layout
-- Use think in terms of main axis and cross axis
+- How do you communicated between rendering and main processes? 
 
 ## After Class
 
 - Wrap up the Electron project. You should have a functional Electron application that runs on the desktop. 
-- 
 
 ## Additional Resources
 

@@ -42,7 +42,7 @@ If you are having trouble understanding a learning objective you need to take ac
         - What makes a good desktop app?
         - What makes a good mobile app?
 
-### WHat would make a good native app?
+### What would make a good native app?
 
 Think of some ideas for native apps:
 
@@ -54,9 +54,7 @@ Think of some ideas for native apps:
 
 React is one of the most popular libraries around today. Seriously, you should know it! React is good to learn now since it has huge and well-deserved popularity.
 
-[Hacker News Hiring Trends: React, Vue, Angular, Angular 2](https://www.hntrends.com/2020/dec-year-unlike-any-other-tech-tools-didnt-change-much.html?compare=React&compare=Angular+2&compare=Vue&compare=)
-
-[NPM Downloads: React, Vue, Svelte, Angular](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=Svelte&from=2016-06-01&to=2018-05-31)
+[Hacker News Hiring Trends: React, Vue, Angular, Next](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=Svelte&package=next&from=2019-06-01&to=2022-01-31)
 
 Here is a good look at the reasons to learn React, Vue, or Angular. 
 
@@ -74,7 +72,7 @@ React seems to be a popular tool, it can also be used to make native mobile appl
 
 Native applications hold and manage their own data. We need a tool and a strategy for this! I'm going to propose Redux. You've used it before, it's mature and popular. 
 
-Let's answer a couple questions about redux. 
+Let's answer a couple questions about redux.
 
 Why use Redux? Is redux still used in 2021? Can't you replace Redux with one of those new hooks?
 
@@ -89,33 +87,13 @@ Build a Cookie Clicker in class?
 - [Break Down Clicker games](https://allbitsequal.medium.com/taking-games-apart-how-to-design-a-simple-idle-clicker-6ca196ef90d6)
 - [Incremental Game Math](https://gamedevelopment.tutsplus.com/articles/numbers-getting-bigger-the-design-and-math-of-incremental-games--cms-24023)
 
-Redux would be a great way to create a complex cookie clicker game.
+## Start the Reat Redux Tutorial
 
-Build the following components
+To get started you will work one of the React + Redux tutorials. There are three to choose from. You may have done one of these in the previous class, choose a different tutorial to complete for this assignment. 
 
-- Counter Display
-- Counter 
-    - Button add to count
-    - Upgrade button
-- Auto Counter
-    - Upgrade button
+This is a review. Redux takes some practice to master doing another tutorial on the topic will solididfy your knowledge. 
 
-- import dependencies `npm install redux react-redux`
-- create actions
-- create reducers
-- Setup the store and provider component
-
-**Challenges: Clicker**
-
-Try and solve these challenges with the clicker game. 
-
-- Create a component that counts with each click "Clicker". 
-- Create a button that adds a new "Clicker". 
-- Create a component that displays the total clicks from all clickers. 
-- Create a bigger clicker. This should add more than 1 with each click. Each click could be 5, 10, 25, 50, or 100. You can use a component and configure it with props to set the amount. 
-- Create an "AutoClicker". AutoClickers count without a manual click. Use `setInterval`
-- Create a button that "buys" an auto clicker for 10 clicks. Clicking this should subtract 10 from the total and add an auto clicker.
-
+- [Assignment 1 - React Redix Tutorial](../Assignments/Assignment-1-react-redux.md)
 
 ## After Class
 
