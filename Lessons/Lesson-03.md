@@ -230,3 +230,31 @@ Remember your goal is to make a portfolio project that proves your capabilities.
 - [Electron Apps](https://electronjs.org/apps)
 - [Create React App + Electron](https://medium.com/@kitze/%EF%B8%8F-from-react-to-an-electron-app-ready-for-production-a0468ecb1da3)
 
+
+
+
+
+
+
+
+## Local Storage 
+
+Local storage allows your apps to save data in the browser. This gives your apps the abilioty to save information without and internet connection, a login, database, or other tooling. 
+
+Local storage saves data in key value pairs. Values must be simple either strings or numbers. 
+
+This sounds pretty limited. Using JSON allows you to convert collections, like objects and arrays, to a string which can be saved. 
+
+Save data with: 
+
+`localStorage.setItem(key, data)`
+
+Fetch data with: 
+
+`localStorage.getItem(key)`
+
+Convert complex values with `JSON.stringify()`
+
+NOTE! Objects and Arrays can contain functions which can not be converted to JSON!
+
+Use this with 
