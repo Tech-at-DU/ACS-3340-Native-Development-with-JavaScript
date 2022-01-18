@@ -1,10 +1,14 @@
 # FEW 2.4 Class 3 - Desktop Apps with Electron
 
+<!-- > -->
+
 ## Learning Objectives
 
 1. Build a desktop application with HTML/CSS/JS
 1. Create an Electron project with React
 1. Dog Fooding...
+
+<!-- > -->
 
 ## Review
 
@@ -13,24 +17,40 @@
 - Copy this array: `['four', 'score', 'and']`, and add the string `'seven'`
 - Copy this object `{ pi: 3.14, gr: 1.618 }` and add property: `en: 2.718`
 
-## What is Electron?
+<!-- > -->
+
+## What is Electron? ⚡️
+
+<!-- > -->
 
 [Electron](https://electronjs.org) is a platform for building desktop applications with JavaScript, HTML, and CSS. It's [open source](https://github.com/electron/electron).
 
-Electron is built on top of the Chrome engine. All of the things that are possible in Chrome are possible in Electron and more. In some ways, you're making an application that runs a single dedicated website with some special privileges not available to websites normally.
+<!-- > -->
+
+Electron is built on top of the Chrome engine. All of the things that are possible in Chrome are possible in Electron and more. **In some ways, you're making an application that runs a single dedicated website with some special privileges not available to websites normally.**
+
+<!-- > -->
 
 Looking deeper Electron is built on a minimal Chromium browser. It uses HTML/CSS/JS to create graphical user interfaces.
+
+<!-- > -->
 
 Electron uses Node.js and uses the same concepts. Code is written in JS and packages are imported with NPM. 
 
 The main process is named in package.json under "main". Usually "electron.js".
+
+<!-- > -->
 
 Every window you create a separate **render** process. 
 
 - Main process - core application process Node.js
 - Render process - The HTML, CSS, and JS that display in a window.
 
-### Who is using Electron? 
+<!-- > -->
+
+### Who is using Electron? 🤔
+
+<!-- > -->
 
 A lot of common apps are using electron. 
 
@@ -42,11 +62,15 @@ A lot of common apps are using electron.
 - GraphiQL
 - [...many more](https://electronjs.org/apps)
 
-### Why use Electron?
+<!-- > -->
+
+### Why use Electron? 🤔
 
 If you know how to make a website you can hack together a desktop app with Electron. 
 
-In most use cases you'll want to make a website. But for cases where you need a desktop app, Electron is probably the fastest easiest way to get there. 
+In most use cases you'll want to make a website. But for cases where you need a desktop app, Electron is probably the fastest easiest way to get there.
+
+<!-- > -->
 
 ### When do you need a desktop app?
 
@@ -54,19 +78,29 @@ In most use cases you'll want to make a website. But for cases where you need a 
 - When **security** is an issue
 - When you need the **file system**
 
+<!-- > -->
+
 ## Getting started with Electron
+
+<!-- > -->
 
 Getting started with Electron is easy. Follow the quick start guide to make a "hello world" app with Electron. 
 
 - https://electronjs.org/docs/tutorial/quick-start
 
+<!-- > -->
+
 You can follow this guide to create a barebones electron app. This is good when you want to experiment. 
 
 If you're making an app with React you have to do a little more work.
 
+<!-- > -->
+
 Choose a react project you want to turn into a desktop app. 
 
 In the lesson today you will set this app up as a desktop app and get it working in development mode. Development mode is what you will use when you are developing the app. 
+
+<!-- > -->
 
 ## Before Starting! 
 

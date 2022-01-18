@@ -73,6 +73,12 @@ Students by the end of the course will be able to:
 [Assignment 1]: Assignments/Assignment-1-react-redux.md
 [Assignment 1]: Assignments/Assignment-1-react-redux.md
 
+## Course video lessons
+
+I have recorded video lessons for this class here: 
+
+https://www.youtube.com/playlist?list=PLoN_ejT35AEhE6SyoGzrLHPISssRaM-a4
+
 ## Evaluation
 
 To pass this course you must meet the following requirements:
