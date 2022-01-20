@@ -1,4 +1,4 @@
-# FEW 2.4 React Native Elements
+# ACS 3340 - React Native Elements
 
 Final Project Lab Day
 

@@ -14,7 +14,7 @@ Your goal is to build a mobile application with React Native that displays a lis
 
 Download the starter code here: 
 
-- https://github.com/Make-School-Labs/few-2-4-by-breed-starter
+- https://github.com/Tech-at-DU/few-2-4-by-breed-starter
 
 Complete the challenges below.
 
@@ -22,7 +22,7 @@ Complete the challenges below.
  
 **Challenge 1:** 
 
-Using the cat and dog data in the [starter code](https://github.com/Make-School-Labs/few-2-4-by-breed-starter) display a list of dogs or cats. 
+Using the cat and dog data in the [starter code](https://github.com/Tech-at-DU/ACS-3340-Native-Development-with-JavaScript/few-2-4-by-breed-starter) display a list of dogs or cats. 
 
 Display the list using the React Native Flat List component. Be sure to use a separate component for the cells/rows displayed in the list. 
 

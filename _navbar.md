@@ -1,3 +1,3 @@
 *  **[Syllabus](README.md)**
-*  **[Tracker](https://www.makeschool.com)**
-* [Make School](https://www.makeschool.com)
+*  **[Tracker](https://github.com/Tech-at-DU)**
+* [Make School](https://github.com/Tech-at-DU)

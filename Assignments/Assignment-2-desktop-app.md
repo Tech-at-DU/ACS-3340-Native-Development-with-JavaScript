@@ -39,7 +39,7 @@ Class 4 - Nov. 4
 
 - Create a new `electron.js` file in your public directory.
 - this file would house the Main process for your electron app
-- See instructions on adding electron scripts to your `package.json` file [here](https://github.com/Make-School-Courses/FEW-2.4-Native-Development-with-JavaScript/blob/master/Lessons/Lesson-03.md)
+- See instructions on adding electron scripts to your `package.json` file [here](https://github.com/Tech-at-DU/ACS-3340-Native-Development-with-JavaScript/Lessons/Lesson-03.md)
 - update the `main` field your package.json to point to this file and include a script to run the electron app `electron-dev`. See sample below:
 
 ```json

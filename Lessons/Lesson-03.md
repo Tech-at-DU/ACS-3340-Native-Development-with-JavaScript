@@ -1,4 +1,4 @@
-# FEW 2.4 Class 3 - Desktop Apps with Electron
+# ACS 3340 - Desktop Apps with Electron
 
 <!-- > -->
 

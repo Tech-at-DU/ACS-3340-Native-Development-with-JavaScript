@@ -1,4 +1,4 @@
-# FEW 2.4 Class 4 - Electron Main and Rendering Process
+# ACS 3340 - Electron Main and Rendering Process
 
 Debugging Electron. 
 

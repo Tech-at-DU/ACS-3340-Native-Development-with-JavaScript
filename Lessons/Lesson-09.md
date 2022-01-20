@@ -1,4 +1,4 @@
-# FEW 2.4 React Navigation
+# ACS 3340 - React Navigation
 
 This goal of this lesson is to introduce navigation concepts on mobile and apply them. 
 

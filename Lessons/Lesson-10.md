@@ -1,4 +1,4 @@
-# FEW 2.4 Navigation Part 2
+# ACS 3340 - Navigation Part 2
 
 A second look at navigation with Tab Navigator and Drawer Navigator. We will also look at how to display icons in your app. 
 

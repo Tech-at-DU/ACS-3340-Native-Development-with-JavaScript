@@ -1,4 +1,4 @@
-# FEW 2.4 React Native Elements
+# ACS 3340 - React Native Elements - Class 11
 
 React native ELements is a library of cross platform UI elements. This library fills in many of the gaps in the default React Native components making it quicker and easier to spin up mobile applications.
 

@@ -1,4 +1,4 @@
-# FEW 2.4 Class 1 - Native Applications with JavaScript
+# ACS 3340 - Native Applications with JavaScript
 
 <!-- > -->
 

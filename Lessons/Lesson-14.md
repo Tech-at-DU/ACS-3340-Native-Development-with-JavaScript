@@ -1,4 +1,4 @@
-# FEW 2.4 Animation 
+# ACS 3340 - Animation 
 
 Making things move on mobile provides that thing that makes your apps interesting and irresistible. 
 
