@@ -102,12 +102,11 @@ This is a review. Redux takes some practice to master doing another tutorial on 
 
 ## Additional Resources
 
-- [Hacker News Hiring Trends: React, Vue, Angular, Angular 2](https://www.hntrends.com/2018/jun-no-signs-of-slowing-for-react.html?compare1=React&compare2=AngularJS&compare3=Angular+2&compare4=Vue)
-- [NPM Downloads: React, Vue, Angular, Angular 2](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=angular%202&from=2016-06-01&to=2018-05-31)
+- [Hacker News Hiring Trends: React, Vue, Angular, Next](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=Svelte&package=next&from=2019-06-01&to=2022-01-31)
+- [State of JS 2020](https://2020.stateofjs.com/en-US/)
 - [React](https://reactjs.org)
 - [Redux](https://redux.js.org)
-- [Incremental (Clicker) Games](https://en.wikipedia.org/wiki/Incremental_game)
-- [Universal Paperclips](http://www.decisionproblem.com/paperclips/)
-- [Password App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-passwords-app)
-- [Timers App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-timers-app)
-- [Tetris App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-tetris-app) 
+- [Assignment 1 - React Redux Tutorial](../Assignments/Assignment-1-react-redux.md)
+    1. [Password App](https://github.com/Tech-at-DU/React-Redux-passwords-Tutorial)
+    2. [Timers App](https://github.com/Tech-at-DU/React-Redux-Timers-Tutorial)
+    3. [Tetris App](https://github.com/Tech-at-DU/React-Redux-Tetris-Tutorial) 

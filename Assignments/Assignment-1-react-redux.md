@@ -6,9 +6,9 @@ Review, practice and brush up your React and Redux skills by completing one of t
 
 There are three tutorials listed by level of difficulty. Your goal is complete one of these. All of tutorials use React and Redux and range from medium to medium difficult complexity.
 
-1. [Password App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-passwords-app)
-2. [Timers App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-timers-app)
-3. [Tetris App](https://github.com/MakeSchool-Tutorials/web-7-react-redux-tetris-app) 
+1. [Password App](https://github.com/Tech-at-DU/React-Redux-passwords-Tutorial)
+2. [Timers App](https://github.com/Tech-at-DU/React-Redux-Timers-Tutorial)
+3. [Tetris App](https://github.com/Tech-at-DU/React-Redux-Tetris-Tutorial) 
 
 Each of these tutorials creates a complete self contained app. There is not network or server required. You'll be using your completed tutorial to create a desktop application. 
 
@@ -35,11 +35,11 @@ Your goal is to complete the tutorial.
 
 ### Deliverable
 
-Submit your work to gradescope. 
+Submit your work to GradeScope. 
 
 ### Due date
 
- **Before class 3 Wed, October 28.**
+Check GradeScope for due date.
 
 # Assignment - Rubric 
 
