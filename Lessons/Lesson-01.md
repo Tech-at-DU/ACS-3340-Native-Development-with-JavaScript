@@ -13,22 +13,23 @@ The purpose of this class is to expand your JavaScript skills by exploring nativ
 1. Compare and contrast Web and Native Applications 
 1. Compare and contrast Mobile vs Desktop experiences 
 1. Define Components with Class and function syntax
-    - Component Architecture
-    - Props and State
-    - JSX
+  - Component Architecture
+  - Props and State
+  - JSX
 
 <!-- > -->
 
 ## Initial Exercise
 
-- Discussion: 
-    - What is native?
-    - Native vs Web
-        - What makes a good native app? 
-        - What makes a good web app? 
-    - Desktop vs Mobile? 
-        - What makes a good desktop app?
-        - What makes a good mobile app?
+Discussion
+
+- What is native?
+- Native vs Web
+- What makes a good native app? 
+- What makes a good web app? 
+- Desktop vs Mobile? 
+- What makes a good desktop app?
+- What makes a good mobile app?
 
 <!-- > -->
 
@@ -70,11 +71,11 @@ React seems to be a popular tool, it can also be used to make native mobile appl
 
 <!-- > -->
 
-Native applications hold and manage their own data. We need a tool and a strategy for this! I'm going to propose Redux. You've used it before, it's mature and popular.
+Native applications hold and manage their data. We need a tool and a strategy for this! I'm going to propose Redux. You've used it before, it's mature and popular.
 
 <!-- > -->
 
-Let's answer a couple questions about redux.
+Let's answer a couple of questions about redux.
 
 Why use Redux? Is redux still used in 2021? Can't you replace Redux with one of those new hooks?
 
@@ -82,13 +83,13 @@ https://dev.to/alexandrudanpop/why-react-projects-still-use-redux-in-2020-395p
 
 <!-- > -->
 
-## Start the Reat Redux Tutorial
+## Start the React-Redux Tutorial
 
-To get started you will work one of the React + Redux tutorials. There are three to choose from. You may have done one of these in the previous class, choose a different tutorial to complete for this assignment. 
+To get started you will work on one of the React + Redux tutorials. There are three to choose from. You may have done one of these in the previous class, choose a different tutorial to complete for this assignment. 
 
 <!-- > -->
 
-This is a review. Redux takes some practice to master doing another tutorial on the topic will solididfy your knowledge. 
+This is a review. Redux takes some practice to master doing another tutorial on the topic will solidify your knowledge. 
 
 - [Assignment 1 - React Redux Tutorial](../Assignments/Assignment-1-react-redux.md)
 
@@ -107,6 +108,7 @@ This is a review. Redux takes some practice to master doing another tutorial on 
 - [React](https://reactjs.org)
 - [Redux](https://redux.js.org)
 - [Assignment 1 - React Redux Tutorial](../Assignments/Assignment-1-react-redux.md)
-    1. [Password App](https://github.com/Tech-at-DU/React-Redux-passwords-Tutorial)
-    2. [Timers App](https://github.com/Tech-at-DU/React-Redux-Timers-Tutorial)
-    3. [Tetris App](https://github.com/Tech-at-DU/React-Redux-Tetris-Tutorial) 
+  1. [Password App](https://github.com/Tech-at-DU/React-Redux-passwords-Tutorial)
+  2. [Timers App](https://github.com/Tech-at-DU/React-Redux-Timers-Tutorial)
+  3. [Tetris App](https://github.com/Tech-at-DU/React-Redux-Tetris-Tutorial) 
+

@@ -2,7 +2,7 @@
 
 <!-- > -->
 
-## Review and Dig into Redux
+## Review React & Redux
 
 <!-- > -->
 
@@ -10,18 +10,20 @@
 
 1. Define Actions, Reducers, and Store
 1. Use Redux to manage application state 
-1. Create container components implement React Redux
+1. Use Application state in components
 1. Use the react controlled component pattern
 
 <!-- > -->
 
-## Why practice the Redux Todo App?
+## Why learn Redux?
 
 <!-- > -->
 
-The controlled component pattern is a common pattern to know with Redux. You should know it!
+Managing application state is an important part of app development. 
 
-You'll need this to handle forms with React.
+Redux is an advanced tool for managing application state. 
+
+Redux is a professional level tool. 
 
 <!-- > -->
 

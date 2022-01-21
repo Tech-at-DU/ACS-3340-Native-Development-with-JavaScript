@@ -1,4 +1,4 @@
-# ACS 3340 - Using Flex - Class 8
+# ACS 3340 - Using Flex
 
 From here until the end of the term you will be working on your final project. Your goal is to define what the project is and plan how you will complete it between now and the end of the term. 
 
