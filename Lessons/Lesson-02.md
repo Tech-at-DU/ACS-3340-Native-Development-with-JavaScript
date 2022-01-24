@@ -15,19 +15,195 @@
 
 <!-- > -->
 
-## Why learn Redux?
+## Why learn Redux? 🤔
 
 <!-- > -->
 
-Managing application state is an important part of app development. 
+🤹‍♀️ Managing application state is an important part of app development. 
 
-Redux is an advanced tool for managing application state. 
+👩‍🔬 Redux is an advanced tool for managing application state. 
 
-Redux is a professional level tool. 
+🧑‍💻 Redux is a professional level tool. 
 
 <!-- > -->
 
-Redux is an industry standard tool for managing application state. You should know it!
+Redux is an industry standard tool for managing application state. 
+
+You should know it! 
+
+<!-- > -->
+
+## Redux Review
+
+<!-- > -->
+
+### Application State
+
+Application state is the data your program manages.
+
+<!-- > -->
+
+This can be almost anything and everything.
+
+- User data
+- Content data 
+- values that determine the state of the interface
+
+<!-- > -->
+
+### Actions 🏃‍♀️
+
+All changes to application state are handled by actions.
+
+<!-- > -->
+
+```JS
+const NEW_TODO = 'NEW_TODO'
+const DELETE_TODO = 'DELETE_TODO'
+
+const newTodo = (name) => {
+  ...
+}
+
+const deleteTodo = (index) => {
+  ...
+}
+```
+
+This will tell you what can changes can be made to your application state. 
+
+_Changes can not be made without an action!_
+
+<!-- > -->
+
+An action has a type and might have a payload. 
+
+```JS
+const deleteTodo = (index) => {
+  return {
+    type: DELETE_TODO, // !!!! REQUIERED !!!!!
+    payload: { index } // { index: 4 }
+  }
+}
+```
+
+_The payload contains any information need to make that change._ 
+
+<!-- > -->
+
+Looking at the actions will tell you what kinds of changes can be made in a Redux app.
+
+🧐 🔎
+
+_State can only be changed through an action!_ 
+
+<!-- > -->
+
+Notice that actions don't actually make a change. 
+
+🤔
+
+_An action is only the name and some values._
+
+<!-- > -->
+
+### Reducers ⚙️
+
+Reducers are where changes occur. 
+
+<!-- > -->
+
+Your reducers handle changes by processing actions. 🏭
+
+<!-- > -->
+
+Every reducer is a function that takes state and an action. 
+
+```JS
+const todoReducer = (state = [], action) => {
+  switch(action.type) {
+    case NEW_TODO: 
+      return [...state, action.payload]
+    case DELETE_TODO: 
+      const newState = state.filter((item, i) => {
+        return i !==  action.payload.index 
+      })
+      return newState
+    default: 
+      return state
+  }
+}
+```
+
+<!-- > -->
+
+A reducer is a function that: 
+
+- Takes in state and an action object
+- Makes changes to state
+- Returns new state
+
+state => new state
+
+<!-- > -->
+
+Reducers are also responsible for defining default state. 
+
+```JS
+const todoReducer = (state = [], action) => {
+  ...
+}
+```
+
+<!-- > -->
+
+What is "new state"? 
+
+A reducer must always copy state and return the copy! 
+
+<!-- > -->
+
+### The Store 🎁
+
+The store is where your data is stored.
+
+<!-- > -->
+
+The store is an object that stores your state values. 
+
+<!-- > -->
+
+You define the store when you `combineReducers`
+
+```JS
+export default combineReducers({
+  todos: todosReducer
+})
+```
+
+This determines the shape of the store/state. 
+
+```JS
+state = { todos }
+```
+
+<!-- > -->
+
+For example: 
+
+```JS
+export default combineReducers({
+  users: usersReducer,
+	posts: postsReducer,
+	options: optionsReducer
+})
+```
+
+⬇️
+
+```JS
+state = { users, posts, options }
+```
 
 <!-- > -->
 
@@ -35,7 +211,7 @@ Redux is an industry standard tool for managing application state. You should kn
 
 <!-- > -->
 
-Get the [sample code](https://github.com/soggybag/redux-todo). 
+Get the [sample code](https://github.com/soggybag/redux-todo).
 
 <!-- > -->
 
@@ -58,7 +234,7 @@ Use this with all form elements.
 
 <!-- > -->
 
-### Organizing code 
+### Organizing code 📐
 
 <!-- > -->
 
