@@ -189,7 +189,31 @@ state = { todos }
 
 <!-- > -->
 
-For example: 
+The Reducer: 
+
+```JS
+const todoReducer = (state = [], action) => {
+  ...
+}
+```
+
+Root reducer
+
+```JS
+export default combineReducers({
+  todos: todosReducer
+})
+```
+
+State
+
+```JS
+const { todos } = useSelector(state => state) // []
+```
+
+<!-- > -->
+
+For example: `
 
 ```JS
 export default combineReducers({
