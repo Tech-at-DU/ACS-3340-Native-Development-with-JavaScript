@@ -138,8 +138,8 @@ Below I've summarized the steps from this [article](https://www.codementor.io/@r
 Use one of your existing projects created with creat-react-app. Add the electron dependencies: 
 
 ```JSON
-yarn add electron electron-builder --dev
-yarn add wait-on concurrently --dev
+yarn add electron electron-builder --dev-save
+yarn add wait-on concurrently --save-dev
 yarn add electron-is-dev
 ```
 
