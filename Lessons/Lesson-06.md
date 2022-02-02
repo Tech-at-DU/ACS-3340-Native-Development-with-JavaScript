@@ -270,7 +270,7 @@ Once you have created a project and can run it in Expo you're ready to start on 
 
 <!-- > -->
 
-Get the sample files here: https://github.com/Make-School-Labs/few-2-4-by-breed-starter 
+Get the sample files here: https://github.com/Tech-at-DU/by-breed-starter 
 
 **Copy these two files into your project folder.**
 
@@ -573,7 +573,7 @@ Your goal is to display a list of Cats or dogs. Your list should include all of 
 
 <!-- > -->
 
-Remember animals share some properties but each animals list of properties us unique to each animal! 
+Note! animals share some properties but each animal's list of properties is unique, that is, each animal does not have the same list of properties!
 
 <!-- > -->
 
@@ -640,6 +640,12 @@ Follow the tutorial videos and create the By Breed app. Your app should do the f
 - Display the name of each breed
 
 <!-- > -->
+
+## After Class 
+
+Complete the challenges in the By Breed project. 
+
+- https://github.com/Tech-at-DU/by-breed-starter
 
 ## Resources 
 
