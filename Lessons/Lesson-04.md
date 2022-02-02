@@ -30,124 +30,9 @@ The instructions here continue from what was covered in class. If you haven't fo
 
 <!-- > -->
 
-The instructions here were compiled from this [article](https://www.codementor.io/@randyfindley/how-to-build-an-electron-app-using-create-react-app-and-electron-builder-ss1k0sfer). 
+The instructions here were compiled from this article:
 
-<!-- > -->
-
-## Set up a production build 
-
-<!-- > -->
-
-We need some build scripts. These scripts replace the existing react scripts that come with the CRA boilerplate code.
-
-```
-yarn add @rescripts/cli @rescripts/rescript-env --dev
-```
-
-<small>**Note!** The terminal will ask you which version of rescripts you want to install choose the latest by hitting return.</small>
-
-<!-- > -->
-
-**Edit** `package.json` and *replace* these keys in scripts with these: 
-
-```JSON
-"start": "rescripts start",
-"build": "rescripts build",
-"test": "rescripts test",
-```
-
-<!-- > -->
-
-Now **add a new file** named `.rescriptsrc.js` with the following contents:
-
-```JS
-module.exports = [require.resolve('./.webpack.config.js')]
-```
-
-<!-- > -->
-
-Finally **add another new file** called `.webpack.config.js` with the following contents:
-
-```JS
-// define child rescript
-module.exports = config => {
-  config.target = 'electron-renderer';
-  return config;
-}
-```
-
-<!-- > -->
-
-Add Electron Builder & Typescript:
-
-```
-yarn add electron-builder typescript --dev
-```
-
-<!-- > -->
-
-**Edit** `package.json` again add:
-
-```
-"homepage": "./",
-```
-
-<!-- > -->
-
-Now **add** these to the `"scripts"` in `package.json`: 
-
-```JSON
-"postinstall": "electron-builder install-app-deps",
-"preelectron-pack": "yarn build",
-"electron-pack": "electron-builder -mw"
-```
-
-<!-- > -->
-
-Now add all of this to package.json
-
-```json
-"author": {
-  "name": "Your Name",
-  "email": "your.email@domain.com",
-  "url": "https://your-website.com"
-},
-"build": {
-  "appId": "com.my-website.my-app",
-  "productName": "MyApp",
-  "copyright": "Copyright © 2019 ${author}",
-  "mac": {
-    "category": "public.app-category.utilities"
-  },
-  "files": [
-    "build/**/*",
-    "node_modules/**/*"
-  ],
-  "directories": {
-    "buildResources": "assets"
-  }
-},
-```
-
-<!-- > -->
-
-Now, build your app for production: 
-
-```
-yarn electron-pack
-```
-
-<!-- > -->
-
-**NOTE:** Following the instructions from the article I wasn't able to get it to build until I changed: 
-
-`"electron-pack": "build -mw"` 
-
-to:
-
-`"electron-pack": "electron-builder -mw"`
-
-**Note!** I also had trouble building with NodeJS 16. I had to switch to NodeJS 15. 
+https://dev.to/mandiwise/electron-apps-made-easy-with-create-react-app-and-electron-forge-560e
 
 <!-- > -->
 
@@ -196,4 +81,4 @@ Build your Electron app. This will conclude the first assignment.
 
 ## Resources
 
-- 
+- https://dev.to/mandiwise/electron-apps-made-easy-with-create-react-app-and-electron-forge-560e
