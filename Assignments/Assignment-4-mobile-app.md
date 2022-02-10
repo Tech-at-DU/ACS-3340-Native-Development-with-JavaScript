@@ -99,4 +99,5 @@ Submit your your completed project to gradescope.
 | Work Ethic.  | < 3 comits.   | Commits show consistent work| commits show full 3 hours of work |
 
 ### Resources
-- [WTHR Native Tutorial](https://www.makeschool.com/academy/track/standalone/wthr-native-tutorial-mvs/getting-started)
+
+
