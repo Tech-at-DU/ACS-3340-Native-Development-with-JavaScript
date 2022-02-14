@@ -2,6 +2,8 @@
 
 This goal of this lesson is to introduce navigation concepts on mobile and apply them. 
 
+<!-- > -->
+
 ## Learning Objectives/Competencies
 
 - Identify navigation paradigms on mobile
@@ -13,25 +15,45 @@ This goal of this lesson is to introduce navigation concepts on mobile and apply
 	- Manage a navigation stack
 - Use static properties and methods
 
+<!-- > -->
+
 ## Navigation on Native
+
+<!-- > -->
 
 On mobile devices space is at a premium and primary content is text which runs horizontally while we are usually viewing in portrait. 
 
+<!-- > -->
+
 The nature of this environment is such that design dictates that we usually want to make content fill the space and minimize the number of items displayed. 
+
+<!-- > -->
 
 Rather than showing mulitple content elements simultaneously we opt to focus on a single item. To fit all of your content into a mobile application you're either scrolling or navigating between views. 
 
+<!-- > -->
+
 Each new whole page of stuff is a screen. Really it's a view with many child views. In iOS native development it's called a ViewController. In React we call it a Component. 
 
+<!-- > -->
+
 For this dicussion let's use the name **Screen** when we are talking about a view that contains the entire current screen of content and use the term Component or View when we are talking about a sub view. 
+
+<!-- > -->
 
 A good resource for understanding navigation is the Human Interface Design Guidelines: HIG. 
 
 https://developer.apple.com/design/human-interface-guidelines/ios/app-architecture/navigation/
 
+<!-- > -->
+
 ## Navigating Screens
 
+<!-- > -->
+
 On the web we navigate between pages and the browser keeps track of navigation in the history. On mobile we don't have this convenience as a default behavior. 
+
+<!-- > -->
 
 Generally speaking on mobile your apps will use one of four navigation schemes:
 
@@ -40,33 +62,57 @@ Generally speaking on mobile your apps will use one of four navigation schemes:
 - Drawers
 - Modals
 
+<!-- > -->
+
 Your app might use any combination of these at the same time. 
+
+<!-- > -->
 
 A **Stack** is a series of Screens. This is similar to what you see in the browser. There is a history. You can _push_ and _pop_ Screens on a stack the same way you can push and pop elements in an array. When you see the back button in a mobile app you're using a stack. 
 
+<!-- > -->
+
 **Tabs** appear at the bottom of the screen and manage a fixed set of Screens. The tabs appear on top of all Screens! Any Screen in tabbed navigation might be a Stack! 
+
+<!-- > -->
 
 **Drawers** act like tabs but the drawer is hidden until displayed, usually by tapping the "Hamburger" menu. Like Tabs, Drawers are available from any Screen, and anything they display might be a Stack. 
 
+<!-- > -->
+
 **Modal** Views appear above the current Screen. Imagine a modal as out side of a stack. Anytime you close/dismiss a modal view you are returned to previous Screen. Really you never left, the modal view just appeared on top to ask a clarifying question then went away.
+
+<!-- > -->
 
 ![Navigation Illustration](./images/Lesson-07.png)
 
+<!-- > -->
+
 ## Navigator
+
+<!-- > -->
 
 A Navigator is the parent for any set of screens. A navigator is usually a Stack, Tab, or Drawer. Any of the screens displayed might be a Stack. 
 
 Navigator is the top level view that manages displaying subviews. 
 
-## Navigation Libraries for native
+<!-- > -->
+
+### Navigation Libraries for native
 
 - [React Navigation](https://reactnavigation.org/)
 - [React Native Router Flux](https://github.com/aksonov/react-native-router-flux)
 - [React Router Native](https://github.com/ReactTraining/react-router/tree/master/packages/react-router-native)
 
+<!-- > -->
+
 I chose [React Navigation](https://reactnavigation.org/) for these examples since it has all of the features any project might need, works on Android and iOS, and was recommended by React Native. It's also an open source solution.
 
+<!-- > -->
+
 ## React Native Navigation
+
+<!-- > -->
 
 React Navigation is a library for React Native that is open source. It provides all of the basic native navigation systems and works on Android and iOS. 
 
