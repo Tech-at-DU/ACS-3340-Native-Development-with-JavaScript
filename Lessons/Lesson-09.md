@@ -432,7 +432,7 @@ You can set styles across all views by applying them to the navigator.
 ...
 ```
 
-## Navbars in the wold 
+## Navbars in the wild 
 
 Observe some navbars in apps that you use to see how they are configured and styled:  
 
