@@ -275,11 +275,9 @@ import { Ionicons } from 'react-native-vector-icons'
       // You can return any component that you like here!
       return <Ionicons name={iconName} size={size} color={color} />;
     },
+    tabBarActiveTintColor: 'tomato',
+    tabBarInactiveTintColor: 'gray'
   })}
-  tabBarOptions={{
-    activeTintColor: 'tomato',
-    inactiveTintColor: 'gray',
-  }}
 >
 ...
 </Tab.Navigator>
