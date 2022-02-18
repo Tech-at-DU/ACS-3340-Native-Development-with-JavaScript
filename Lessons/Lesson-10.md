@@ -189,7 +189,7 @@ import { Ionicons } from 'react-native-vector-icons'
 
 Use the icon with: 
 
-```
+```JS
 <Ionicons name="ios-add-circle-outline" size={32} />
 ```
 
