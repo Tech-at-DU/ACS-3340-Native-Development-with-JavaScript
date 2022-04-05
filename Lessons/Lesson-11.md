@@ -12,83 +12,13 @@ https://react-native-training.github.io/react-native-elements/docs/overview.html
 
 - Build Native apps with Native Components
 
-## Initial Exercise
+<!-- > -->
 
-Identify and implement React Native Elements. Get started with React Native Elements by taking a look at the docs: 
+Test out the components in the docs: 
 
 https://reactnativeelements.com/docs/
 
-Follow these instructions to start using React Native Elements:
-
-Make a new expo app:
-
-```
-expo init react-native-elements-example
-```
-
-Choose blank project
-
-Navigate to the project: 
-
-```
-cd react-native-elements-example
-```
-
-Install native elements:
-
-```
-yarn add react-native-elements
-```
-
-Add vector icons: 
-
-```
-yarn add react-native-vector-icons
-```
-
-Install safe area context:
-
-```
-yarn add react-native-safe-area-context
-```
-
-In `App.js` add the SafeAreaProvider: 
-
-```JS
-import { SafeAreaProvider } from 'react-native-safe-area-context';
-
-function App() {
-  return <SafeAreaProvider>...</SafeAreaProvider>;
-}
-```
-
-Test your app at this point: 
-
-```
-yarn start
-```
-
-If everything is working you'll see the default app!
-
-Let's experiment with some of the React Native Elements. 
-
-Start with an image. This is NOT a React Native ELements component but you may want to use images. 
-
-Create a folder named images in your project directory and add an image to the folder. Find an image you can use and add it to this folder. I used an image named `dog.png`:
-
-```JS
-import { ..., Image } from 'react-native';
-
-export default function App() {
-  return (
-    <SafeAreaProvider>
-			...
-      <Image source={require('./images/dog.png')} />
-      ...
-    </SafeAreaProvider>
-  );
-}
-```
+<!-- > -->
 
 Here's more info about the Image component: https://reactnative.dev/docs/images
 
@@ -161,7 +91,29 @@ When there is no value the badge is a small colored circle.
 
 Set the base color of the badge with the `status` prop.
 
+<!-- > -->
+
+## NativeBase.io 
+
+<!-- > -->
+
+https://nativebase.io is a library of components for react native. Here's how they describe themselves: 
+
+> NativeBase is an accessible, utility-first component library that helps you build consistent UI across Android, iOS and Web.
+
+<!-- > -->
+
+Try out native base. Follow their getting started guide. Note! They have a native Base template you can use with Expo. 
+
+```
+expo init my-app --template @native-base/expo-template
+```
+
+<!-- > -->
+
 ## Defining your final project
+
+<!-- > -->
 
 To stretch your skills your goal now is to tqke the ideas from class and put them all togetherr into a project of your own design. 
 
