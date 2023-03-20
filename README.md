@@ -29,32 +29,26 @@ Students by the end of the course will be able to:
 
 ## Schedule
 
-**Course Dates:** January 18, 2022 to March 4, 2022
+**Course Dates:** March 28, 2023 to May 10, 2023
 
-**Class Times:** Monday, Wednesday, Friday 5:40 PM to 7:30 PM
+**Class Times:** Monday, Wednesday 9:30 AM to 12:15 PM (13 class sessions)
 
 | Class |    Date     |   Topics   |  Assignment |
 |:-----:|:-----------:|:----------:|:-----------:|
-|  1    | Wed, Jan 19 | [Lesson 1 - Intro] | [Assignment 1 React/Redux Tutorial] |
-|  2    | Fri, Jan 21 | Lab        | - |
-|  3    | Mon, Jan 24 | [Lesson 2 - Redux Review] | - |
-|  4    | Wed, Jan 26 | [Lesson 3 - Electron] | - |
-|  5    | Fri, Jan 28 | Lab        | - |
-|  6    | Mon, Jan 31 | [Lesson 4 - Electron Build] | [Assignment 2 Desktop Application](Assignments/Assignment-2-desktop-app.md) |
-|  7    | Wed, Feb  2 | [Lesson 5 - Processes] | - |
-|  8    | Fri, Feb  4 | Lab        | - |
-|  9    | Mon, Feb  7 | [Lesson 6 - React Native] | [By Breed](Assignments/Assignment-4-mobile-app.md) |
-| 10    | Wed, Feb  9 | [Lesson 7 - Native Components] | - |
-| 11    | Fri, Feb 11 | Lab        | - |
-| 12    | Mon, Feb 14 | [Lesson 8 - Flex] | [Assignment 4 Final Project](Assignments/Assignment-final-project.md) |
-| 13    | Wed, Feb 16 | [Lesson 9 - Navigation] | - |
-| 14    | Fri, Feb 18 | Lab        | - |
-| -     | Mon, Feb 21 | **President's Day** | - |
-| 15    | Wed, Feb 23 | [Lesson 10 - Tab Bar] | - |
-| 16    | Fri, Feb 25 | Lab        | - |
-| 17    | Mon, Feb 28 | [Lesson 11 - Native Elements] | - |
-| 18    | Wed, Mar  2 | Final Presentation | - |
-| 19    | Fri, Mar  4 | Final Assessment | - |
+|  1    | Wed, Mar 29 | [Lesson 1 - Intro] | [Assignment 1 React/Redux Tutorial] |
+|  2    | Mon, Apr  3 | [Lesson 2 - Redux Review] | - |
+|  3    | Wed, Apr  5 | [Lesson 3 - Electron] | - |
+|  4    | Mon, Apr 10 | [Lesson 4 - Electron Build] | [Assignment 2 Desktop Application] |
+|  5    | Wed, Apr 12 | [Lesson 5 - Processes] | - |
+|  6    | Mon, Apr 17 | [Lesson 6 - React Native] | [By Breed] |
+|  7    | Wed, Apr 19 | [Lesson 7 - Native Components] | - |
+|  8    | Mon, Apr 24 | [Lesson 8 - Flex] | [Assignment 4 Final Project] |
+|  9    | Wed, Apr 26 | [Lesson 9 - Navigation] |  |
+| 10    | Mon, May  1 | [Lesson 10 - Tab Bar] | - |
+| 11    | Wed, May  3 | [Lesson 11 - Native Elements] | - |
+| 12    | Mon, May  8 | Final Assessment | - |
+| 13    | Wed, May 10 | Final Presentation | - |
+
 
 [Lesson 1 - Intro]: Lessons/Lesson-01.md
 [Lesson 2 - Redux Review]: Lessons/Lesson-02.md
@@ -72,6 +66,10 @@ Students by the end of the course will be able to:
 [Assignment 1]: Assignments/Assignment-1-react-redux.md
 [Assignment 1]: Assignments/Assignment-1-react-redux.md
 [Assignment 1]: Assignments/Assignment-1-react-redux.md
+
+[Assignment 2 Desktop Application]: Assignments/Assignment-2-desktop-app.md
+[By Breed]: Assignments/Assignment-4-mobile-app.md
+[Assignment 4 Final Project]: Assignments/Assignment-final-project.md
 
 ## Course video lessons
 
