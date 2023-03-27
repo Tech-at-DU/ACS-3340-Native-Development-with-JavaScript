@@ -49,7 +49,6 @@ Students by the end of the course will be able to:
 | 12    | Mon, May  8 | Final Assessment | - |
 | 13    | Wed, May 10 | Final Presentation | - |
 
-
 [Lesson 1 - Intro]: Lessons/Lesson-01.md
 [Lesson 2 - Redux Review]: Lessons/Lesson-02.md
 [Lesson 3 - Electron]: Lessons/Lesson-03.md
