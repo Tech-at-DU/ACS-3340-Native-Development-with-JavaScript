@@ -45,19 +45,14 @@ Think of some ideas for native apps?
 
 React is one of the most popular libraries around today. Seriously, you should know it! React is good to learn now since it has huge and well-deserved popularity.
 
-[Hacker News Hiring Trends: React, Vue, Angular, Next](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=Svelte&package=next&from=2019-06-01&to=2022-01-31)
+[Hacker News Hiring Trends: React, Vue, Angular, Next](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=Svelte&package=next&from=2019-06-01&to=2023-01-31)
+
 
 <!-- > -->
 
-Here is a good look at the reasons to learn React, Vue, or Angular. 
+Check out the state of JavaScript 2022:
 
-[https://levelup.gitconnected.com/angular-vs-react-vs-vue-which-is-the-best-choice-for-2020-81f577697c7e](https://levelup.gitconnected.com/angular-vs-react-vs-vue-which-is-the-best-choice-for-2020-81f577697c7e)
-
-<!-- > -->
-
-Check out the state of JavaScript 2019:
-
-[State of JS 2020](https://2020.stateofjs.com/en-US/)
+[State of JS 2022](https://2022.stateofjs.com/en-US/)
 
 Looks to me like it's a good time to learn React. That said, it won't be here forever and you are capable of learning any framework. React is a good place to invest your time right now.
 
@@ -65,9 +60,13 @@ Looks to me like it's a good time to learn React. That said, it won't be here fo
 
 ## React Redux Review
 
+What is redux? 
+
+https://careerfoundry.com/en/blog/web-development/what-is-redux/
+
 <!-- > -->
 
-React seems to be a popular tool, it can also be used to make native mobile applications. This makes it a good choice for this class. 
+React is a popular tool, it can also be used to make native mobile applications. This makes it a good choice for this class. 
 
 <!-- > -->
 
@@ -77,9 +76,9 @@ Native applications hold and manage their data. We need a tool and a strategy fo
 
 Let's answer a couple of questions about redux.
 
-Why use Redux? Is redux still used in 2021? Can't you replace Redux with one of those new hooks?
+Why use Redux? Do you need to use Redux? Read this and decide: 
 
-https://dev.to/alexandrudanpop/why-react-projects-still-use-redux-in-2020-395p
+https://thecodebytes.com/is-redux-necessary-for-react/
 
 <!-- > -->
 
