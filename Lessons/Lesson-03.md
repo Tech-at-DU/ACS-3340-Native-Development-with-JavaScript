@@ -212,7 +212,7 @@ Add the following to `package.json`:
 
 Use this command to test your electron app in development mode: 
 
-`yarn electron-dev`
+`npm electron-dev`
 
 You'll use development mode while to test, modify, and add new features to your app. 
 
