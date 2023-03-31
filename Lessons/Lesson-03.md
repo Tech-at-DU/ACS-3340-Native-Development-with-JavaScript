@@ -137,7 +137,7 @@ Below I've summarized the steps from this [article](https://www.codementor.io/@r
 
 Use one of your existing projects created with creat-react-app. Add the electron dependencies: 
 
-```JSON
+```
 npm add electron electron-builder --dev
 npm add wait-on concurrently --dev
 npm add electron-is-dev
