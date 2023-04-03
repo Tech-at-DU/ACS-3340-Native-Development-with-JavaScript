@@ -210,7 +210,7 @@ export const todosSlice = createSlice({
   }
 })
 
-export const { addTodo } = timersSlice.actions
+export const { addTodo } = todosSlice.actions
 export default todosSlice.reducer
 ```
 
@@ -238,7 +238,7 @@ Here is a new action `removeTodo` with a new reducer. The reducer always takes `
 The last step is to export the action
 
 ```JS
-export const { addTodo, removeTodo } = timersSlice.actions
+export const { addTodo, removeTodo } = todosSlice.actions
 ```
 
 ## React Redux Hooks
