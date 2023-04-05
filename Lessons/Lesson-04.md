@@ -63,6 +63,8 @@ Icons are actually more complex than you might think. You'll need images for all
   - https://www.christianengvall.se/electron-app-icons/
 	- https://www.electron.build/icons
 
+Here are some alternative instructions for building Electron with Electron Builder: https://reactjsexample.com/electron-integration-with-react/
+
 <!-- > -->
 	
 ## Build an Electron App
