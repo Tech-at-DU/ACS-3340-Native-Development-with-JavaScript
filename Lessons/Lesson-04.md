@@ -30,7 +30,21 @@ The instructions here continue from what was covered in class. If you haven't fo
 
 <!-- > -->
 
-Folllow the instruction here: https://www.electronforge.io/import-existing-project
+Import Electron forge to build the app binary: 
+
+```
+npm install --save-dev @electron-forge/cli
+npm exec --package=@electron-forge/cli -c "electron-forge import"
+```
+
+This should add some new scripts to your package.json. Check teh scripts section and look for: 
+
+```
+"package": "electron-forge package",
+"make": "electron-forge make"
+```
+
+These instructions follow the guide here: https://www.electronforge.io/import-existing-project
 
 <!-- > -->
 
