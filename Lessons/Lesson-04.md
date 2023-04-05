@@ -44,7 +44,55 @@ This should add some new scripts to your package.json. Check teh scripts section
 "make": "electron-forge make"
 ```
 
-These instructions follow the guide here: https://www.electronforge.io/import-existing-project
+Electron Forge will changed your start script to: `"start": "electron-forge start",` change this back to: 
+
+```
+"start": "react-scripts start",
+```
+
+You need this start script to launch your react code. 
+
+Still in package.json edit the package and make scripts: 
+
+```
+"package": "react-scripts build && electron-forge package",
+"make": "react-scripts build && electron-forge make"
+```
+
+These scripts will build the electron app but they need to run the react scripts first before running electron forge packager. 
+
+Now add this new script: 
+
+```
+"electron": "wait-on tcp:3000 && electron-forge start",
+```
+
+
+
+
+
+
+If you see an error: 
+
+> An unhandled rejection has occurred inside Forge:
+Error: ENOTEMPTY: directory not empty, rmdir ...
+
+Try: 
+
+```
+npm remove node_modules 
+npm remove package-lock.json
+npm install 
+```
+
+
+
+
+
+
+
+
+These instructions follow the guide here: [https://www.electronforge.io/import-existing-project](https://dev.to/mandiwise/electron-apps-made-easy-with-create-react-app-and-electron-forge-560e)
 
 <!-- > -->
 
