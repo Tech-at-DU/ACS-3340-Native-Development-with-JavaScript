@@ -30,11 +30,7 @@ The instructions here continue from what was covered in class. If you haven't fo
 
 <!-- > -->
 
-The instructions here were compiled from this article:
-
-https://dev.to/mandiwise/electron-apps-made-easy-with-create-react-app-and-electron-forge-560e
-
-To build your app skip to the section: Configuring Electron Forge
+Folllow the instruction here: https://www.electronforge.io/import-existing-project
 
 <!-- > -->
 
