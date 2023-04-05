@@ -40,10 +40,10 @@ Students by the end of the course will be able to:
 |  3    | Wed, Apr  5 | [Lesson 3 - Electron] [Lesson 4 - Electron Build] [Lesson 5 - Processes] | [Assignment 2 Desktop Application] |
 |  4    | Mon, Apr 10 | [Lesson 6 - React Native] | [By Breed] |
 |  5    | Wed, Apr 12 | [Lesson 7 - Native Components] | - |
-|  6    | Mon, Apr 17 | [Lesson 8 - Flex] | [Assignment 4 Final Project] |
+|  6    | Mon, Apr 17 | [Lesson 8 - Flex] | - |
 |  7    | Wed, Apr 19 | [Lesson 9 - Navigation] | - |
-|  8    | Mon, Apr 24 | [Lesson 10 - Tab Bar] | - |
-|  9    | Wed, Apr 26 | [Lesson 11 - Native Elements] | Custom project |
+|  8    | Mon, Apr 24 | [Lesson 10 - Tab Bar] | [Assignment 4 Final Project] |
+|  9    | Wed, Apr 26 | [Lesson 11 - Native Elements] | - |
 | 10    | Mon, May  1 | TBA | - |
 | 11    | Wed, May  3 | TBA | - |
 | 12    | Mon, May  8 | Final Assessment | - |
