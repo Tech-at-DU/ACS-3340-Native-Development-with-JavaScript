@@ -160,14 +160,6 @@ For these projects you will be using Expo. It is a tool used with React Native. 
 
 <!-- > -->
 
-**tl;dr**
-
-```
-npm install --global expo-cli
-```
-
-
-
 For these examples, you'll be using a data set that has information about cat and dog breeds. 
 
 <!-- > -->
@@ -175,9 +167,8 @@ For these examples, you'll be using a data set that has information about cat an
 Initialize a new React Native Project with expo. 
 
 ```
-expo init by-breed
+npx create-expo-app by-breed
 ```
-Choose **blank** project at the prompt.
 
 <!-- > -->
 
@@ -194,31 +185,13 @@ Navigate to the project directory in the terminal with:
 Start the project:
 
 ```
-yarn start
+npx expo start
 ```
 
-Notice the command shown in the terminal. To run your project you can choose any one of these. The project will run in different environments depending on your choice. 
+The terminal should show a QR code and a list of commands you can run. To see the project live you can:
 
-<!-- > -->
-
-- `yarn start` # you can open iOS, Android, or web from here, or run them directly with the commands below.
-- `yarn android`
-- `yarn ios`
-- `yarn web`
-
-Run your project with: 
-
-```
-yarn start
-```
-
-<!-- > -->
-
-This should open a web window showing a QR. You will scan this QR code with Expo to test your app. 
-
-<!-- > -->
-
-**Note!** I had trouble again with the NodeJS version and had to switch to Node 15. It might also ask to install expo. Follow the instructions in the terminal. 
+- Open it on your mobile phone by scanning the QR code with your camera. It will ask you to install the Expo Go app.
+- You can press a, i, or w to open the app in the Android or iOS simulator, or open it on the web. To use the simulator you must install it! 
 
 <!-- > -->
 
