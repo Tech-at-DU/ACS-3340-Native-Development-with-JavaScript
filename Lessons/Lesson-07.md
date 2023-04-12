@@ -27,7 +27,7 @@ React native is written in JavaScript using the React component architecture. Th
 
 <!-- > -->
 
-Where React Native is different is in the components that are used. Instead of HTML tags like: `div`, `h1`, `p`, `a`, etc. React Native uses "Native" tags like: `View`, `Text`, `FlatLsit`. These native components arr translated into native code for iOS or Android when the App is built. 
+Where React Native is different is in the components that are used. Instead of HTML tags like: `div`, `h1`, `p`, `a`, etc. React Native uses "Native" tags like: `View`, `Text`, `FlatList`. These native components are translated into native code for iOS or Android when the App is built. 
 
 <!-- > -->
 
@@ -41,9 +41,9 @@ What did you see?
 
 <!-- > -->
 
-Here a few important points: 
+Here are a few important points: 
 
-1. Functionality not covered by one of these components requires you to write your own component.
+1. Functionality not covered by one of these components requires you to write your component.
 2. Some components are supported by both iOS and Android and others are only supported by one or the other.  
 3. Components are styled with CSS but only support a subset of CSS properties.  
 
@@ -53,7 +53,7 @@ Here a few important points:
 
 <!-- > -->
 
-Many apps require text input. React uses the Controlled component pattern to handle input. On Native it's the same but you must use the Native `TextInput` component in place of the `input` tag. 
+Many apps require text input. React uses the Controlled component pattern to handle input. On Native, it's the same but you must use the Native `TextInput` component in place of the `input` tag. 
 
 Read about the component here: https://reactnative.dev/docs/textinput
 
@@ -73,7 +73,7 @@ import { ..., TextInput } from 'react-native';
 
 <!-- > -->
 
-Import `useState`, this will be used the same way it is used a regular web app!
+Import `useState`, this will be used the same way it is used in a regular web app!
 
 ```JS
 import React, { useState } from 'react';
@@ -81,7 +81,7 @@ import React, { useState } from 'react';
 
 <!-- > -->
 
-At the top of the App component define a state variable to hold the search value. 
+At the top of the App, the component defines a state variable to hold the search value. 
 
 ```JS
 export default function App() {
@@ -113,7 +113,7 @@ Here you are setting the value to the search term. Notice that `TextInput` uses 
 
 <!-- > -->
 
-Also note, I added a new style property here: `style={styles.search}`. The `TextInput` is really small it would be good to give it some styles.
+Also note, I added a new style property here: `style={styles.search}`. The `TextInput` is small it would be good to give it some styles.
 
 <!-- > -->
 
@@ -135,7 +135,7 @@ const styles = StyleSheet.create({
 
 <!-- > -->
 
-On mobile text input is handled by a software/virtual keyboard. This keyboard appears on the screen. It can cover other UI elements including the test you are inputing. Not being able to see what you are typing could be a bad user experience! 
+On mobile text, input is handled by a software/virtual keyboard. This keyboard appears on the screen. It can cover other UI elements including the test you are inputting. Not being able to see what you are typing could be a bad user experience! 
 
 <!-- > -->
 
@@ -147,7 +147,7 @@ https://reactnative.dev/docs/keyboardavoidingview
 
 Try out the KeyboardAvoiding View for yourself. 
 
-In `App.js` import the `KeyboardAvoidingView` and `Platform` at the top. Platform is an object that provides information about the current platform. 
+In `App.js` import the `KeyboardAvoidingView` and `Platform` at the top. A platform is an object that provides information about the current platform. 
 
 ```JS
 import { ..., KeyboardAvoidingView, Platform } from 'react-native';
@@ -155,7 +155,7 @@ import { ..., KeyboardAvoidingView, Platform } from 'react-native';
 
 <!-- > -->
 
-Next wrap your content in the `KeyboardAvoidingView`: 
+Next, wrap your content in the `KeyboardAvoidingView`: 
 
 ```JS
 export default function App() {
@@ -181,7 +181,7 @@ Note! I used the `styles.container` styles on the `KeyboardAvoidingView`. If you
 
 <!-- > -->
 
-Also note! `behavior` prop. I took this from the docs. It appears that `KeyboardAvoidingView` behaves differently on different playforms and needs a different stting for each! 
+Also note! the `behavior` prop. I took this from the docs. It appears that `KeyboardAvoidingView` behaves differently on different platforms and needs a different setting for each! 
 
 <!-- > -->
 
