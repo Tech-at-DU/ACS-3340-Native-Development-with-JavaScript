@@ -36,9 +36,9 @@ return <View style={styles.container}></View>
 ...
 import { StyleSheet }
 const styles = StyleSheet.create({
-	container: {
-		width: 100
-	}
+ container: {
+ width: 100
+ }
 })
 ```
 
@@ -48,15 +48,15 @@ const styles = StyleSheet.create({
 
 - Does not support all styles 
 - Not all components support all styles 
-- All units are pixels/points (with a few expections)
+- All units are pixels/points (with a few expectations)
 
 <!-- > -->
 
 ### Flex Box
 
-With React Native you will be using Flex to manage layout of elements. Here is what the React-Native docs say: 
+With React Native you will be using Flex to manage the layout of elements. Here is what the React-Native docs say: 
 
-> Flexbox works the same way in React Native as it does in CSS on the web, with a few exceptions. The defaults are different, with flexDirection defaulting to column instead of row, alignContent defaulting to flex-start instead of stretch, flexShrink defaulting to 0 instead of 1, the flex parameter only supporting a single number.
+> Flexbox works the same way in React Native as it does in CSS on the web, with a few exceptions. The defaults are different, with flexDirection defaulting to column instead of row, alignContent defaulting to flex-start instead of stretch, flexShrink defaulting to 0 instead of 1, and the flex parameter only supporting a single number.
 
 https://reactnative.dev/docs/flexbox
 
@@ -68,13 +68,13 @@ Everything is styled with Flex. The following properties will take your layouts 
 - justifyContent
 - alignItems 
 
-Keep in mind that Flexbox applies to children. While Flexbox applies to a single axis you can mix axis by nesting elements in in a view. 
+Keep in mind that Flexbox applies to children. While Flexbox applies to a single axis you can mix axis by nesting elements in a view. 
 
-**Flex** Is a property in CSS that breaks down to three properties grow, shrink, and basis. Only flex grow is supported. In a flex container flex items take up a fraction of the space defined by their flex value. 
+**Flex** Is a property in CSS that breaks down into three properties grow, shrink, and basis. Only flex growth is supported. In a flex container, flex items take up a fraction of the space defined by their flex value. 
 
-For example, imagine three flex items with flex 1, 2, and 3. The total is 6 so the first element fills 1/6, the second fills 1/3, and the last fills 1/2 of the available space.  
+For example, imagine three flex items with flex 1, 2, and 3. The total is 6 so the first element fills 1/6, the second fill 1/3, and the last fills 1/2 of the available space. 
 
-A pattern in React native is to give an element a flex of 1 to make it fill the space. This works because a single element with a flex of 1 will take up 1/1 of the available space. 
+A pattern in React Native is to give an element a flex of 1 to make it fill the space. This works because a single element with a flex of 1 will take up 1/1 of the available space. 
 
 <!-- > -->
 
@@ -82,7 +82,7 @@ Most of the standard flex properties work mostly the way that you expect them to
 
 https://reactnative.dev/docs/layout-props
 
-You can create a grid based layout with `flexWrap`. 
+You can create a grid-based layout with `flexWrap`. 
 
 Divide space proportionally using `flex`. 
 
@@ -96,11 +96,11 @@ Sometimes you may need to know the size of the window. This can be useful when y
 
 <!-- > -->
 
-Touch screen devices have their own input paradigms. Touch screen interaction is a very different experience from mouse driven interaction. Screens are small and the pointing device, your finger, is really large. This is the opposite of desktop computers, where screens are large and the pointing device is very small and much more accurate. 
+Touchscreen devices have their input paradigms. Touch screen interaction is a very different experience from mouse driven interaction. Screens are small and the pointing device, your finger, is really large. This is the opposite of desktop computers, where screens are large and the pointing device is very small and much more accurate. 
 
 <!-- > -->
 
-Take a quick look at the HIG and study the best practices for handling inputs on touch screen devices: 
+Take a quick look at the HIG and study the best practices for handling inputs on touchscreen devices: 
 
 https://developer.apple.com/design/human-interface-guidelines/inputs/touchscreen-gestures
 
@@ -110,10 +110,10 @@ React Native provides a few interactive components.
 
 - Button - Good for basic button
 - Touchables - Good when the button isn't enough or can't be styled to meet your needs. 
-	- TouchableHighlight
-	- TouchableNativeFeedback
-	- TouchableOpacity
-	- TouchableWithoutNativeFeedback
+ - TouchableHighlight
+ - TouchableNativeFeedback
+ - TouchableOpacity
+ - TouchableWithoutNativeFeedback
 - TextInput
 
 <!-- > -->
@@ -122,13 +122,18 @@ Use the 'Touchable' components to create custom buttons and things you can tap t
 
 https://reactnative.dev/docs/handling-touches
 
+If you plan on using more complex gestures you should read more about gestures and how they work: 
+
+- https://developer.apple.com/design/human-interface-guidelines/inputs/touchscreen-gestures
+- https://reactnative.dev/docs/gesture-responder-system
+
 <!-- > -->
 
 ## Images 
 
 React Native provides two ways to work with images. 
 
-The Image component can be used to display images. Use this when an image is content element. 
+The Image component can be used to display images. Use this when an image is a content element. 
 
 https://reactnative.dev/docs/image
 
@@ -151,7 +156,7 @@ What platform will it use?
 - Mobile
 - Desktop
 
-Define milestones for the project. A milestone is a a step in the construction of your project and should have a deliverable.
+Define milestones for the project. A milestone is a step in the construction of your project and should have a deliverable.
 
 ## Additional Resources
 
