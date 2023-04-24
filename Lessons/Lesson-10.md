@@ -39,7 +39,7 @@ I tested these both on my iOS device.
 To get started with tabbed navigation you'll need to spin up a react native app along with the required dependancies. 
 
 ```
-expo init tabbed-example
+npx create-expo-app tabbed-example
 ```
 
 When prompted **choose blank project**.
