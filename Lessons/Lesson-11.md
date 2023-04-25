@@ -16,7 +16,9 @@ https://reactnativeelements.com
 
 Test out the components in the docs: 
 
-https://reactnativeelements.com/docs/
+https://reactnativeelements.com/docs/installation#installation
+
+I followed the "Stable" install guide. 
 
 <!-- > -->
 
