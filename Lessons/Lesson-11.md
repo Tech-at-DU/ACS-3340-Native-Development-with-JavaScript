@@ -18,7 +18,12 @@ Test out the components in the docs:
 
 https://reactnativeelements.com/docs/installation#installation
 
-I followed the "Stable" install guide. 
+I followed the "Stable" install guide. I also install the peer dependencies. 
+
+```
+npm install @rneui/themed @rneui/base
+npm i react-native-vector-icons
+```
 
 <!-- > -->
 
