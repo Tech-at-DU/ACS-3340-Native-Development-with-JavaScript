@@ -4,7 +4,7 @@
 
 React native ELements is a library of cross platform UI elements. This library fills in many of the gaps in the default React Native components making it quicker and easier to spin up mobile applications.
 
-https://react-native-training.github.io/react-native-elements/docs/overview.html
+https://reactnativeelements.com
 
 <!-- > -->
 
