@@ -1,6 +1,6 @@
 # ACS 3340 - Redux
 
-Add Redux to a React Native project. 
+Add Redux to a React Native project.
 
 ## Objectives 
 
