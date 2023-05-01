@@ -10,18 +10,18 @@ Revisiting the concepts is the best way to solidify your understanding. Taking t
 
 ## Project requirements
 
-This will be a project of your own design. You will decide the topic, content, and platform. Your project can be anything you like but needs to include the following: 
+This will be a project of your design. You will decide the topic, content, and platform. Your project can be anything you like but needs to include the following: 
 
-- Tab View Navigation with at leats three tabs
+- Tab View Navigation with at least three tabs
 - FlatList or SectionList 
 - Uses Redux to manage application state
 
-In addition you need to scope your project to be able to complete by the end of the term. 
+In addition, you need to scope your project to be able to complete it by the end of the term. 
 
 Here are a few places you might look for ideas for your final project: 
 
-- Could be an a continuation of an earlier project like an intensive project. 
-- Could be a mobile application that acts as a frontend or client for an existing backend or server project. 
+- Could be a continuation of an earlier project like an intensive project. 
+- Could be a mobile application that acts as a frontend or client for an existing backend or service project. 
 - it could be one of the tutorial projects converted to React Native
 
 ### Deliverable
@@ -32,6 +32,6 @@ Your final project should be on GitHub and submitted to GradeScope.
 
 | Expectations | Does not meet | Meets  | Exceeds  |
 |:-------------|:--------------|:-------|:---------|
-| Completion | project is not complete | Project is complete, functional, and includes all of the required features listed above. | The project is complete and has gone through at least one cycle of user testing and review. |
+| Completion | Project is not complete | Project is complete, functional, and includes all of the required features listed above. | The project is complete and has gone through at least one cycle of user testing and review. |
 | Code Quality | Code is not functioning | Code functions without errors or warnings. | Code has been linted and formatted to professional standards |
-| Work Ethic.  | < 3 comits. | Commits document your work process. | Commits show meaningful messages that tell the story of your development process. |
+| Work Ethic.  | < 3 commits. | Commits document your work process. | Commits show meaningful messages that tell the story of your development process. |

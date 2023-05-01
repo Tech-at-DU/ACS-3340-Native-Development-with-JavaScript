@@ -2,9 +2,14 @@
 
 <!-- > -->
 
+## React Native Components 
+
+Quick take a look at this article on React Native Components: https://www.codeinwp.com/blog/react-native-component-libraries/#gref
+
+
 React native ELements is a library of cross platform UI elements. This library fills in many of the gaps in the default React Native components making it quicker and easier to spin up mobile applications.
 
-https://react-native-training.github.io/react-native-elements/docs/overview.html
+https://reactnativeelements.com
 
 <!-- > -->
 
@@ -16,7 +21,14 @@ https://react-native-training.github.io/react-native-elements/docs/overview.html
 
 Test out the components in the docs: 
 
-https://reactnativeelements.com/docs/
+https://reactnativeelements.com/docs/installation#installation
+
+I followed the "Stable" install guide. I also install the peer dependencies. 
+
+```
+npm install @rneui/themed @rneui/base
+npm i react-native-vector-icons
+```
 
 <!-- > -->
 
