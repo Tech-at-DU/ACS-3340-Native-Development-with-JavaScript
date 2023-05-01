@@ -44,8 +44,8 @@ Students by the end of the course will be able to:
 |  7    | Wed, Apr 19 | [Lesson 9 - Navigation] | - |
 |  8    | Mon, Apr 24 | [Lesson 10 - Tab Bar] | [Assignment 4 Final Project] |
 |  9    | Wed, Apr 26 | [Lesson 11 - Native Elements] | - |
-| 10    | Mon, May  1 | TBA | - |
-| 11    | Wed, May  3 | TBA | - |
+| 10    | Mon, May  1 | [React Native APIs] [Redux] | - |
+| 11    | Wed, May  3 | Lab | - |
 | 12    | Mon, May  8 | Final Assessment | - |
 | 13    | Wed, May 10 | Final Presentation | - |
 
@@ -60,6 +60,7 @@ Students by the end of the course will be able to:
 [Lesson 9 - Navigation]: Lessons/Lesson-09.md
 [Lesson 10 - Tab Bar]: Lessons/Lesson-10.md
 [Lesson 11 - Native Elements]: Lessons/Lesson-11.md
+[React Native APIs]: Lessons/Lesson-12.md
 
 [Assignment 1 React/Redux Tutorial]: Assignments/Assignment-1-react-redux.md
 [Assignment 1]: Assignments/Assignment-1-react-redux.md

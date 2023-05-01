@@ -39,7 +39,7 @@ I tested these both on my iOS device.
 To get started with tabbed navigation you'll need to spin up a react native app along with the required dependancies. 
 
 ```
-expo init tabbed-example
+npx create-expo-app tabbed-example
 ```
 
 When prompted **choose blank project**.
@@ -52,11 +52,13 @@ Navigate to your project directory:
 cd tabbed-example
 ```
 
-Install the expo dependancies:
+Install the npm dependancies:
 
 ```
 npm install @react-navigation/native
 ```
+
+Install the expo dependancies:
 
 ```
 expo install react-native-reanimated react-native-screens @react-native-community/masked-view
@@ -84,7 +86,7 @@ The code below comes from the React Native Navigation docs [here](https://reactn
 
 <!-- > -->
 
-This creates a bare bones application with two tabs. Notice this is very similar to the stack navigation code! 
+The code below creates a bare bones application with two tabs. Notice this is very similar to the stack navigation code! 
 
 Replace the code in `App.js` with the code below:
 
@@ -124,11 +126,15 @@ export default function App() {
 }
 ```
 
+**Tabbed apps** should use tabs to organize funcitonality with each tab acting as a smaller app inside the app as a whole. For example, one tab might be used for taking pictures, and another used for displaying a list of images. 
+
+You'll never create navigation that moves between the tabs. That would defeat the purpose of tabs and create confusion. 
+
 <!-- > -->
 
-**Challenge:** 
-
 The code above uses three components: `App`, `HomeScreen`, and `SettingsScreen` in one file. Best practice is to keep all components in their own files. 
+
+**Challenge:** 
 
 Move `HomeScreen` and `SettingsScreen` into their own files. Be sure to import the required dependencies, export the component, and import these components for use in `App.js`. 
 
@@ -183,7 +189,7 @@ npm install --save react-native-vector-icons
 
 In your React Native project import the icon with: 
 
-```
+```JS
 import { Ionicons } from 'react-native-vector-icons'
 ```
 
@@ -202,6 +208,8 @@ You can put this component almost anywhere! You can place inside of a `View` or 
 **Explore Icons here:**
 
 Look at the bundled icon sets: https://github.com/oblador/react-native-vector-icons#bundled-icon-sets.
+
+Spend a few minutes exploring the iconsets and icons at the link above. 
 
 **Note!** Above uses the name: `ios-add-circle-outline` which identifies and displays a specific icon. Finding the name to use for a specific icon is not as easy as you might think. The names shown with the icon bundles are not always what you need to set as the name in the component using React Native!
 
@@ -266,8 +274,8 @@ import { Ionicons } from 'react-native-vector-icons'
 
       if (route.name === 'Home') {
         iconName = focused
-          ? 'ios-information-circle'
-          : 'ios-information-circle-outline';
+          ? 'ios-information-circle' // Set focused icon
+          : 'ios-information-circle-outline'; // Set the not focused icon
       } else if (route.name === 'Settings') {
         iconName = focused ? 'ios-list' : 'ios-list';
       }
@@ -275,8 +283,8 @@ import { Ionicons } from 'react-native-vector-icons'
       // You can return any component that you like here!
       return <Ionicons name={iconName} size={size} color={color} />;
     },
-    tabBarActiveTintColor: 'tomato',
-    tabBarInactiveTintColor: 'gray'
+    tabBarActiveTintColor: 'tomato', // Active/focussed color
+    tabBarInactiveTintColor: 'gray' // Inactive color
   })}
 >
 ...
