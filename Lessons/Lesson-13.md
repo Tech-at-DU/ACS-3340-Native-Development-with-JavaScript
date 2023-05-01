@@ -131,9 +131,7 @@ Add a new component to add items to the todo list:
 
 ```JS
 import { StatusBar } from 'expo-status-bar';
-import React, { useState } from 'react';
 import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
-import { store } from './app/store'
 import { useDispatch } from 'react-redux'
 import { addTodo } from './app/todosSlice'
 import { Provider } from 'react-redux'
@@ -143,7 +141,6 @@ export default function AddTodo() {
   const dispatch = useDispatch()
   
   return (
-    
 		<View style={styles.container}>
 			<TextInput 
 				style={styles.textInput}
