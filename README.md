@@ -61,6 +61,7 @@ Students by the end of the course will be able to:
 [Lesson 10 - Tab Bar]: Lessons/Lesson-10.md
 [Lesson 11 - Native Elements]: Lessons/Lesson-11.md
 [React Native APIs]: Lessons/Lesson-12.md
+[Redux]: Lessons/Lesson-13.md
 
 [Assignment 1 React/Redux Tutorial]: Assignments/Assignment-1-react-redux.md
 [Assignment 1]: Assignments/Assignment-1-react-redux.md
