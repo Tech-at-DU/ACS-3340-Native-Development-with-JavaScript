@@ -1,21 +1,18 @@
-# ACS 3340 - Native Applications with JavaScript
+# ACS 3340 - Building Native Applications with JavaScript
 
 <!-- > -->
 
 ## Introduction
 
-The purpose of this class is to expand your JavaScript skills by exploring native applications built with JS. 
+This course is designed to enhance your JavaScript skills through the exploration of native applications built with JS.
 
 <!-- > -->
 
 ## Learning Objectives
 
-1. Compare and contrast Web and Native Applications 
-1. Compare and contrast Mobile vs Desktop experiences 
-1. Define Components with Class and function syntax
-  - Component Architecture
-  - Props and State
-  - JSX
+1. Comparison of Web and Native Applications
+1. Contrasting Mobile vs. Desktop Experiences
+1. Use React and Redux
 
 <!-- > -->
 
@@ -23,19 +20,19 @@ The purpose of this class is to expand your JavaScript skills by exploring nativ
 
 Discussion
 
-- What is native?
-- Native vs Web
+- What is a native application?
+- What are the differences between web and native apps? 
 - What makes a good native app? 
 - What makes a good web app? 
-- Desktop vs Mobile? 
+- Native apps can be desktop or mobile, what the differences? 
 - What makes a good desktop app?
 - What makes a good mobile app?
 
 <!-- > -->
 
-### What would make a good native app? 🤔
+### Explore Ideas for Native Apps
 
-Think of some ideas for native apps?
+Brainstorm some ideas for native applicatiopns!
 
 📱 🤔 🖥
 
@@ -43,42 +40,22 @@ Think of some ideas for native apps?
 
 ## Why Learn React? 
 
-React is one of the most popular libraries around today. Seriously, you should know it! React is good to learn now since it has huge and well-deserved popularity.
-
-[Hacker News Hiring Trends: React, Vue, Angular, Next](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=Svelte&package=next&from=2019-06-01&to=2023-01-31)
+React stands out as one of the most popular libraries in today's development landscape. Its widespread adoption and popularity make it a crucial skill to acquire. Explore the hiring trends in technologies such as React, Vue, Angular, and Next on [Hacker News Hiring Trends: React, Vue, Angular, Next](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=Svelte&package=next&from=2019-06-01&to=2023-01-31)
 
 
 <!-- > -->
 
-Check out the state of JavaScript 2022:
-
-[State of JS 2022](https://2022.stateofjs.com/en-US/)
-
-Looks to me like it's a good time to learn React. That said, it won't be here forever and you are capable of learning any framework. React is a good place to invest your time right now.
+Check the [State of JS 2022](https://2022.stateofjs.com/en-US/), indicating that now is an opportune time to invest time in learning React.
 
 <!-- > -->
 
 ## React Redux Review
 
-What is redux? 
+Understand the fundamentals of Redux by referring to this [article](https://redux.js.org/redux-toolkit/overview#what-is-redux-toolkit).
 
-https://careerfoundry.com/en/blog/web-development/what-is-redux/
+React's versatility extends to creating native mobile applications, making it an excellent choice for this course.
 
-<!-- > -->
-
-React is a popular tool, it can also be used to make native mobile applications. This makes it a good choice for this class. 
-
-<!-- > -->
-
-Native applications hold and manage their data. We need a tool and a strategy for this! I'm going to propose Redux. You've used it before, it's mature and popular.
-
-<!-- > -->
-
-Let's answer a couple of questions about redux.
-
-Why use Redux? Do you need to use Redux? Read this and decide: 
-
-https://thecodebytes.com/is-redux-necessary-for-react/
+Considering that native applications manage data, Redux is proposed as a mature and popular tool for this purpose. Explore the necessity and benefits of Redux in React applications [here](https://www.geeksforgeeks.org/what-are-the-advantages-of-using-redux-with-reactjs/).
 
 <!-- > -->
 
