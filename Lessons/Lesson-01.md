@@ -65,15 +65,11 @@ To get started you will work on one of the React + Redux tutorials. There are th
 
 <!-- > -->
 
-This is a review. Redux takes some practice to master doing another tutorial on the topic will solidify your knowledge. 
+There are three tutorials listed by level of difficulty. Your goal is complete one of these.
 
-- [Assignment 1 - React Redux Tutorial](../Assignments/Assignment-1-react-redux.md)
-
-<!-- > -->
-
-## After Class
-
-- [Assignment 1 - React Redux Tutorial](../Assignments/Assignment-1-react-redux.md)
+1. [Password App](https://github.com/Tech-at-DU/React-Redux-passwords-Tutorial)
+2. [Timers App](https://github.com/Tech-at-DU/React-Redux-Timers-Tutorial)
+3. [Tetris App](https://github.com/Tech-at-DU/React-Redux-Tetris-Tutorial) 
 
 <!-- > -->
 
