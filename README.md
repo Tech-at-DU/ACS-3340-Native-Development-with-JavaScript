@@ -38,15 +38,15 @@ Students by the end of the course will be able to:
 |  1    | Wed, Mar 20 | [Lesson 1 - Intro] | [Assignment 1 React/Redux Tutorial] |
 |  2    | Mon, Mar 25 | [Lesson 2 - Redux Review] | - |
 |  3    | Wed, Mar 27 | [Lesson 3 - Electron] [Lesson 4 - Electron Build] [Lesson 5 - Processes] | [Assignment 2 Desktop Application] |
-|  4    | Mon, Apr  1 | [Lesson 6 - React Native] | [By Breed] |
-|  5    | Wed, Apr  3 | [Lesson 7 - Native Components] | - |
-|  6    | Mon, Apr  8 | [Lesson 8 - Flex] | - |
-|  7    | Wed, Apr 10 | [Lesson 9 - Navigation] | - |
-|  8    | Mon, Apr 15 | [Lesson 10 - Tab Bar] | [Assignment 4 Final Project] |
-|  9    | Wed, Apr 17 | [Lesson 11 - Native Elements] | - |
-| 10    | Mon, Apr 22 | [React Native APIs] - [Redux] | - |
-| 11    | Wed, Apr 24 | Lab | - |
-| 12    | Mon, Apr 29 | Final Assessment | - |
+|  4    | Mon, Apr  1 | Cesar Chavez Day Campus Holiday | |
+|  5    | Wed, Apr  3 | [Lesson 6 - React Native] | [By Breed] |
+|  6    | Mon, Apr  8 | [Lesson 7 - Native Components] | - |
+|  7    | Wed, Apr 10 | [Lesson 8 - Flex] | - |
+|  8    | Mon, Apr 15 | [Lesson 9 - Navigation] | - |
+|  9    | Wed, Apr 17 | [Lesson 10 - Tab Bar] | [Assignment 4 Final Project] |
+| 10    | Mon, Apr 22 | [Lesson 11 - Native Elements] | - |
+| 11    | Wed, Apr 24 | [React Native APIs] - [Redux] | - |
+| 12    | Mon, Apr 29 | Lab | - |
 | 13    | Wed, May  1 | Final Presentation | - |
 | 14    | Mon, May  6 | Final Presentation | - |
 | 15    | Wed, May  8 | Final Presentation | - |
