@@ -28,6 +28,8 @@ Discussion
 - What makes a good desktop app?
 - What makes a good mobile app?
 
+Review these ideas by reading this article: https://medium.com/@latestwebs/what-is-the-difference-between-mobile-and-desktop-app-9eb59b762857
+
 <!-- > -->
 
 ### Explore Ideas for Native Apps
