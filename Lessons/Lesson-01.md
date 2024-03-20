@@ -78,7 +78,7 @@ There are three tutorials listed by level of difficulty. Your goal is complete o
 ## Additional Resources
 
 - [Hacker News Hiring Trends: React, Vue, Angular, Next](https://npm-stat.com/charts.html?package=react&package=vue&package=angular&package=Svelte&package=next&from=2019-06-01&to=2022-01-31)
-- [State of JS 2020](https://2020.stateofjs.com/en-US/)
+- [State of JS](https://stateofjs.com/en-US)
 - [React](https://reactjs.org)
 - [Redux](https://redux.js.org)
 - [Assignment 1 - React Redux Tutorial](../Assignments/Assignment-1-react-redux.md)
