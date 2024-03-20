@@ -65,7 +65,7 @@ Considering that native applications manage data, Redux is proposed as a mature 
 
 To get started you will work on one of the React + Redux tutorials. There are three to choose from. You may have done one of these in the previous class, choose a different tutorial to complete for this assignment. 
 
-**Why are covering redux again?** Redux is a complicated library. It has a lot of potential. Using it once is not enough to really get a handle on what it is doing and where and why you would use it. Doing another Redux tutorial will help you internalize redux and really own the concepts! 
+**Why are we covering redux again?** Redux is a complicated library. It has a lot of potential. Using it once is not enough to really get a handle on what it is doing and where and why you would use it. Doing another Redux tutorial will help you internalize redux and really own the concepts! 
 
 <!-- > -->
 
