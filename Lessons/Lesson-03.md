@@ -216,6 +216,41 @@ Use this command to test your electron app in development mode:
 
 You'll use development mode while to test, modify, and add new features to your app. 
 
+## Note! 
+
+When I tested this recently I had some trouble getting Electron to run with a React project. I was seeing an error: 
+
+```
+Error [ERR_REQUIRE_ESM]: require() of ES Module ... not supported
+```
+
+I needed to the following to my package.json. 
+
+```JSON
+  "type": "module",
+```
+
+This fixed the problem but created another problem! After doing this I started seeing errors like: 
+
+```
+Module not found: Error: Can't resolve './App' in '.../src'
+[0] Did you mean 'App.js'?
+```
+
+I needed to change my import statements from: 
+
+```JS
+import App from './App';
+```
+
+To:
+
+```JS
+import App from './App.js';
+```
+
+Super annoying! I haven't found an easy work around to this issue yet! The examples here worked in the past, so this problem may not affect you. If it does try the fix above or talk to me. 
+
 <!-- > -->
 
 ## What is Dog Fooding? 
