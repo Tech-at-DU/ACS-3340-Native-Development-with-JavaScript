@@ -203,7 +203,7 @@ Add the following to `package.json`:
 **Add the following** to `"scripts"` in `package.json`: 
 
 ```JSON
-"electron-dev": "concurrently \"BROWSER=none yarn start\" \"wait-on http://127.0.0.1:3000 && electron .\""
+"electron-dev": "concurrently \"BROWSER=none npm start\" \"wait-on http://127.0.0.1:3000 && electron .\""
 ```
 
 <!-- > -->
