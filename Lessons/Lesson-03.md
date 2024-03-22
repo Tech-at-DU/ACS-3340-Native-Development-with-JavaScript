@@ -138,9 +138,9 @@ Below I've summarized the steps from this [article](https://www.codementor.io/@r
 Use one of your existing projects created with creat-react-app. Add the electron dependencies: 
 
 ```
-npm install electron electron-builder --dev
-npm install wait-on concurrently --dev
-npm install electron-is-dev
+npm install electron electron-builder --save-dev
+npm install wait-on concurrently --save-dev
+npm install electron electron-is-dev --save-dev
 ```
 
 <!-- > -->
