@@ -116,7 +116,7 @@ You will always wrap your top-level component, usually App, in the `<Provider>` 
 
 The code above came from `index.js` in my React project. 
 
-## Rudux Toolkit
+## Redux Toolkit
 
 React Toolkit provides utilities and a framework to use Redux in React projects. It's here that you will define the reducers and actions that we talked about above! 
 
