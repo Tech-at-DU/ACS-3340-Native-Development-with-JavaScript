@@ -140,7 +140,7 @@ Use one of your existing projects created with creat-react-app. Add the electron
 ```
 npm install electron electron-builder --save-dev
 npm install wait-on concurrently --save-dev
-npm install electron electron-is-dev --save-dev
+npm install electron-is-dev --save-dev
 ```
 
 <!-- > -->
