@@ -287,7 +287,7 @@ Take notes and make changes to the work. Keep a list of all of these changes.
 
 Follow the instructions above. These should get your Electron app running on the desktop in dev mode. This is what you'll use when you are working locally and making changes. **I should be able to run the project you submit to Gradescope using `npm run electron-dev` to satisfy this assignment!**
 
-See lessons 4 and 5 for stretch challnges! 
+See lessons 4 and 5 for stretch challenges! 
 
 <!-- > -->
 
