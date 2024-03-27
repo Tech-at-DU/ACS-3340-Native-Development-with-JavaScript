@@ -101,7 +101,7 @@ In the lesson today you will set this app up as a desktop app and get it working
 
 ✋ 🤔
 
-During this lesson, you will be building desktop applications. This will generate latge binary files. You don't want to push these to your GitHub repo!
+During this lesson, you will be building desktop applications. This will generate large binary files. You don't want to push these to your GitHub repo! You must add a `.gitignore`!
 
 <!-- > -->
 
@@ -127,7 +127,7 @@ Electron Builder is a tool that handles a lot of the work of building your elect
 
 <!-- > -->
 
-Note! React apps have some special requirements, they are a little more than simple web pages. They also require a special build process. The steps below create an electron app using a Create React App (CRA) project.
+Note! React apps have some special requirements, they are a little more than simple web pages. The steps below create an electron app using a Create React App (CRA) project.
 
 <!-- > -->
 
@@ -224,7 +224,7 @@ When I tested this recently I had some trouble getting Electron to run with a Re
 Error [ERR_REQUIRE_ESM]: require() of ES Module ... not supported
 ```
 
-I needed to the following to my package.json. 
+I think this was happening becuase I was using the latest version of Node.js. I needed to the following to my package.json. 
 
 ```JSON
   "type": "module",
@@ -285,7 +285,9 @@ Take notes and make changes to the work. Keep a list of all of these changes.
 
 <!-- > -->
 
-Follow the instructions above. These should get your Electron app running on the desktop in dev mode. This is what you'll use when you are working locally and making changes.
+Follow the instructions above. These should get your Electron app running on the desktop in dev mode. This is what you'll use when you are working locally and making changes. **I should be able to run the project you submit to Gradescope using `npm run electron-dev` to satisfy this assignment!**
+
+See lessons 4 and 5 for stretch challnges! 
 
 <!-- > -->
 
