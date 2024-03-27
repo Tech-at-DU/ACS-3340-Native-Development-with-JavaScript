@@ -33,7 +33,7 @@ Students by the end of the course will be able to:
 
 **Class Times:** Monday, Wednesday 9:30 AM to 12:15 PM (13 class sessions)
 
-| Class |    Date     |   Topics   |  Assignment |
+| Class |    Date     |   Lesson   |  Assignment |
 |:-----:|:-----------:|:----------:|:-----------:|
 |  1    | Wed, Mar 20 | [Lesson 1 - Intro] | [Assignment 1 React/Redux Tutorial] |
 |  2    | Mon, Mar 25 | [Lesson 2 - Redux Review] | - |
