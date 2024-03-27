@@ -37,7 +37,7 @@ Students by the end of the course will be able to:
 |:-----:|:-----------:|:----------:|:-----------:|
 |  1    | Wed, Mar 20 | [Lesson 1 - Intro] | [Assignment 1 React/Redux Tutorial] |
 |  2    | Mon, Mar 25 | [Lesson 2 - Redux Review] | - |
-|  3    | Wed, Mar 27 | [Lesson 3 - Electron] • [Lesson 4 - Electron Build] • [Lesson 5 - Processes] | [Assignment 2 Desktop Application] |
+|  3    | Wed, Mar 27 | [Lesson 3 - Electron] (Optional: [Lesson 4 - Electron Build] • [Lesson 5 - Processes]) | [Assignment 2 Desktop Application] |
 |  4    | Mon, Apr  1 | Cesar Chavez Day Campus Holiday | |
 |  5    | Wed, Apr  3 | [Lesson 6 - React Native] | [By Breed] |
 |  6    | Mon, Apr  8 | [Lesson 7 - Native Components] | - |
