@@ -17,6 +17,67 @@
 - Copy this array: `['four', 'score', 'and']`, and add the string `'seven'`
 - Copy this object `{ pi: 3.14, gr: 1.618 }` and add property: `en: 2.718`
 
+<!-- > --> 
+
+Follow up the review questions with these cope snippets: 
+
+```JS
+// Arrays, Objects, and Functions are stored as references
+// Sometimes we need to create a copy. 
+
+const a_obj = {a: 1, b: 2}
+const b_obj = a_obj
+
+console.log(a_obj === b_obj) // true since both are references to the same object
+
+const c_obj = {...a_obj} // Creates a copy of a_obj. 
+// This has the same contents but is a new and unique object
+console.log(a_obj === c_obj) // false since each is unique! 
+
+// Copy arrays the same way
+const arr = ['four', 'score', 'and']
+const arr2 = [...arr, 'seven'] // copy arr and add a new value! 
+
+console.log(arr)
+console.log(arr2)
+
+// Copy objects, add and update values 
+const obj = { pi: 3.14, gr: 1.618, arr, func: () => {} }
+const obj2 = { ...obj, en: 2.718 } 
+const obj3 = { ...obj, pi:3.14159265359 } 
+console.log(obj)
+console.log(obj2)
+console.log(obj3)
+
+// You might copy an object but the references it stores will not be copied! 
+const arrOfPi = [obj, obj, obj]
+
+// One way to create a deep copy is convert the object to a JSON string
+// Call this serialization. You can "reconstitute" the JSON string into 
+// a JS object usign JSON.parse()
+const copyOf = JSON.parse(JSON.stringify(arrOfPi))
+
+// This is a deep copy. 
+console.log(copyOf)
+
+// Somethings can't be serialized. Classes and methods stored in 
+// objects can't serialized. Notice that the function is missing! 
+// Functions can not be serialized! 
+
+// Classes can't be serialized
+class Timer {
+	constructor() {
+		this.name = ''
+	}
+
+	someMethod() {
+
+	}
+}
+
+console.log(JSON.stringify(Timer)) // undefined
+```
+
 <!-- > -->
 
 ## What is Electron? ⚡️
