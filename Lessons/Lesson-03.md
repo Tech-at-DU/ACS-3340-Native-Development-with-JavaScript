@@ -66,13 +66,13 @@ console.log(copyOf)
 
 // Classes can't be serialized
 class Timer {
-	constructor() {
-		this.name = ''
-	}
-
-	someMethod() {
-
-	}
+  constructor() {
+    this.name = ''
+  }
+  
+  someMethod() {
+  
+  }
 }
 
 console.log(JSON.stringify(Timer)) // undefined
