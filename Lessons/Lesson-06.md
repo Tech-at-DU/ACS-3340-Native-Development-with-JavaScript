@@ -106,11 +106,11 @@ Mobile screens are small you'll always be scrolling. There are two ways to handl
 
 <!-- > -->
 
-ScrollView scrolls things when things take up more space than the ScrollView displays.
+ScrollView scrolls things when they take up more space than the ScrollView displays. This means that all of those things are rendered. 
 
 <!-- > -->
 
-Why is there a ListView and why would you use one?
+Why is there a ListView and why would you use that instead of scrollview?
 
 <!-- > -->
 
@@ -124,7 +124,7 @@ People thought it was great. There was a developer somewhere that needed to solv
 
 <!-- > -->
 
-Seriously, imagine creating 10,000 views and loading them in RAM. Sounds like a memory problem. 
+Seriously, imagine creating 10,000 views and loading them in RAM. Sounds like we might have memory problem. 
 
 Heck! imagine rendering the pixels that made up a list of table cells where each cell is 40 pixels tall...
 
