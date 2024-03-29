@@ -194,16 +194,16 @@ Start the project:
 
 ```
 npx expo start
-```
-
-**Note!** You may get a message that you need to install or update Xcode. Xcode is a large download and it may take a while! 
-
-Xocde is Apple's developer tool and is used to create apps for Apple devices. 
+``` 
 
 The terminal should show a QR code and a list of commands you can run. To see the project live you can:
 
 - Open it on your mobile phone by scanning the QR code with your camera. It will ask you to install the Expo Go app.
-- You can press a, i, or w to open the app in the Android or iOS simulator, or open it on the web. To use the simulator you must install it! 
+- You can press a, i, or w to open the app in the Android or iOS simulator, or open it on the web. To use the simulator you must install it!
+
+**Note!** You may get a message that you need to install or update Xcode. Xcode is a large download and it may take a while! 
+
+Xocde is Apple's developer tool and is used to create apps for Apple devices. Xcode includes an iOS simulator, which allows you to simulate running an iOS app on your desktop.
 
 <!-- > -->
 
