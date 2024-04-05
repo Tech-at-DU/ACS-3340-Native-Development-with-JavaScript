@@ -58,6 +58,8 @@ With React Native you will be using Flex to manage the layout of elements. Here 
 
 > Flexbox works the same way in React Native as it does in CSS on the web, with a few exceptions. The defaults are different, with flexDirection defaulting to column instead of row, alignContent defaulting to flex-start instead of stretch, flexShrink defaulting to 0 instead of 1, and the flex parameter only supporting a single number.
 
+Take a look at this page and dsicuss: 
+
 https://reactnative.dev/docs/flexbox
 
 <!-- > -->
