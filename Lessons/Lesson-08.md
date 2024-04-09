@@ -193,18 +193,106 @@ https://developer.apple.com/design/human-interface-guidelines/inputs/touchscreen
 React Native provides a few interactive components. 
 
 - Button - Good for basic button
-- Touchables - Good when the button isn't enough or can't be styled to meet your needs. 
- - TouchableHighlight
- - TouchableNativeFeedback
- - TouchableOpacity
- - TouchableWithoutNativeFeedback
+- Pressable
 - TextInput
 
 <!-- > -->
 
-Use the 'Touchable' components to create custom buttons and things you can tap to handle input. 
+Use the 'Pressable' components to create custom buttons and things you can tap to handle input. 
 
-https://reactnative.dev/docs/handling-touches
+Imagine the boxes in the previous example needed to be "pressable". That is, something would happen when they are tapped. To do this, it woudl be best to have another component. 
+
+Replace the box `View`s with a `Box` component: 
+
+```JS
+import { View, Text, Pressable, StyleSheet } from 'react-native'
+
+function Box() {
+  return (
+    <Pressable 
+      style={styles.container}
+      onPress={() => console.log("Tap!")}  
+    >
+      <Text>Tap Me</Text>
+    </Pressable>
+  )
+}
+
+export default Box
+
+const styles = StyleSheet.create({
+  container: {
+    backgroundColor: 'red',
+    flexBasis: 180,
+    flexGrow: 1,
+    height: 300
+  }
+})
+```
+
+In the `Colors` component add replace the `View`s with `Box`es:
+
+```JS
+function Colors() {
+  return (
+    <ScrollView>
+      <View style={styles.container}>
+        {/* <View style={styles.box}></View>
+        <View style={styles.box}></View>
+        <View style={styles.box}></View>
+        <View style={styles.box}></View>
+        <View style={styles.box}></View>
+        <View style={styles.box}></View>
+        <View style={styles.box}></View> */}
+        <Box />
+        <Box />
+        <Box />
+        <Box />
+        <Box />
+        <Box />
+        <Box />
+      </View>
+    </ScrollView>
+  )
+}
+```
+
+**Challenge!** use flex to center the `Text` in each `Box` inside the `Pressable`!
+
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+-
+
+In the Box styles, in the `container` property add: 
+
+```JS
+justifyContent: 'center',
+alignItems: 'center'
+```
+
+This centers the children on the main axis, vertical, and cross axis, horizontal. 
+
+You can pass props to these boxes to get more functionality, here the example is kept simple. 
+
+https://reactnative.dev/docs/pressable
 
 If you plan on using more complex gestures you should read more about gestures and how they work: 
 
