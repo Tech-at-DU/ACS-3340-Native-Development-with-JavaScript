@@ -117,12 +117,12 @@ export default Colors
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1, // make this container expand to fill the space
     display: 'flex', // make this a flex container
     flexDirection: 'row', // set direction to row
     flexWrap: 'wrap', // wrap boxes
     gap: 5, // space between rows and columns
-    padding: 5 // add some space around the outside
+    padding: 5, // add some space around the outside
+    backgroundColor: 'lightgray'
   },
   box: {
     backgroundColor: 'red',
@@ -142,7 +142,11 @@ Use `flexBasis` like width. Replacing `width: 100` with `flexBasis: 100`. This l
 
 `flexBasis` determines the size of the flex item on the main axis. In this case it applies to width becuase the direction is row.
 
-Flex items can grow and shrink. This determins what the flex container does with the left over space. In 
+Flex items can grow and shrink. This determines what the flex container does with the left over space. In example image you can see there is extra space on the right, the boxes wrap when there isn't enough space left on the right. 
+
+Add `flexGrow: 1` now the boxes fill out each row. The flex container takes the extra space and divides it between each of the boxes in a row! The app might look like this now: 
+
+<img src="./images/flex-example-2.png" style="width: 200px; border: 1px solid"/>
 
 Read about this in the docs: 
 
