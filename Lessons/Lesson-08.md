@@ -132,6 +132,10 @@ const styles = StyleSheet.create({
 })
 ```
 
+This gives us something like this: 
+
+![flex-example-1](./images/flex-example-1.png)
+
 <!-- > -->
 
 ## Handling Input 
