@@ -292,6 +292,24 @@ This centers the children on the main axis, vertical, and cross axis, horizontal
 
 You can pass props to these boxes to get more functionality, here the example is kept simple. 
 
+Providing user feedback can be handled like this: 
+
+```JS
+<Pressable 
+  style={({pressed}) => [
+    styles.container, 
+    {
+      backgroundColor: pressed ? 'green' : styles.container.backgroundColor
+    }
+  ]}
+  onPress={() => console.log("Tap!")}  
+>
+  <Text>Tap Me</Text>
+</Pressable>
+```
+
+Here, `style` takes a function that recieves an object with a `pressed` property. This true, if the pressable is pressed. This function returns an array of style objects. The second object in this array is overriding the `backgroundColor` to change the color when pressed is true! 
+
 https://reactnative.dev/docs/pressable
 
 If you plan on using more complex gestures you should read more about gestures and how they work: 
