@@ -152,6 +152,28 @@ Read about this in the docs:
 
 https://reactnative.dev/docs/flexbox#flex-basis-grow-and-shrink
 
+<!-- > --> 
+
+Use `ScrollView` to scroll content. Change the height of boxes to `300` and change `flexBasis: 180`. This should give you boxes that run off the bottom of the screen in two columns. Imagine the size of the screen is 393px, two boxes is 360. Three boxes would be 540, so the boxes wrap at 2 and the extra space is shared. The height is 852, four boxes at 300 height is 1200 which runs off the bottom of the screen. 
+
+Wrap everything in a `ScrollView`:
+
+```JS
+<ScrollView>
+  <View style={styles.container}>
+    <View style={styles.box}></View>
+    <View style={styles.box}></View>
+    <View style={styles.box}></View>
+    <View style={styles.box}></View>
+    <View style={styles.box}></View>
+    <View style={styles.box}></View>
+    <View style={styles.box}></View>
+  </View>
+</ScrollView>
+```
+
+Everything should now scroll allowing access to the boxes that fall off the bottom of the screen. 
+
 <!-- > -->
 
 ## Handling Input 
