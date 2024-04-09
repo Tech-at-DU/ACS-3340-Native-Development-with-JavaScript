@@ -134,6 +134,8 @@ const styles = StyleSheet.create({
 
 This gives us something like this: 
 
+<img src="./images/flex-example-1.png" style="width: 200px"/>
+
 ![flex-example-1](./images/flex-example-1.png)
 
 <!-- > -->
