@@ -134,9 +134,19 @@ const styles = StyleSheet.create({
 
 This gives us something like this: 
 
-<img src="./images/flex-example-1.png" style="width: 200px"/>
+<img src="./images/flex-example-1.png" style="width: 200px; border: 1px solid"/>
 
-![flex-example-1](./images/flex-example-1.png)
+You can use other properties of Flex to make objects take up more of less space. 
+
+Use `flexBasis` like width. Replacing `width: 100` with `flexBasis: 100`. This looks the same!
+
+`flexBasis` determines the size of the flex item on the main axis. In this case it applies to width becuase the direction is row.
+
+Flex items can grow and shrink. This determins what the flex container does with the left over space. In 
+
+Read about this in the docs: 
+
+https://reactnative.dev/docs/flexbox#flex-basis-grow-and-shrink
 
 <!-- > -->
 
