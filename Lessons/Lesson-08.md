@@ -94,6 +94,46 @@ Sometimes you may need to know the size of the window. This can be useful when y
 
 <!-- > -->
 
+Arrange a group of "boxes" with flex. 
+
+```JS
+import { View, Text, StyleSheet, ScrollView } from 'react-native'
+
+function Colors() {
+  return (
+    <View style={styles.container}> // flex container
+      <View style={styles.box}></View> // Some boxes 100 x 100
+      <View style={styles.box}></View>
+      <View style={styles.box}></View>
+      <View style={styles.box}></View>
+      <View style={styles.box}></View>
+      <View style={styles.box}></View>
+      <View style={styles.box}></View>
+    </View>
+  )
+}
+
+export default Colors
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1, // make this container expand to fill the space
+    display: 'flex', // make this a flex container
+    flexDirection: 'row', // set direction to row
+    flexWrap: 'wrap', // wrap boxes
+    gap: 5, // space between rows and columns
+    padding: 5 // add some space around the outside
+  },
+  box: {
+    backgroundColor: 'red',
+    width: 100, // each box is 100
+    height: 100 // by 100
+  }
+})
+```
+
+<!-- > -->
+
 ## Handling Input 
 
 <!-- > -->
