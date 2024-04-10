@@ -174,6 +174,8 @@ Wrap everything in a `ScrollView`:
 
 Everything should now scroll allowing access to the boxes that fall off the bottom of the screen. 
 
+Read more about Flex here: https://www.joshwcomeau.com/css/interactive-guide-to-flexbox/
+
 <!-- > -->
 
 ## Handling Input 
