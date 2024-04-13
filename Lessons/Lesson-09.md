@@ -167,9 +167,9 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 function HomeScreen() {
  return (
- <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
- <Text>Home Screen</Text>
- </View>
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+   <Text>Home Screen</Text>
+  </View>
  );
 }
 
@@ -177,11 +177,11 @@ const Stack = createStackNavigator();
 
 function App() {
  return (
- <NavigationContainer>
- <Stack.Navigator>
- <Stack.Screen name="Home" component={HomeScreen} />
- </Stack.Navigator>
- </NavigationContainer>
+  <NavigationContainer>
+   <Stack.Navigator>
+    <Stack.Screen name="Home" component={HomeScreen} />
+   </Stack.Navigator>
+  </NavigationContainer>
  );
 }
 
@@ -207,9 +207,9 @@ Add another Component screen. You can add the code below to `App.js` or create a
 ```JS
 function DetailsScreen() {
  return (
- <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
- <Text>Details Screen</Text>
- </View>
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+   <Text>Details Screen</Text>
+  </View>
  );
 }
 ```
@@ -219,12 +219,12 @@ Now add a route to that screen in your stack navigator:
 ```JS
 function App() {
  return (
- <NavigationContainer>
- <Stack.Navigator initialRouteName="Home">
- <Stack.Screen name="Home" component={HomeScreen} />
- <Stack.Screen name="Details" component={DetailsScreen} />
- </Stack.Navigator>
- </NavigationContainer>
+  <NavigationContainer>
+   <Stack.Navigator initialRouteName="Home">
+    <Stack.Screen name="Home" component={HomeScreen} />
+    <Stack.Screen name="Details" component={DetailsScreen} />
+   </Stack.Navigator>
+  </NavigationContainer>
  );
 }
 ```
@@ -245,13 +245,13 @@ import { createStackNavigator } from '@react-navigation/stack';
 
 function HomeScreen({ navigation }) {
  return (
- <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
- <Text>Home Screen</Text>
- <Button
- title="Go to Details"
- onPress={() => navigation.navigate('Details')}
- />
- </View>
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+   <Text>Home Screen</Text>
+   <Button
+    title="Go to Details"
+    onPress={() => navigation.navigate('Details')}
+   />
+  </View>
  );
 }
 ...
