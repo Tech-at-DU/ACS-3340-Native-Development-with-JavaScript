@@ -142,23 +142,7 @@ After you confirm everything is working continue!
 
 ```
 npm install @react-navigation/native
-```
-
-**Install Expo dependencies**
-
-```
-npm install @react-native-community/masked-view
-```
-
-?????????
-```
-expo install react-native-reanimated react-native-screens @react-native-community/masked-view
-```
-
-I had a problem installing all of these at the same time, I tried installing them in two passes like this: 
-
-```
-expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context
+npx expo install react-native-screens react-native-safe-area-context
 ```
 
 **Creating a Stack View** 
