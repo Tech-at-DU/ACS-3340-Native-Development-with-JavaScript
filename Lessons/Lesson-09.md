@@ -269,13 +269,13 @@ Navigating to a Screen creates an instance of that screen and adds it to the nav
 ...
 function DetailsScreen({ navigation }) {
  return (
- <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
- <Text>Details Screen</Text>
- <Button
- title="Go to Details... again"
- onPress={() => navigation.push('Details')}
- />
- </View>
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+   <Text>Details Screen</Text>
+   <Button
+    title="Go to Details... again"
+    onPress={() => navigation.push('Details')}
+   />
+  </View>
  );
 }
 ...
@@ -293,15 +293,15 @@ Add two buttons in the Details Screen. The first navigate to Home. The second re
 ...
 function DetailsScreen({ navigation }) {
  return (
- <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
- <Text>Details Screen</Text>
- <Button
- title="Go to Details... again"
- onPress={() => navigation.push('Details')}
- />
- <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
- <Button title="Go back" onPress={() => navigation.goBack()} />
- </View>
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+   <Text>Details Screen</Text>
+   <Button
+    title="Go to Details... again"
+    onPress={() => navigation.push('Details')}
+   />
+   <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+   <Button title="Go back" onPress={() => navigation.goBack()} />
+  </View>
  );
 }
 ...
@@ -321,19 +321,19 @@ Pass params from home to details. The second parameter to `navigation.navigate('
 ...
 function HomeScreen({ navigation }) {
  return (
- <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
- <Text>Home Screen</Text>
- <Button
- title="Go to Details"
- onPress={() => {
- /* 1. Navigate to the Details route with params */
- navigation.navigate('Details', {
- itemId: 86,
- otherParam: 'anything you want here',
- });
- }}
- />
- </View>
+  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+   <Text>Home Screen</Text>
+   <Button
+    title="Go to Details"
+    onPress={() => {
+     /* 1. Navigate to the Details route with params */
+     navigation.navigate('Details', {
+      itemId: 86,
+      otherParam: 'anything you want here',
+     });
+    }}
+   />
+  </View>
  );
 }
 ...
@@ -350,19 +350,19 @@ function DetailsScreen({ route, navigation }) {
 
  return (
  <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
- <Text>Details Screen</Text>
- <Text>itemId: {JSON.stringify(itemId)}</Text>
- <Text>otherParam: {JSON.stringify(otherParam)}</Text>
- <Button
- title="Go to Details... again"
- onPress={() =>
- navigation.push('Details', {
- itemId: Math.floor(Math.random() * 100),
- })
- }
- />
- <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
- <Button title="Go back" onPress={() => navigation.goBack()} />
+  <Text>Details Screen</Text>
+  <Text>itemId: {JSON.stringify(itemId)}</Text>
+  <Text>otherParam: {JSON.stringify(otherParam)}</Text>
+  <Button
+   title="Go to Details... again"
+   onPress={() =>
+    navigation.push('Details', {
+    itemId: Math.floor(Math.random() * 100),
+   })
+  }
+  />
+  <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+  <Button title="Go back" onPress={() => navigation.goBack()} />
  </View>
  );
 }
@@ -390,14 +390,14 @@ Set some more styles for the navigation bar:
  name="Home" 
  component={HomeScreen} 
  options={{ 
- title: "Hello World",
- headerStyle: {
- backgroundColor: '#f4511e'
+  title: "Hello World",
+  headerStyle: {
+  backgroundColor: '#f4511e'
  },
  headerTintColor: '#fff',
  headerTitleStyle: {
- fontWeight: 'bold',
- fontSize: 24
+  fontWeight: 'bold',
+  fontSize: 24
  }
  }}
 />
@@ -412,12 +412,12 @@ You can set styles across all views by applying them to the navigator.
 <Stack.Navigator 
  initialRouteName="Home"
  screenOptions={{
- headerStyle: {
- backgroundColor: '#e1154f',
+  headerStyle: {
+  backgroundColor: '#e1154f',
  },
  headerTintColor: '#fff',
  headerTitleStyle: {
- fontWeight: 'bold',
+  fontWeight: 'bold',
  },
  }}
 >
