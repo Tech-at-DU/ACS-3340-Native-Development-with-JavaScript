@@ -147,6 +147,8 @@ npx expo install react-native-screens react-native-safe-area-context
 
 **Creating a Stack View** 
 
+Follow the guide here: https://reactnavigation.org/docs/stack-navigator
+
 Create a root component that will act as the main navigator. This can be the App component. If you're using a single Stack it should be App. 
 
 ```
