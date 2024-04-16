@@ -52,23 +52,11 @@ Navigate to your project directory:
 cd tabbed-example
 ```
 
-Install the npm dependancies:
+Install dependancies:
 
 ```
 npm install @react-navigation/native
-```
-
-Install the expo dependancies:
-
-```
-expo install react-native-reanimated react-native-screens @react-native-community/masked-view
-```
-
-<!-- > -->
-
-Get the bottom tabs:
-
-```
+npx expo install react-native-screens react-native-safe-area-context
 npm install @react-navigation/bottom-tabs
 ```
 
