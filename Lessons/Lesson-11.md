@@ -57,10 +57,10 @@ export default function App() {
     <SafeAreaProvider>
     	...
     	<Avatar
-    		overlayContainerStyle={{backgroundColor: '#eee'}}
-    		size="large"
-    		rounded
-    		source={require('./images/dog.png')}
+      	overlayContainerStyle={{backgroundColor: '#eee'}}
+      	size="large"
+      	rounded
+      	source={require('./images/dog.png')}
     	/>
     	...
     </SafeAreaProvider>
