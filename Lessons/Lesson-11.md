@@ -55,14 +55,14 @@ import { Avatar } from 'react-native-elements';
 export default function App() {
   return (
     <SafeAreaProvider>
-			...
-			<Avatar
-				overlayContainerStyle={{backgroundColor: '#eee'}}
-				size="large"
-				rounded
-				source={require('./images/dog.png')}
-			/>
-			...
+    	...
+    	<Avatar
+    		overlayContainerStyle={{backgroundColor: '#eee'}}
+    		size="large"
+    		rounded
+    		source={require('./images/dog.png')}
+    	/>
+    	...
     </SafeAreaProvider>
   );
 }
