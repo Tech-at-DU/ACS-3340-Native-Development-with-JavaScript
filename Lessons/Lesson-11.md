@@ -9,13 +9,13 @@ Quick take a look at this article on React Native Components: https://www.codein
 
 React native ELements is a library of cross platform UI elements. This library fills in many of the gaps in the default React Native components making it quicker and easier to spin up mobile applications.
 
-## Lets explore of Native Libs 
+## Lets explore Native Libs 
 
 - https://reactnativeelements.com
 - https://nativebase.io
 - https://www.creative-tim.com/product/material-kit-react-native
 
-With your group create a demo app that demonstrating the lib assigned to your group. 
+With your group create a demo app that demonstrating the lib assigned to your group. The goal is to give everyone else a background on your library and how to get started with it. 
 
 <!-- > -->
 
