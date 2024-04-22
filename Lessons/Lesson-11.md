@@ -13,7 +13,9 @@ React native ELements is a library of cross platform UI elements. This library f
 
 - https://reactnativeelements.com
 - https://nativebase.io
+- https://www.creative-tim.com/product/material-kit-react-native
 
+With your group create a demo app that demonstrating the lib assigned to your group. 
 
 <!-- > -->
 
