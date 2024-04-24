@@ -252,13 +252,9 @@ Then display it below:
 </SafeAreaView>
 ```
 
-### Challenges 
-
- 
-
 ## Resources 
 
-- 
+- https://redux.js.org/introduction/getting-started
 
 
 
