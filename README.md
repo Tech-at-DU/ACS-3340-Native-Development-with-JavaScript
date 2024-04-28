@@ -47,7 +47,7 @@ Students by the end of the course will be able to:
 | 10    | Mon, Apr 22 | [Lesson 11 - Native Elements] | - |
 | 11    | Wed, Apr 24 | [React Native APIs] - [Redux] | - |
 | 12    | Mon, Apr 29 | Lab | - |
-| 13    | Wed, May  1 | Progressive Web Apps | - |
+| 13    | Wed, May  1 | [Progressive Web Apps] | - |
 | 14    | Mon, May  6 | Progressive Web Apps | - |
 | 15    | Wed, May  8 | Final Presentation | - |
 
@@ -64,6 +64,8 @@ Students by the end of the course will be able to:
 [Lesson 11 - Native Elements]: Lessons/Lesson-11.md
 [React Native APIs]: Lessons/Lesson-12.md
 [Redux]: Lessons/Lesson-13.md
+
+[Progressive Web Apps]: Lessons/pwa-part-1.md
 
 [Assignment 1 React/Redux Tutorial]: Assignments/Assignment-1-react-redux.md
 [Assignment 1]: Assignments/Assignment-1-react-redux.md
