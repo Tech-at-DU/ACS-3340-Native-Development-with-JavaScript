@@ -194,3 +194,5 @@ This simple example covers the fundamental aspects of service workers, including
 
 Read more about Service workers: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Tutorials/js13kGames/Offline_Service_workers
 
+Learn more about progressive web apps by following this tutorial: https://developer.mozilla.org/en-US/docs/Web/Progressive_web_apps/Tutorials
+
