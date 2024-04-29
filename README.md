@@ -46,8 +46,8 @@ Students by the end of the course will be able to:
 |  9    | Wed, Apr 17 | [Lesson 10 - Tab Bar] | [Assignment 4 Final Project] |
 | 10    | Mon, Apr 22 | [Lesson 11 - Native Elements] | - |
 | 11    | Wed, Apr 24 | [React Native APIs] - [Redux] | - |
-| 12    | Mon, Apr 29 | Lab | - |
-| 13    | Wed, May  1 | [Progressive Web Apps] | - |
+| 12    | Mon, Apr 29 | [Progressive Web Apps] | - |
+| 13    | Wed, May  1 | Lab | - |
 | 14    | Mon, May  6 | Progressive Web Apps | - |
 | 15    | Wed, May  8 | Final Presentation | - |
 
