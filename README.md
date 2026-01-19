@@ -29,29 +29,28 @@ Students by the end of the course will be able to:
 
 ## Schedule
 
-**Course Dates:** March 20, 2023 to May 8, 2023
+**Course Dates:** January 20, 2026 to March 6, 2026
 
-**Class Times:** Monday, Wednesday 9:30 AM to 12:15 PM (13 class sessions)
+**Class Times:** Tuesday, Thursday 4:00 PM to 6:45 PM
 
 | Class |    Date     |   Lesson   |  Assignment |
 |:-----:|:-----------:|:----------:|:-----------:|
-|  1    | Wed, Mar 20 | [Lesson 1 - Intro] | [Assignment 1 React/Redux Tutorial] |
-|  2    | Mon, Mar 25 | [Lesson 2 - Redux Review] | - |
-|  3    | Wed, Mar 27 | [Lesson 3 - Electron] (Optional: [Lesson 4 - Electron Build] • [Lesson 5 - Processes]) | [Assignment 2 Desktop Application] |
-|  4    | Mon, Apr  1 | Cesar Chavez Day Campus Holiday | |
-|  5    | Wed, Apr  3 | [Lesson 6 - React Native] | [By Breed] |
-|  6    | Mon, Apr  8 | [Lesson 7 - Native Components] | - |
-|  7    | Wed, Apr 10 | [Lesson 8 - Flex] | - |
-|  8    | Mon, Apr 15 | [Lesson 9 - Navigation] | - |
-|  9    | Wed, Apr 17 | [Lesson 10 - Tab Bar] | [Assignment 4 Final Project] |
-| 10    | Mon, Apr 22 | [Lesson 11 - Native Elements] | - |
-| 11    | Wed, Apr 24 | [React Native APIs] - [Redux] | - |
-| 12    | Mon, Apr 29 | [Progressive Web Apps] | - |
-| 13    | Wed, May  1 | Lab | - |
-| 14    | Mon, May  6 | Progressive Web Apps | - |
-| 15    | Wed, May  8 | Final Presentation | - |
+|  1    | Tue, Jan 20 | [Lesson 1 - Intro] | [Assignment 1 React/Redux Tutorial] |
+|  2    | Thr, Jan 22 | [Lesson 2 - Redux Review] | - |
+|  3    | Tue, Jan 27 | [Lesson 3 - Electron] (Optional: [Lesson 4 - Electron Build] • [Lesson 5 - Processes]) | [Assignment 2 Desktop Application] |
+|  4    | Thr, Jan 29 | [Lesson 6 - React Native] | [By Breed] |
+|  5    | Tue, Feb  3 | [Lesson 7 - Native Components] |  |
+|  6    | Thr, Feb  5 | [Lesson 8 - Flex] | - |
+|  7    | Tue, Feb 10 | [Lesson 9 - Navigation] | - |
+|  8    | Thr, Feb 12 | [Lesson 10 - Tab Bar] | - |
+|  9    | Tue, Feb 17 | [Lesson 11 - Native Elements] | [Assignment 4 Final Project] |
+| 10    | Thr, Feb 19 | [React Native APIs] | - |
+| 11    | Tue, Feb 24 |  - [Redux] | - |
+| 12    | Thr, Feb 26 | [Progressive Web Apps] | - |
+| 13    | Tue, Mar  3 | Lab | - |
+| 14    | Thr, Mar  5 | Progressive Web Apps | - |
 
-[Lesson 1 - Intro]: Lessons/Lesson-01.md
+[Lesson 1 - Intro]: Lessons/Lesson-01.mds
 [Lesson 2 - Redux Review]: Lessons/Lesson-02.md
 [Lesson 3 - Electron]: Lessons/Lesson-03.md
 [Lesson 4 - Electron Build]: Lessons/Lesson-04.md
