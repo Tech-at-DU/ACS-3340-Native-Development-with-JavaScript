@@ -175,7 +175,7 @@ For these examples, you'll be using a data set that has information about cat an
 Initialize a new React Native Project with expo. 
 
 ```
-npx create-expo-app by-breed
+npx create-expo-app@latest by-breed --template blank
 ```
 
 <!-- > -->
