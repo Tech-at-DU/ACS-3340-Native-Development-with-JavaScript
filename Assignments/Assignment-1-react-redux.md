@@ -6,9 +6,10 @@ Review, practice and brush up your React and Redux skills by completing one of t
 
 There are three tutorials listed by level of difficulty. Your goal is complete one of these. All of tutorials use React and Redux and range from medium to medium difficult complexity.
 
-1. [Password App](https://github.com/Tech-at-DU/React-Redux-passwords-Tutorial)
-2. [Timers App](https://github.com/Tech-at-DU/React-Redux-Timers-Tutorial)
-3. [Tetris App](https://github.com/Tech-at-DU/React-Redux-Tetris-Tutorial) 
+1. [Todo App](https://github.com/Tech-at-DU/React-Redux-Todo-Tutorial)
+2. [Password App](https://github.com/Tech-at-DU/React-Redux-passwords-Tutorial)
+3. [Timers App](https://github.com/Tech-at-DU/React-Redux-Timers-Tutorial)
+4. [Tetris App](https://github.com/Tech-at-DU/React-Redux-Tetris-Tutorial) 
 
 Each of these tutorials creates a complete self contained app. There is not network or server required. You'll be using your completed tutorial to create a desktop application. 
 
