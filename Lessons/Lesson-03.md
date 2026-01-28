@@ -78,6 +78,10 @@ class Timer {
 console.log(JSON.stringify(Timer)) // undefined
 ```
 
+NEW! Another options for cloning objects with JS is: https://developer.mozilla.org/en-US/docs/Web/API/Window/structuredClone
+
+This is a new vanilla JS option!
+
 <!-- > -->
 
 ## What is Electron? ⚡️
