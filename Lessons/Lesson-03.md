@@ -144,7 +144,7 @@ A lot of common apps are using electron.
 
 Getting started with Electron is easy. Follow the quick start guide to make a "hello world" app with Electron. 
 
-- https://electronjs.org/docs/tutorial/quick-start
+- https://www.electronjs.org/docs/latest/tutorial/tutorial-first-app
 
 <!-- > -->
 
