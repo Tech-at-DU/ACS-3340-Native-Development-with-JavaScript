@@ -176,7 +176,8 @@ export default function App() {
 
 const styles = Stylesheet.create({
   container: {
-    flex: 1
+    flex: 1,
+    width: '100%'
   }
 }) 
 ```
