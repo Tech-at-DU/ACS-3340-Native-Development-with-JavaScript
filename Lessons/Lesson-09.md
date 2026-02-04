@@ -118,6 +118,33 @@ React Navigation is a library for React Native that is open source. It provides 
 
 - https://reactnavigation.org/docs/getting-started
 
+
+
+NEW INSTRUCTIONS 
+```
+npx create-expo-app stack-example --template blank
+```
+
+```
+npm install @react-navigation/stack
+```
+
+
+```
+npx expo install react-native-gesture-handler @react-native-masked-view/masked-view
+```
+
+```
+npm i react-native-screens@4.16.0 --save-exact
+```
+
+
+
+
+
+
+OLD INSTRUCTIONS
+
 Start with a new Expo project: 
 
 ```
