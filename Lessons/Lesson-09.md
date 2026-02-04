@@ -126,6 +126,10 @@ npx create-expo-app stack-example --template blank
 ```
 
 ```
+cd stack-example
+```
+
+```
 npm install @react-navigation/stack
 ```
 
@@ -138,39 +142,12 @@ npx expo install react-native-gesture-handler @react-native-masked-view/masked-v
 npm i react-native-screens@4.16.0 --save-exact
 ```
 
-
-
-
-
-
-OLD INSTRUCTIONS
-
-Start with a new Expo project: 
-
-```
-npx create-expo-app react-navigation-example
-```
-
-Choose a blank project. 
-
-```
-cd react-navigation-example
-```
-
-Test your project with: 
+Start your project: 
 
 ```
 npm start
 ```
 
-After you confirm everything is working continue! 
-
-**Get started by importing the library**
-
-```
-npm install @react-navigation/native
-npx expo install react-native-screens react-native-safe-area-context
-```
 
 **Creating a Stack View** 
 
