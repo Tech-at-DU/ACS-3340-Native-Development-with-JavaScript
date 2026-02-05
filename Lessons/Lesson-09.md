@@ -155,10 +155,6 @@ Follow the guide here: https://reactnavigation.org/docs/stack-navigator
 
 Create a root component that will act as the main navigator. This can be the App component. If you're using a single Stack it should be App. 
 
-```
-npm install @react-navigation/stack
-```
-
 Edit `App.js`, and replace everything there with the code block below: 
 
 ```JS
@@ -192,15 +188,13 @@ function App() {
 export default App;
 ```
 
-The code above defines a component `HomeScreen` and the component `App` in the same file. You can move `HomeScreen` to its file and import it here if you like. 
+The code above defines a component `HomeScreen` and the component `App` in the same file. You can move `HomeScreen` to a file and import it here if you like. 
 
 To keep things simple I used inline styles. You could move these inline styles to a styles object if you like. 
 
 The sample code above Defines a HomeScreen component, creates an instance of StackNavigator, and wraps these in a NavigationContainer. 
 
 There is a single route: `<Stack.Screen>` which will display: `HomeScreen`. 
-
-The example so far only displays a single Screen: "Home Screen". But, it does this using the StackNavigator!
 
 Notice that the Stack navigator provides the title bar at the top. This is the standard behavior. You can configure the title bar and do things like add buttons to the upper right and left, change the background color of the title bar, and test the title in the center. 
 
@@ -258,7 +252,6 @@ function HomeScreen({ navigation }) {
   </View>
  );
 }
-...
 ```
 
 You did three things here. Check them for yourself: 
@@ -270,7 +263,6 @@ You did three things here. Check them for yourself:
 Navigating to a Screen creates an instance of that screen and adds it to the navigation stack. You can experiment with that here. Add a button to the `DetailsScreen` that loads another instance of the `DetailsScreen` to the stack.
 
 ```js 
-...
 function DetailsScreen({ navigation }) {
  return (
   <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -282,19 +274,17 @@ function DetailsScreen({ navigation }) {
   </View>
  );
 }
-...
 ```
 
 Test your work. From the Home, Screen presses the button to go to Details. Then press the button to load another Details screen. Press the button again to load another Details screen. 
 
-Notice the back returns to the previous screen, try it out. 
+Notice the back returns to the previous screen, try it yourself. 
 
-Going back from one screen to the previous screen in the stack. Or jump to a screen on the stack. In the next step, you'll a Home button that jumps all over the Home screen. 
+Going back from one screen to the previous screen in the stack. Or jump to a screen on the stack. In the next step, you'll a Home button that jumps all the way back to the Home screen. 
 
 Add two buttons in the Details Screen. The first navigate to Home. The second returns to the previous screen on the stack. 
 
 ```js
-...
 function DetailsScreen({ navigation }) {
  return (
   <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -303,18 +293,17 @@ function DetailsScreen({ navigation }) {
     title="Go to Details... again"
     onPress={() => navigation.push('Details')}
    />
-   <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+   <Button title="Go to Home" onPress={() => navigation.popToTop()} />
    <Button title="Go back" onPress={() => navigation.goBack()} />
   </View>
  );
 }
-...
 ```
 
 Notice the new buttons added to the detail screen. There are three buttons here and they each implement three different choices of navigation. 
 
 - "Go to Details... again" - This button adds a new instance of the Details screen to the stack. Think of this like turning to the next page in a book. In this case the next looks just like the previous page. 
-- "Go to Home" - This button jumps to the first page of the book. All of the screens are stored in an array and you're jumping to the first screen in the array. 
+- "Go to Home" - `navigation.popToTop()` removes all views from the stack, leaving only the root view, and shows the root view. 
 - "Go back" - Think of this like turning to the previous page of the book. If you add more Detail pages you'll be able to go back to each of those until you eventually get back to the Home screen again. 
 
 ## Passing params to routes
@@ -322,7 +311,6 @@ Notice the new buttons added to the detail screen. There are three buttons here 
 Pass params from home to details. The second parameter to `navigation.navigate('Screen', { params })` is an object containing params. 
 
 ```js 
-...
 function HomeScreen({ navigation }) {
  return (
   <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
@@ -340,13 +328,11 @@ function HomeScreen({ navigation }) {
   </View>
  );
 }
-...
 ```
 
 The details screen can access the params object to receiving data from the route that called it: 
 
 ```JS
-...
 function DetailsScreen({ route, navigation }) {
 
  /* 2. Get the param */
@@ -365,12 +351,11 @@ function DetailsScreen({ route, navigation }) {
    })
   }
   />
-  <Button title="Go to Home" onPress={() => navigation.navigate('Home')} />
+  <Button title="Go to Home" onPress={() => navigation.popToTop()} />
   <Button title="Go back" onPress={() => navigation.goBack()} />
  </View>
  );
 }
-...
 ```
 
 ### Configure the Navigation Bar
@@ -407,12 +392,11 @@ Set some more styles for the navigation bar:
 />
 ```
 
-Here you set the title, background color of the nav bar, tint color, and font types of the title. 
+Here you set the title, background color of the nav bar, tint color, and font types of the title. Notice this only sets the style for the Home Screen! 
 
 You can set styles across all views by applying them to the navigator. 
 
 ```js
-...
 <Stack.Navigator 
  initialRouteName="Home"
  screenOptions={{
@@ -425,10 +409,9 @@ You can set styles across all views by applying them to the navigator.
  },
  }}
 >
-...
 ```
 
-Notice these styles apply to all of the views that haven't set their styles. 
+Notice these styles apply to all of the views that haven't set their own styles. 
 
 ## Navbars in the wild 
 
