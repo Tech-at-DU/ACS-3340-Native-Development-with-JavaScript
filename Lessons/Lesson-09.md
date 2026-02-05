@@ -6,14 +6,11 @@ The goal of this lesson is to introduce navigation concepts on mobile and apply 
 
 ## Learning Objectives/Competencies
 
-- Identify navigation paradigms on mobile
- - Stack
- - Tab
- - Drawer
- - Modal
+- Identify navigation paradigms on mobile: Stack, Tab, Drawer, Modal
 - Implement and build a stack navigator
- - Manage a navigation stack
-- Use static properties and methods
+- Manage a navigation stack
+- Style the navigation bar
+- Pass params to a stack view
 
 <!-- > -->
 
