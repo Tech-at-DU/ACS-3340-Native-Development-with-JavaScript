@@ -462,10 +462,9 @@ Start planning your final project. We will cover Tab Navigation in a future clas
 
 If you are done with the current challenges (stack view, list, and detail view) you can try these challenges: 
 
-- Display the animal features using `FlatList` in the detail screen. 
+- Display the animal breed name using `FlatList` in a list view. Display the animal features in a detail view. Use a stack navigator with the list view as the root view.  
 - Customize the styles of the app. 
 - Display the Average rating for each breed in the title bar next to the breed name. 
-- Add another level. Start with a FlatList that displays: "Cats" and "Dogs". Tapping one of these two cells displays a new screen with the stack navigator that is a list of all breeds (either cats or dogs.) Tapping on a breed displays details about the breed. I would look forward to creating an app that could handle any number of pet types! 
 
 ## Additional Resources
 
