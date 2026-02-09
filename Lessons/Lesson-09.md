@@ -116,11 +116,10 @@ I chose [React Navigation](https://reactnavigation.org/) for these examples sinc
 
 React Navigation is a library for React Native that is open source. It provides all of the basic native navigation systems and works on Android and iOS. 
 
+Read the docs! 
 - https://reactnavigation.org/docs/getting-started
 
 
-
-NEW INSTRUCTIONS 
 ```
 npx create-expo-app stack-example --template blank
 ```
@@ -132,7 +131,6 @@ cd stack-example
 ```
 npm install @react-navigation/stack
 ```
-
 
 ```
 npx expo install react-native-gesture-handler @react-native-masked-view/masked-view
@@ -148,10 +146,182 @@ Start your project:
 npm start
 ```
 
-
-**Creating a Stack View** 
+**Creating a Stack View**
 
 Follow the guide here: https://reactnavigation.org/docs/stack-navigator
+
+```JSX
+import * as React from 'react';
+import { Text, View } from 'react-native';
+import {
+  createStaticNavigation,
+  useNavigation,
+} from '@react-navigation/native';
+import { Button } from '@react-navigation/elements';
+import { createStackNavigator } from '@react-navigation/stack';
+
+// HomeScreen
+function HomeScreen() {
+  const navigation = useNavigation();
+
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Home Screen</Text>
+      {/* Push Profile on to the Navigation Stack */}
+      <Button onPress={() => navigation.navigate('Profile')}>
+        Go to Profile
+      </Button>
+    </View>
+  );
+}
+
+// ProfileScreen
+function ProfileScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Profile Screen</Text>
+    </View>
+  );
+}
+
+// MyStack - This the Stack Navigator
+const MyStack = createStackNavigator({
+  screens: {
+    Home: HomeScreen,
+    Profile: ProfileScreen,
+  },
+});
+
+const Navigation = createStaticNavigation(MyStack);
+
+function App() {
+  return <Navigation />;
+}
+
+export default App
+```
+
+This should create an app with two pages and a stack navigator. 
+
+### Creating New Views 
+
+Define a new view. 
+
+```JSX
+// DetailScreen
+function DetailScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Detail Screen</Text>
+    </View>
+  );
+}
+```
+
+Add the new view to your Navigator. 
+
+```JS
+const MyStack = createStackNavigator({
+  screens: {
+    Home: HomeScreen,
+    Profile: ProfileScreen,
+    Details: DetailScreen
+  },
+});
+```
+
+Add a new button to the HomeScreen. 
+
+```JSX
+<Button onPress={() => navigation.navigate('Details')}>
+  Go to Details
+</Button>
+```
+
+### Add a Subview 
+
+This step will add a view that will follow the Profile or Detail Screen. 
+
+Add a new View: 
+
+```JSX
+// NewScreen
+function NewScreen() {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>New Screen</Text>
+    </View>
+  );
+}
+```
+
+Add this view to the navigator. 
+
+```JS
+const MyStack = createStackNavigator({
+  screens: {
+    Home: HomeScreen,
+    Profile: ProfileScreen,
+    Details: DetailScreen,
+    New: NewScreen
+  },
+});
+```
+
+Edit the Profile Screen. 
+
+```JSX
+function ProfileScreen() {
+  // Get the Navigator with the useNavigation hook
+  const navigation = useNavigation();
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Text>Profile Screen</Text>
+      {/* Add a button to load a new page */}
+      <Button onPress={() => navigation.navigate('New')}>
+        Go to New
+      </Button>
+    </View>
+  );
+}
+```
+
+### Passing params to Screens
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 Create a root component that will act as the main navigator. This can be the App component. If you're using a single Stack it should be App. 
 
