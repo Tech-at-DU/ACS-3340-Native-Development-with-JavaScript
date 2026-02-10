@@ -179,13 +179,40 @@ You can put this component almost anywhere! You can place it inside of a `View` 
 
 **Explore Icons here:**
 
-Look at the bundled icon sets: https://github.com/oblador/react-native-vector-icons#bundled-icon-sets.
+On the Ionicons site you’ll see names like:
 
-Spend a few minutes exploring the iconsets and icons at the link above. 
+```
+add
+add-circle
+add-circle-outline
+```
 
-**Note!** Above uses the name: `ios-add-circle-outline` which identifies and displays a specific icon. Finding the name to use for a specific icon is not as easy as you might think. The names shown with the icon bundles are not always what you need to set as the name in the component using React Native!
+Those map directly to:
 
-If you get a warning that the name isn't working for an icon open the warning and read the names! It will list all of the names that are possible values. 
+```jsx
+<Ionicons name="add-circle-outline" size={24} />
+```
+
+Other icon sets available in Expo (use the same pattern)
+
+Expo ships several icon packs. Each has its own browser:
+
+- Ionicons	https://ionic.io/ionicons
+- Material Icons	https://fonts.google.com/icons
+- MaterialCommunityIcons	https://materialdesignicons.com
+- FontAwesome	https://fontawesome.com/icons
+
+Usage pattern is always:
+
+```js
+import { MaterialIcons } from '@expo/vector-icons';
+```
+
+```JSX
+<MaterialIcons name="settings" size={24} />
+```
+
+…but the name must come from that set’s site. 
 
 <!-- > -->
 
