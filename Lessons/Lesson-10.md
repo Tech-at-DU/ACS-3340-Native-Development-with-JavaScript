@@ -237,8 +237,9 @@ The three properties: `focussed`, `color`, and `size` describe how the icon shou
 
 ```JS
 ...
-import { Ionicons } from 'react-native-vector-icons'
+import { Ionicons } from '@expo/vector-icons';
 ...
+
 <Tab.Navigator
   screenOptions={({ route }) => ({
     tabBarIcon: ({ focused, color, size }) => {
