@@ -44,25 +44,25 @@ npx create-expo-app tabbed-example --template blank
 
 <!-- > -->
 
-Navigate to your project directory: 
-
-```
-cd tabbed-example
-```
-
 Install dependancies:
 
 ```
 npm install @react-navigation/native
+```
+
+```
 npx expo install react-native-screens react-native-safe-area-context
+```
+
+```
 npm install @react-navigation/bottom-tabs
 ```
 
-<!-- One more time in case soemthing was missing:
+```
+npm install @react-navigation/native-stack
+```
 
-`npm install` -->
-
-Test your app with `yarn start`, `npm start`, `yarn ios` or which ever method you prefer. 
+Test your app with `npm start`. 
 
 If everything is working you should see the default Expo app and you will create some tabbed navigation in the next steps! 
 
@@ -157,37 +157,23 @@ Icons are used in many places in mobile apps. With the small screen size a pictu
 
 <!-- > -->
 
-Icons will appear at different sizes in different locations on the screen and at different sizes on diofferent devices with different screen sizes. Using a scalable vector images is a good choice when possible. There are several libraries that provide vector icons. For this example we will use: [react-native-vector-icons](https://github.com/oblador/react-native-vector-icons).
-
-This library has several sets of bundled icons. Start by importing the library. 
-
-```
-npm install --save react-native-vector-icons
-```
-
-<!-- > -->
-
-<!-- I had to link my icons using, this may not be needed for everyone: 
-
- `npx react-native link`
-
-`npx react-native link react-native-vector-icons` -->
+`react-native-vector-icons` is a native module Expo wraps and preloads it. 
 
 In your React Native project import the icon with: 
 
 ```JS
-import { Ionicons } from 'react-native-vector-icons'
+import { Ionicons } from '@expo/vector-icons';
 ```
 
 Use the icon with: 
 
 ```JS
-<Ionicons name="ios-add-circle-outline" size={32} />
+<Ionicons name="add-circle-outline" size={32} color="black" />
 ```
 
 This should display a 32pt icon that looks like a circle with a plus in the center.
 
-You can put this component almost anywhere! You can place inside of a `View` or inside of a `Text` component. 
+You can put this component almost anywhere! You can place it inside of a `View` or inside of a `Text` component. 
 
 <!-- > -->
 
