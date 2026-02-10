@@ -247,10 +247,10 @@ import { Ionicons } from '@expo/vector-icons';
 
       if (route.name === 'Home') {
         iconName = focused
-          ? 'ios-information-circle' // Set focused icon
-          : 'ios-information-circle-outline'; // Set the not focused icon
+          ? 'information-circle' // Set focused icon
+          : 'information-circle-outline'; // Set the not focused icon
       } else if (route.name === 'Settings') {
-        iconName = focused ? 'ios-list' : 'ios-list';
+        iconName = focused ? 'list' : 'list';
       }
 
       // You can return any component that you like here!
