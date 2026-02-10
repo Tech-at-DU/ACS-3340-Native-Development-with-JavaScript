@@ -270,23 +270,24 @@ import { Ionicons } from '@expo/vector-icons';
 <Tab.Navigator
   screenOptions={({ route }) => ({
     tabBarIcon: ({ focused, color, size }) => {
-      let iconName;
+      const icons = {
+        Home: focused ? 'home' : 'home-outline',
+        Settings: focused ? 'settings' : 'settings-outline',
+      };
 
-      if (route.name === 'Home') {
-        iconName = focused
-          ? 'information-circle' // Set focused icon
-          : 'information-circle-outline'; // Set the not focused icon
-      } else if (route.name === 'Settings') {
-        iconName = focused ? 'list' : 'list';
-      }
-
-      // You can return any component that you like here!
-      return <Ionicons name={iconName} size={size} color={color} />;
+      return (
+        <Ionicons
+          name={icons[route.name] ?? 'help-circle-outline'}
+          size={size}
+          color={color}
+        />
+      );
     },
-    tabBarActiveTintColor: 'tomato', // Active/focussed color
-    tabBarInactiveTintColor: 'gray' // Inactive color
+    tabBarActiveTintColor: 'tomato',
+    tabBarInactiveTintColor: 'gray',
   })}
 >
+
 ...
 </Tab.Navigator>
 ```
@@ -299,21 +300,7 @@ Add a custom icon for your new tab bar view. Find an icon you like. In the `tabB
 
 <!-- > -->
 
-Note: Many icons have a solid and outline version. You can use the solid for the focussed state and the outline when the tab is not focussed. 
-
-```JS
-if (route.name === 'Home') {
-  iconName = focused ? 'ios-information-circle' : 'ios-information-circle-outline';
-} else if (route.name === 'Settings') {
-  iconName = focused ? 'ios-list-box' : 'ios-list';
-} else if (route.name === 'Other') {
-  iconName = focused ? 'ios-star' : 'ios-star-outline';
-}
-```
-
-<!-- > -->
-
-Here I used the icons 'ios-star' and 'ios-star-outline' for the icon used in the 'Other' route.
+Note: Many icons have a solid and outline version. You can use the solid for the focussed state and the outline when ßthe tab is not focussed. 
 
 <!-- > -->
 
