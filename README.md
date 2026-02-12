@@ -40,15 +40,17 @@ Students by the end of the course will be able to:
 |  3    | Tue, Jan 27 | [Lesson 3 - Electron] (Optional: [Lesson 4 - Electron Build] • [Lesson 5 - Processes]) | [Assignment 2 Desktop Application] |
 |  4    | Thr, Jan 29 | [Lesson 6 - React Native] | [By Breed] |
 |  5    | Tue, Feb  3 | [Lesson 7 - Native Components] |  |
-|  6    | Thr, Feb  5 | [Lesson 8 - Flex] | - |
-|  7    | Tue, Feb 10 | [Lesson 9 - Navigation] | - |
-|  8    | Thr, Feb 12 | [Lesson 10 - Tab Bar] | - |
+|  6    | Thr, Feb  5 | [Lesson 9 - Navigation] | - |
+|  7    | Tue, Feb 10 | [Lesson 10 - Tab Bar] | - |
+|  8    | Thr, Feb 12 | [Async and Persistence] | - |
 |  9    | Tue, Feb 17 | [Lesson 11 - Native Elements] | [Assignment 4 Final Project] |
 | 10    | Thr, Feb 19 | [React Native APIs] | - |
 | 11    | Tue, Feb 24 |  - [Redux] | - |
 | 12    | Thr, Feb 26 | [Progressive Web Apps] | - |
 | 13    | Tue, Mar  3 | Lab | - |
 | 14    | Thr, Mar  5 | Progressive Web Apps | - |
+
+[Async and Persistence]: Lesson-async-and-persistence.md
 
 [Lesson 1 - Intro]: Lessons/Lesson-01.mds
 [Lesson 2 - Redux Review]: Lessons/Lesson-02.md
