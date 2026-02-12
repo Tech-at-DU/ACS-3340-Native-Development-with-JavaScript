@@ -50,7 +50,7 @@ Students by the end of the course will be able to:
 | 13    | Tue, Mar  3 | Lab | - |
 | 14    | Thr, Mar  5 | Progressive Web Apps | - |
 
-[Async and Persistence]: ./Lessons/Lesson-async-and-persistence.md
+[Async and Persistence]: ./Lessons/Lesson-async-and-persistence-challenge.md
 
 [Lesson 1 - Intro]: Lessons/Lesson-01.mds
 [Lesson 2 - Redux Review]: Lessons/Lesson-02.md
