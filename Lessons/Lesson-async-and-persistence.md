@@ -1,4 +1,4 @@
-# 🐶 ACS 3340 – In-Class Build
+# 🐶 ACS 3340 – In-Class Challenge
 
 Animal Explorer (Async + Persistence)
 
