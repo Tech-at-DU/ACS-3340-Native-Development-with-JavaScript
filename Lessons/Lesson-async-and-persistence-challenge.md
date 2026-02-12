@@ -14,15 +14,16 @@ By the end of class students will:
 
 ## ⏱ Class Timeline Overview
 
-Time	Activity
-0:00–0:15	Setup + architecture overview
-0:15–0:45	Redux slice + async thunk
-0:45–1:15	Connect UI + loading/error states
-1:15–1:30	Break
-1:30–2:00	Favorites + Redux reducers
-2:00–2:20	AsyncStorage persistence
-2:20–2:35	Hydration on launch
-2:35–2:45	Reflection + extension challenge
+| Time | Activity |
+|:----:|:--------:|
+| 0:00–0:15 | Setup + architecture overview |
+| 0:15–0:45 | Redux slice + async thunk |
+| 0:45–1:15 | Connect UI + loading/error states |
+| 1:15–1:30 | Break |
+| 1:30–2:00 | Favorites + Redux reducers |
+| 2:00–2:20 | AsyncStorage persistence |
+| 2:20–2:35 | Hydration on launch |
+| 2:35–2:45 | Reflection + extension challenge |
 
 ## 🏗 Project Overview
 
