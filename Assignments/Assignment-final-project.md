@@ -142,30 +142,16 @@ You must submit:
 
 | Category              | Does Not Meet                         | Meets                           | Exceeds                                 |
 |-----------------------|---------------------------------------|---------------------------------|-----------------------------------------|
-| Completion            | Missing required features              | All required features implemented           | Includes additional thoughtful features                    |
-| Navigation            | Incomplete or broken navigation        | Functional tab + stack structure            | Clean, intuitive navigation architecture                   |
-| State Management      | Minimal Redux usage                    | Meaningful slices + async logic             | Clean selectors, structure, separation of concerns         |
-| Async + Persistence   | No loading/error handling              | Correct async + persistence behavior        | Robust error handling + clean hydration                    |
-| Native Integration    | Not implemented                        | One native API integrated                   | Well-integrated + polished UX                              |
-| UI / UX               | Inconsistent design                    | Consistent layout and styling               | Thoughtful UX + animations                                 |
-| Code Quality          | Errors or warnings                     | Clean, functional code                      | Organized structure + professional formatting              |
-| Development Process   | Few commits                            | Regular commits                             | Clear commit history showing iteration                     |
+| Completion          | Missing required features          | All required features implemented    | Includes additional thoughtful features    |
+| Navigation          | Incomplete or broken navigation    | Functional tab + stack structure     | Clean, intuitive navigation architecture   |
+| State Management    | Minimal Redux usage                | Meaningful slices + async logic      | Clean selectors, structure, separation of concerns |
+| Async + Persistence | No loading/error handling          | Correct async + persistence behavior | Robust error handling + clean hydration    |
+| Native Integration  | Not implemented                    | One native API integrated            | Well-integrated + polished UX              |
+| UI / UX             | Inconsistent design                | Consistent layout and styling        | Thoughtful UX + animations                 |
+| Code Quality        | Errors or warnings                 | Clean, functional code               | Organized structure + professional formatting |
+| Development Process | Few commits                        | Regular commits                      | Clear commit history showing iteration     |
 
-
-| Category | Does Not | Meet | Meets | Exceeds | 
-Completion	Missing required features	All required features implemented	Includes additional thoughtful features
-Navigation	Incomplete or broken navigation	Functional tab + stack structure	Clean, intuitive navigation architecture
-State Management	Minimal Redux usage	Meaningful slices + async logic	Clean selectors, structure, separation of concerns
-Async + Persistence	No loading/error handling	Correct async + persistence behavior	Robust error handling + clean hydration
-Native Integration	Not implemented	One native API integrated	Well-integrated + polished UX
-UI / UX	Inconsistent design	Consistent layout and styling	Thoughtful UX + animations
-Code Quality	Errors or warnings	Clean, functional code	Organized structure + professional formatting
-Development Process	Few commits	Regular commits	Clear commit history showing iteration
-
-
-⸻
-
-Proposal Requirement
+## Proposal Requirement
 
 Before beginning full implementation, submit a brief proposal including:
 	•	App name
@@ -178,9 +164,7 @@ Before beginning full implementation, submit a brief proposal including:
 
 Instructor approval is required before proceeding.
 
-⸻
-
-What This Project Demonstrates
+## What This Project Demonstrates
 
 By completing this project, you will demonstrate:
 	•	Mobile application architecture
@@ -189,5 +173,3 @@ By completing this project, you will demonstrate:
 	•	Device integration
 	•	UX design
 	•	Real-world development practices
-
-
