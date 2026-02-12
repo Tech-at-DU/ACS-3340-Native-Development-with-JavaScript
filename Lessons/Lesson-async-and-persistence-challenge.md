@@ -45,6 +45,61 @@ You will build **Animal Explorer** with the following features:
 
 ---
 
+# ✅ Project Setup + Dependency Checklist
+
+You should start with the **blank Expo template**. It keeps the project minimal and avoids preloaded navigation or extra boilerplate.
+
+## 1) Create the project
+
+```bash
+npx create-expo-app@latest animal-explorer --template blank
+cd animal-explorer
+npx expo start
+```
+
+Make sure the app runs **before** you start adding code.
+
+## 2) Install dependencies
+
+### Navigation (Tabs)
+
+```bash
+npm install @react-navigation/native @react-navigation/bottom-tabs
+npx expo install react-native-screens react-native-safe-area-context
+```
+
+### Redux Toolkit
+
+```bash
+npm install @reduxjs/toolkit react-redux
+```
+
+### Persistence (AsyncStorage)
+
+```bash
+npx expo install @react-native-async-storage/async-storage
+```
+
+### Icons
+
+Expo includes `@expo/vector-icons` already. You do **not** need to install `react-native-vector-icons`.
+
+## 3) Quick sanity check
+
+After installing, restart Metro:
+
+```bash
+npx expo start -c
+```
+
+If you see “Unable to resolve module …” errors, it usually means:
+
+- you missed a dependency install
+- Metro cache needs to be cleared (`-c`)
+- your import path is wrong
+
+---
+
 # 🧰 Starter Code (Scaffold)
 
 Copy the files below into your project. You will fill in the TODOs as you work through the signposts.
