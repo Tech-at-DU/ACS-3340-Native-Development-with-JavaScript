@@ -110,3 +110,241 @@ Any additional resources you may need (online books, etc.) can be found here. Yo
 - [Course Credit Policy](https://make.sc/course-credit-policy) - Our policy for how you obtain credit for your courses
 - [Disability Services (Academic Accommodations)](https://make.sc/disability-services) - Services and accommodations we provide for students
 - [Student Handbook](https://make.sc/student-handbook) - Guidelines, policies, and resources for all Make School students
+
+
+<!-- 
+
+
+UPDATING
+
+
+
+🔥 Updated Final Project (Modern + Challenging + Structured)
+
+ACS 3340 – Final Project: Production-Ready Mobile App
+
+Core Idea
+
+Build a mobile app of your own design that demonstrates:
+	•	Architecture
+	•	State management
+	•	Device integration
+	•	UX thinking
+	•	Data persistence
+	•	Navigation structure
+
+This should feel like something you could ship to the App Store.
+
+⸻
+
+✅ Updated Requirements (Stronger + More Meaningful)
+
+Your app must include:
+
+1️⃣ Navigation Architecture
+	•	Bottom Tab Navigator (min 3 tabs)
+	•	At least one nested Stack Navigator
+	•	One modal screen or conditional route
+
+⸻
+
+2️⃣ State Management
+	•	Redux Toolkit
+	•	At least one async thunk
+	•	Meaningful global state (not just a counter)
+
+⸻
+
+3️⃣ Data Layer
+
+One of the following:
+	•	Fetch data from a public API
+	•	OR connect to your own backend
+	•	OR simulate server with async storage + local persistence
+
+Must include:
+	•	Loading state
+	•	Error state
+	•	Refresh mechanism
+
+⸻
+
+4️⃣ Persistence
+	•	Use AsyncStorage (or equivalent)
+	•	Persist user settings or favorites
+	•	Hydrate state on app launch
+
+⸻
+
+5️⃣ Device or Native Capability
+
+Choose one:
+	•	Camera
+	•	Image picker
+	•	Location
+	•	Haptics
+	•	Share API
+	•	Notifications
+	•	File system
+
+This is where it becomes a real mobile app.
+
+⸻
+
+6️⃣ UI / Design System
+
+One of:
+	•	Use a component library with theming
+	•	OR implement your own theme system
+	•	Must support light/dark mode toggle
+
+⸻
+
+7️⃣ Animation
+
+At least one:
+	•	Animated list item
+	•	Modal transition
+	•	Button microinteraction
+	•	Layout animation
+	•	Reanimated usage (bonus)
+
+⸻
+
+📊 Updated Rubric (More Professional)
+
+Category	Does Not Meet	Meets	Exceeds
+Architecture	App is disorganized	Clear folder structure, separation of concerns	Feature-based architecture, reusable components
+State Management	Redux used minimally	Proper slice structure + async logic	Clean thunks, selectors, memoization
+UX & Design	Basic layout	Consistent spacing + theme	Thoughtful UX, animations, accessibility
+Native Integration	None	One native API integrated	Well-integrated + permission handling
+Persistence	None	Data persists correctly	Clean hydration + fallback handling
+Code Quality	Errors / warnings	Clean and functional	Linted, formatted, structured
+Development Process	Few commits	Regular commits	Clean commit history + clear iteration
+
+
+⸻
+
+🎯 Three-Week Plan With In-Class Demos
+
+You need demos that spark ideas while teaching depth.
+
+⸻
+
+Week 1 – “Real Data + Persistence”
+
+In-Class Demo:
+
+Build a small “Favorites Explorer”
+
+Features:
+	•	Fetch data from an API (e.g. Dogs API, Pokemon API)
+	•	Display in FlatList
+	•	Add favorite
+	•	Persist to AsyncStorage
+	•	Hydrate on launch
+	•	Add pull-to-refresh
+
+This demo hits:
+	•	Redux async thunks
+	•	AsyncStorage
+	•	List refresh
+	•	Error/loading states
+
+Then say:
+
+Your final project needs this level of depth.
+
+⸻
+
+Week 2 – “Device Integration + UX”
+
+In-Class Demo:
+
+Build a “Photo Journal”
+
+Features:
+	•	Take a photo
+	•	Save to local storage
+	•	Display in list
+	•	Add metadata
+	•	Add animation when new photo appears
+
+Teaches:
+	•	Permissions
+	•	Expo camera
+	•	File system
+	•	Animation
+	•	Navigation between screens
+
+This expands their thinking.
+
+⸻
+
+Week 3 – “Polish + Architecture”
+
+In-Class Demo:
+
+Refactor an ugly app into:
+	•	Feature folders
+	•	Reusable components
+	•	Theme file
+	•	Dark mode toggle
+	•	Performance optimizations
+
+This shows what professional polish looks like.
+
+⸻
+
+💡 Good Final Project Idea Prompts
+
+Instead of vague suggestions, give structured prompts:
+	•	Fitness Tracker
+	•	Book Tracker
+	•	Recipe Manager
+	•	Travel Journal
+	•	Mood Tracker
+	•	Pet Adoption Browser
+	•	Habit Tracker
+	•	Movie Discovery App
+	•	Event Planner
+	•	Personal Finance Tracker
+
+All must:
+	•	Fetch or simulate data
+	•	Persist data
+	•	Include device feature
+
+⸻
+
+🚫 What to Remove
+
+Remove:
+	•	“Convert a tutorial”
+	•	“Any idea is fine”
+	•	Minimal navigation requirement
+
+Students will default to easiest path.
+
+⸻
+
+🧠 Why This Matters
+
+Right now your final project checks:
+	•	Navigation
+	•	Redux
+	•	Lists
+
+That’s midterm-level.
+
+By the end of term they should demonstrate:
+	•	Architecture
+	•	Asynchronous logic
+	•	Persistence
+	•	Native capability
+	•	UX thinking
+
+That’s capstone-level.
+
+
+ -->
