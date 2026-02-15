@@ -46,6 +46,24 @@ npx expo install react-native-screens react-native-safe-area-context
 npm install @react-navigation/native-stack
 ```
 
+## 3️⃣ `app.json` (New Concept)
+
+Some device APIs require iOS permission text (the popup that asks the user for access).
+In Expo projects, you often set this up in **`app.json`** using a **plugin**.
+
+### When you need to edit `app.json`
+
+- When an API needs iOS permission text (Photos, Camera, Location, etc.)
+- When the library’s docs show a `plugins: [...]` config block
+
+### After you edit `app.json`
+
+1. **Restart Expo** so Metro reloads your config:
+   ```bash
+   npx expo start -c
+   ```
+2. Important: some `app.json` changes only fully apply when you build a native app (Development Build / EAS Build). Expo Go may work for quick testing, but don’t assume it’s “done” until you’ve built.
+
 ---
 
 # 🏗 App Structure
@@ -305,6 +323,8 @@ Pick **one** native capability below. Do not attempt multiple unless you finish 
 Recommended: **Image Picker, Haptics, Clipboard, Linking**  
 Challenge: **Camera, Location, Share (file), Notifications**
 
+If a station tells you to update `app.json`, do it **before** writing code for the station, then restart Expo with `npx expo start -c`.
+
 ---
 
 ## 🖼 Station A — Image Picker (Recommended)
@@ -320,7 +340,7 @@ Challenge: **Camera, Location, Share (file), Notifications**
 npx expo install expo-image-picker
 ```
 
-### Step 2 — Add iOS permission text (app.json)
+### Step 2 — Add iOS permission text (app.json plugin)
 
 Add this to your `app.json`:
 
@@ -344,6 +364,8 @@ Then restart Expo:
 ```bash
 npx expo start -c
 ```
+
+> If your permission popup text still looks wrong, that’s usually because you need a **development build** for the config plugin to apply fully (Expo Go can be inconsistent here).
 
 ### Step 3 — Implement in FeatureScreen
 
@@ -449,20 +471,58 @@ const styles = StyleSheet.create({
 npx expo install expo-camera
 ```
 
-### Code hints
+### `app.json` note (Camera permission text)
 
-```js
-import { CameraView, useCameraPermissions } from 'expo-camera';
+Add an iOS permission message using the `expo-camera` plugin. In `app.json`:
 
-// Permission pattern
-const [permission, requestPermission] = useCameraPermissions();
-if (!permission?.granted) {
-  return <Button title="Allow Camera" onPress={requestPermission} />;
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "expo-camera",
+        {
+          "cameraPermission": "Allow access to your camera so you can take a photo."
+        }
+      ]
+    ]
+  }
 }
+```
 
-// Capture (pseudo)
-const photo = await cameraRef.current.takePictureAsync();
-setUri(photo.uri);
+Then restart Expo:
+
+```bash
+npx expo start -c
+```
+
+### Implementation Plan (Pseudo Code)
+
+```
+STATE:
+  photoUri = null
+  permissionGranted = false
+
+ON SCREEN LOAD:
+  ask for camera permission
+  if granted → permissionGranted = true
+  else → show error + "Try Again" button
+
+RENDER:
+  if permissionGranted is false:
+    show permission request UI
+
+  else if photoUri is null:
+    show camera preview
+    show "Take Photo" button
+
+    on button press:
+      call takePictureAsync()
+      store returned uri in photoUri
+
+  else:
+    show the captured image using photoUri
+    show "Retake" button (optional)
 ```
 
 > ⚠️ Works best on a physical device.
@@ -492,28 +552,63 @@ setUri(photo.uri);
 npx expo install expo-location
 ```
 
-### Code hints
+### `app.json` note (Location permission text)
 
-```js
-import * as Location from 'expo-location';
+Add an iOS permission message using the `expo-location` plugin. In `app.json`:
 
-const { status } = await Location.requestForegroundPermissionsAsync();
-if (status !== 'granted') {
-  setError('Permission denied');
-  return;
+```json
+{
+  "expo": {
+    "plugins": [
+      [
+        "expo-location",
+        {
+          "locationAlwaysAndWhenInUsePermission": "Allow location access so we can show your current position."
+        }
+      ]
+    ]
+  }
 }
-
-const pos = await Location.getCurrentPositionAsync({});
-setCoords(pos.coords); // { latitude, longitude, ... }
 ```
 
-Optional enhancement:
+Then restart Expo:
 
-```js
-const place = await Location.reverseGeocodeAsync({
-  latitude: pos.coords.latitude,
-  longitude: pos.coords.longitude,
-});
+```bash
+npx expo start -c
+```
+
+### Implementation Plan (Pseudo Code)
+
+```
+STATE:
+  coords = null
+  error = null
+
+ON SCREEN LOAD:
+  request foreground location permission
+  if denied → set error and stop
+
+  if granted:
+    call getCurrentPositionAsync()
+    store { latitude, longitude } in coords
+
+RENDER:
+  if error exists:
+    show error message + "Try Again" button
+
+  else if coords is null:
+    show loading spinner + "Getting location..."
+
+  else:
+    display latitude and longitude
+    optional: "Refresh Location" button
+```
+
+Optional enhancement (still pseudo-code):
+
+```
+call reverseGeocodeAsync(latitude, longitude)
+display city/region
 ```
 
 ---
@@ -539,16 +634,21 @@ const place = await Location.reverseGeocodeAsync({
 npx expo install expo-haptics
 ```
 
-### Code hints
+### `app.json` note
 
-```js
-import * as Haptics from 'expo-haptics';
+No `app.json` changes are needed for Haptics.
 
-await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
+### Implementation Plan (Pseudo Code)
 
-await Haptics.notificationAsync(
-  Haptics.NotificationFeedbackType.Success
-);
+```
+UI:
+  Button: "Success"
+  Button: "Warning"
+  Button: "Error"
+
+ON PRESS:
+  call a haptics function for that type
+  show a short message like "Haptic triggered"
 ```
 
 ---
@@ -578,25 +678,45 @@ await Haptics.notificationAsync(
 npx expo install expo-sharing expo-file-system
 ```
 
-### Code hints
+### `app.json` note
 
-**Share text**
+No `app.json` changes are needed to share text.  
+If you share **files**, you still usually don’t need `app.json` changes, but you must create the file and share its URI.
 
-```js
-import { Share } from 'react-native';
+### Implementation Plan (Pseudo Code)
 
-await Share.share({ message: 'Hello from my app!' });
+```
+OPTION A: SHARE TEXT
+STATE:
+  message = "Hello from my app!"
+
+UI:
+  TextInput for message
+  Button: "Share"
+
+ON PRESS:
+  call Share.share({ message })
+
+RENDER:
+  show success/canceled message if available
 ```
 
-**Share a file**
+```
+OPTION B: SHARE A FILE (ADVANCED)
+STATE:
+  fileUri = null
 
-```js
-import * as FileSystem from 'expo-file-system';
-import * as Sharing from 'expo-sharing';
+UI:
+  Button: "Create File"
+  Button: "Share File"
 
-const uri = FileSystem.documentDirectory + 'notes.txt';
-await FileSystem.writeAsStringAsync(uri, 'Hello file!');
-await Sharing.shareAsync(uri);
+ON "Create File":
+  write a text file into the app document directory
+  set fileUri
+
+ON "Share File":
+  if fileUri missing → show error
+  else → call shareAsync(fileUri)
 ```
 
 ---
@@ -623,15 +743,31 @@ await Sharing.shareAsync(uri);
 npx expo install expo-clipboard
 ```
 
-### Code hints
+### `app.json` note
 
-```js
-import * as Clipboard from 'expo-clipboard';
+No `app.json` changes are needed for Clipboard.
 
-await Clipboard.setStringAsync(text);
+### Implementation Plan (Pseudo Code)
 
-const pasted = await Clipboard.getStringAsync();
-setText(pasted);
+```
+STATE:
+  text = ""
+  statusMessage = ""
+
+UI:
+  TextInput bound to text
+  Button: "Copy"
+  Button: "Paste"
+  Text: statusMessage
+
+ON "Copy":
+  set clipboard to text
+  statusMessage = "Copied!"
+
+ON "Paste":
+  read clipboard text
+  set text to clipboard value
+  statusMessage = "Pasted!"
 ```
 
 ---
@@ -651,24 +787,29 @@ setText(pasted);
 3. Call `Linking.openURL(url)`
 4. Render an error message if it fails
 
-### Code hints
+### `app.json` note
 
-```js
-import { Linking } from 'react-native';
+No `app.json` changes are needed for Linking.
 
-const url = 'https://www.dominican.edu';
+### Implementation Plan (Pseudo Code)
 
-if (await Linking.canOpenURL(url)) {
-  await Linking.openURL(url);
-} else {
-  setError('Cannot open URL');
-}
 ```
+STATE:
+  error = null
 
-Maps example (iOS):
+UI:
+  Button: "Open Website"
+  Button: "Open Maps"
+  Text: error (if any)
 
-```js
-await Linking.openURL('maps://?q=coffee');
+ON "Open Website":
+  url = "https://www.dominican.edu"
+  if canOpenURL(url) is false → set error
+  else → openURL(url)
+
+ON "Open Maps" (iOS):
+  url = "maps://?q=coffee"
+  openURL(url)
 ```
 
 ---
@@ -696,21 +837,40 @@ await Linking.openURL('maps://?q=coffee');
 npx expo install expo-notifications
 ```
 
-### Code hints
+### `app.json` note
 
-```js
-import * as Notifications from 'expo-notifications';
+Local notifications usually work without `app.json` changes.  
+If you go further into **push notifications**, you will need additional configuration (out of scope today).
 
-const perm = await Notifications.requestPermissionsAsync();
-if (!perm.granted) {
-  setError('Permission denied');
-  return;
-}
+After installing the dependency, restart Expo:
 
-await Notifications.scheduleNotificationAsync({
-  content: { title: 'Hello', body: 'This is a local notification' },
-  trigger: { seconds: 5 },
-});
+```bash
+npx expo start -c
+```
+
+### Implementation Plan (Pseudo Code)
+
+```
+STATE:
+  permissionGranted = false
+  statusMessage = ""
+
+ON SCREEN LOAD:
+  request notifications permission
+  if granted → permissionGranted = true
+  else → statusMessage = "Permission denied"
+
+UI:
+  Button: "Schedule Notification (5s)"
+  Text: statusMessage
+
+ON PRESS:
+  if permissionGranted is false:
+    statusMessage = "Enable notifications first"
+    stop
+  else:
+    scheduleNotificationAsync(trigger in 5 seconds)
+    statusMessage = "Scheduled!"
 ```
 
 ---
