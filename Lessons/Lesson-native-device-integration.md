@@ -302,6 +302,9 @@ You will still need to install the dependency for your chosen station (for examp
 
 Pick **one** native capability below. Do not attempt multiple unless you finish early.
 
+Recommended: **Image Picker, Haptics, Clipboard, Linking**  
+Challenge: **Camera, Location, Share (file), Notifications**
+
 ---
 
 ## 🖼 Station A — Image Picker (Recommended)
@@ -427,20 +430,42 @@ const styles = StyleSheet.create({
 
 **Build:** Take a photo and display it.
 
+### Reference docs
+
+- Expo Camera reference: https://docs.expo.dev/versions/latest/sdk/camera/
+- Expo Camera tutorial: https://docs.expo.dev/tutorial/camera/
+
+### Step-by-step
+
+1. Install `expo-camera`
+2. Request camera permission
+3. Render a camera preview
+4. Capture a photo and store its `uri`
+5. Display the captured image
+
 ### Install
 
 ```bash
 npx expo install expo-camera
 ```
 
-### Requirements
+### Code hints
 
-- Request camera permission
-- Show camera preview
-- Capture image
-- Display captured photo
+```js
+import { CameraView, useCameraPermissions } from 'expo-camera';
 
-> Works best on a physical device.
+// Permission pattern
+const [permission, requestPermission] = useCameraPermissions();
+if (!permission?.granted) {
+  return <Button title="Allow Camera" onPress={requestPermission} />;
+}
+
+// Capture (pseudo)
+const photo = await cameraRef.current.takePictureAsync();
+setUri(photo.uri);
+```
+
+> ⚠️ Works best on a physical device.
 
 ---
 
@@ -448,29 +473,47 @@ npx expo install expo-camera
 
 **Build:** Display current latitude and longitude.
 
+### Reference docs
+
+- Expo Location reference: https://docs.expo.dev/versions/latest/sdk/location/
+- Expo Permissions guide: https://docs.expo.dev/guides/permissions/
+
+### Step-by-step
+
+1. Install `expo-location`
+2. Request foreground location permission
+3. Get current position
+4. Render coordinates
+5. Handle denied permission
+
 ### Install
 
 ```bash
 npx expo install expo-location
 ```
 
-### Requirements
-
-- Button: “Get Location”
-- Request permission
-- Display coordinates
-- Handle denied permission
+### Code hints
 
 ```js
 import * as Location from 'expo-location';
 
-const getLocation = async () => {
-  const { status } = await Location.requestForegroundPermissionsAsync();
-  if (status !== 'granted') return setError('Permission denied');
+const { status } = await Location.requestForegroundPermissionsAsync();
+if (status !== 'granted') {
+  setError('Permission denied');
+  return;
+}
 
-  const location = await Location.getCurrentPositionAsync({});
-  setCoords(location.coords);
-};
+const pos = await Location.getCurrentPositionAsync({});
+setCoords(pos.coords); // { latitude, longitude, ... }
+```
+
+Optional enhancement:
+
+```js
+const place = await Location.reverseGeocodeAsync({
+  latitude: pos.coords.latitude,
+  longitude: pos.coords.longitude,
+});
 ```
 
 ---
@@ -479,19 +522,29 @@ const getLocation = async () => {
 
 **Build:** Buttons that trigger vibration feedback.
 
+### Reference docs
+
+- Expo Haptics reference: https://docs.expo.dev/versions/latest/sdk/haptics/
+
+### Step-by-step
+
+1. Install `expo-haptics`
+2. Create at least 3 buttons (success / warning / error)
+3. Trigger haptic feedback on press
+4. Add a sentence explaining when haptics improve UX
+
 ### Install
 
 ```bash
 npx expo install expo-haptics
 ```
 
-### Requirements
-
-- At least 3 buttons (Success, Warning, Error)
-- Visible explanation of when haptics improve UX
+### Code hints
 
 ```js
 import * as Haptics from 'expo-haptics';
+
+await Haptics.impactAsync(Haptics.ImpactFeedbackStyle.Medium);
 
 await Haptics.notificationAsync(
   Haptics.NotificationFeedbackType.Success
@@ -502,19 +555,49 @@ await Haptics.notificationAsync(
 
 ## 🔗 Station E — Share API
 
-**Build:** Share a message or URL from your app.
+**Build:** Share text (easy) or share a file (advanced).
 
-### Install
+### Reference docs
+
+- React Native Share API: https://reactnative.dev/docs/share
+- Expo Sharing (share a file): https://docs.expo.dev/versions/latest/sdk/sharing/
+- Expo FileSystem (create a file): https://docs.expo.dev/versions/latest/sdk/filesystem/
+
+### Step-by-step (choose one)
+
+**Option A: Share text (simplest)**  
+1. Call `Share.share({ message })` from a button press
+
+**Option B: Share a file (more realistic)**  
+1. Write a file to `FileSystem.documentDirectory`  
+2. Call `Sharing.shareAsync(uri)`
+
+### Install (for file sharing)
 
 ```bash
 npx expo install expo-sharing expo-file-system
 ```
 
-### Requirements
+### Code hints
 
-- Button: “Share”
-- Share text or URL
-- Confirm success or failure
+**Share text**
+
+```js
+import { Share } from 'react-native';
+
+await Share.share({ message: 'Hello from my app!' });
+```
+
+**Share a file**
+
+```js
+import * as FileSystem from 'expo-file-system';
+import * as Sharing from 'expo-sharing';
+
+const uri = FileSystem.documentDirectory + 'notes.txt';
+await FileSystem.writeAsStringAsync(uri, 'Hello file!');
+await Sharing.shareAsync(uri);
+```
 
 ---
 
@@ -522,32 +605,71 @@ npx expo install expo-sharing expo-file-system
 
 **Build:** Copy and paste text.
 
+### Reference docs
+
+- Expo Clipboard reference: https://docs.expo.dev/versions/latest/sdk/clipboard/
+
+### Step-by-step
+
+1. Install `expo-clipboard`
+2. Add a `TextInput` controlled by state
+3. Copy: `Clipboard.setStringAsync(text)`
+4. Paste: `Clipboard.getStringAsync()` → set into state
+5. Show “Copied!” or “Pasted!” feedback
+
 ### Install
 
 ```bash
 npx expo install expo-clipboard
 ```
 
-### Requirements
+### Code hints
 
-- TextInput
-- “Copy” button
-- “Paste” button
-- Show confirmation message
+```js
+import * as Clipboard from 'expo-clipboard';
+
+await Clipboard.setStringAsync(text);
+
+const pasted = await Clipboard.getStringAsync();
+setText(pasted);
+```
 
 ---
 
 ## 🌐 Station G — Linking
 
-**Build:** Open an external app or website.
+**Build:** Open an external website or app.
 
-No additional install required.
+### Reference docs
 
-### Requirements
+- React Native Linking: https://reactnative.dev/docs/linking
 
-- Open a website
-- Open maps or another app
-- Handle failure case
+### Step-by-step
+
+1. Choose a URL
+2. Check `Linking.canOpenURL(url)`
+3. Call `Linking.openURL(url)`
+4. Render an error message if it fails
+
+### Code hints
+
+```js
+import { Linking } from 'react-native';
+
+const url = 'https://www.dominican.edu';
+
+if (await Linking.canOpenURL(url)) {
+  await Linking.openURL(url);
+} else {
+  setError('Cannot open URL');
+}
+```
+
+Maps example (iOS):
+
+```js
+await Linking.openURL('maps://?q=coffee');
+```
 
 ---
 
@@ -555,17 +677,41 @@ No additional install required.
 
 **Build:** Schedule a local notification 5 seconds in the future.
 
+### Reference docs
+
+- Expo Notifications reference: https://docs.expo.dev/versions/latest/sdk/notifications/
+- Notifications overview: https://docs.expo.dev/push-notifications/overview/
+
+### Step-by-step
+
+1. Install `expo-notifications`
+2. Request permission
+3. Schedule a notification with a 5-second trigger
+4. Show “Scheduled!” state in the UI
+5. Handle denied permission
+
 ### Install
 
 ```bash
 npx expo install expo-notifications
 ```
 
-### Requirements
+### Code hints
 
-- Request permission
-- Schedule notification
-- Confirm scheduled state
+```js
+import * as Notifications from 'expo-notifications';
+
+const perm = await Notifications.requestPermissionsAsync();
+if (!perm.granted) {
+  setError('Permission denied');
+  return;
+}
+
+await Notifications.scheduleNotificationAsync({
+  content: { title: 'Hello', body: 'This is a local notification' },
+  trigger: { seconds: 5 },
+});
+```
 
 ---
 
