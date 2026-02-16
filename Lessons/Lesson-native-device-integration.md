@@ -323,7 +323,21 @@ Pick **one** native capability below. Do not attempt multiple unless you finish 
 Recommended: **Image Picker, Haptics, Clipboard, Linking**  
 Challenge: **Camera, Location, Share (file), Notifications**
 
-If a station tells you to update `app.json`, do it **before** writing code for the station, then restart Expo with `npx expo start -c`.
+
+---
+
+## Quick API Overview (What each station does)
+
+Use this to pick a station quickly. Each of these APIs is **async** (you wait for a result), and many require **permissions**.
+
+- **Image Picker (Photos):** Opens the device’s photo library so the user can select an image. You usually store the returned **image URI** in state and render it with `<Image />`. Requires Photos permission on iOS.
+- **Camera:** Shows a live camera preview and lets the user capture a photo. You store the captured photo’s **URI** in state and display it. Requires Camera permission and works best on a real device.
+- **Location (GPS):** Reads the user’s current coordinates (latitude/longitude). You render coordinates in your UI and optionally “refresh” them. Requires Location permission and can fail if denied or unavailable.
+- **Haptics:** Triggers vibration/feedback to confirm actions (success, warning, error). It’s usually called **on button press**—no complex UI needed, but it should be used sparingly.
+- **Share API:** Opens the system share sheet so the user can share text (easy) or a file (harder) to Messages, Mail, etc. You trigger it from a button and handle cancel/failure.
+- **Clipboard:** Reads/writes text to the system clipboard. Typical flow: copy text on press, paste it back into a TextInput, and show feedback like “Copied!”.
+- **Linking:** Opens external URLs (websites, maps, phone, email) using installed apps. You should check if the URL can open and show an error if it can’t.
+- **Notifications:** Schedules a local notification that appears later (e.g., in 5 seconds). Requires notification permission; for push notifications you’d need extra setup (out of scope today).
 
 ---
 
