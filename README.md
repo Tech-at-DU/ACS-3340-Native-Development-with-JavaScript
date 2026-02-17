@@ -43,8 +43,8 @@ Students by the end of the course will be able to:
 |  6    | Thr, Feb  5 | [Lesson 9 - Navigation] | - |
 |  7    | Tue, Feb 10 | [Lesson 10 - Tab Bar] | - |
 |  8    | Thr, Feb 12 | [Async and Persistence] | - |
-|  9    | Tue, Feb 17 | [Lesson 11 - Native Elements] | [Assignment 4 Final Project] |
-| 10    | Thr, Feb 19 | [React Native APIs] | - |
+|  9    | Tue, Feb 17 | [Native Device APIs] | [Assignment 4 Final Project] |
+| 10    | Thr, Feb 19 | - | - |
 | 11    | Tue, Feb 24 |  - [Redux] | - |
 | 12    | Thr, Feb 26 | [Progressive Web Apps] | - |
 | 13    | Tue, Mar  3 | Lab | - |
@@ -65,6 +65,8 @@ Students by the end of the course will be able to:
 [Lesson 11 - Native Elements]: Lessons/Lesson-11.md
 [React Native APIs]: Lessons/Lesson-12.md
 [Redux]: Lessons/Lesson-13.md
+
+[Native Device APIs]: ./Lessons/Lesson-native-device-integration.md
 
 [Progressive Web Apps]: Lessons/pwa-part-1.md
 
