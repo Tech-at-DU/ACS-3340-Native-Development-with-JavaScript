@@ -1,5 +1,3 @@
-
-
 # ACS 3340 — Theming in React Native
 
 ## 🎯 Learning Objectives
@@ -7,25 +5,27 @@
 By the end of this lesson you will:
 
 - Understand what “theming” means in a mobile application
-- Build a reusable theme system using a theme object
-- Implement dark mode using React Context
-- Connect your theme to React Navigation
-- Refactor hardcoded styles into a scalable design system
+- Build a reusable theme system using theme tokens
+- Use a style factory function to keep JSX clean
+- Introduce ThemeContext and use `useContext()` to read theme values in any screen
+- Connect theme values to React Navigation UI
+- (Bonus) Detect system dark mode with `useColorScheme()`
 
 ---
 
 # ⏱ Class Plan (2:45)
 
-| Time      | Activity                                         |
-|-----------|--------------------------------------------------|
-| 0:00–0:15 | Why Theming Matters (Discussion + Demo)          |
-| 0:15–0:45 | Build the Sample App Scaffold (Tabs + UI Elements)|
-| 0:45–1:15 | Build a Theme Object                             |
-| 1:15–1:55 | Add Theme Context + Toggle                       |
-| 1:55–2:20 | Connect Theme to Navigation                      |
-| 2:20–2:40 | Refactor Hardcoded Styles (Tokens + Reuse)       |
-| 2:40–2:45 | Reflection + Final Project Tie-In                |
+| Time | Activity |
+|------|----------|
+| 0:00–0:15 | Why Theming Matters (Discussion + Demo) |
+| 0:15–0:45 | Build the Sample App Scaffold (Tabs + UI Elements) |
+| 0:45–1:15 | Build a Theme Object (Tokens) |
+| 1:15–1:55 | Add Theme Context + useContext |
+| 1:55–2:20 | Connect Theme to Navigation |
+| 2:20–2:40 | Refactor Hardcoded Styles (Tokens + Reuse) |
+| 2:40–2:45 | Reflection + Final Project Tie‑In |
 
+---
 
 # Part 0 — Build a Sample App Scaffold (30 min)
 
@@ -33,7 +33,7 @@ You will build a tiny app first. It is intentionally **ugly and hardcoded** so y
 
 ## What you will build
 
-A 2‑tab app:
+A 2-tab app:
 
 - **Home tab:** headings, text, and a couple buttons
 - **List tab:** a list with a simple “row” layout (title on left, rating on right)
@@ -247,13 +247,15 @@ const styles = StyleSheet.create({
 - Home shows a card and buttons
 - List shows rows with rating aligned right
 
-If any of these fail, fix them before starting Part 2.
+If any of these fail, fix them before starting Part 1.
+
+---
 
 # Part 1 — Why Theming Matters (15 min)
 
-## Discussion Prompt
-
 Open the sample app you just built. Notice how many values are hardcoded and repeated across screens.
+
+## Discussion Prompt
 
 Ask yourself:
 
@@ -274,269 +276,434 @@ Theming is about:
 
 # Part 2 — Build a Theme Object (30 min)
 
-## Step 1 — Create `theme.js`
+You are now going to refactor the **sample app scaffold** you built earlier (Home + List tabs).
 
-Create a file:
+This app is intentionally:
+- Hardcoded
+- Repetitive
+- Not ready for dark mode
+
+Your job is to fix that.
+
+You are not building something new — you are improving what already exists.
+
+---
+
+## Step 1 — Audit the Demo App (5 min)
+
+Open:
+
+- `HomeScreen.js`
+- `ListScreen.js`
+
+Scan the styles.
+
+Make a quick list (in comments or on paper):
+
+- What colors repeat across both screens?
+- What padding numbers repeat?
+- Where do you see the same borderRadius value?
+- Where do you see the same background color used multiple times?
+
+Now discuss:
+
+> If you had to support dark mode right now, how many lines would you have to change?
+
+This is the problem theming solves.
+
+---
+
+## Step 2 — Design Your Theme Structure (10 min)
+
+Create a file called `theme.js` at the root of your project.
+
+Before writing values, decide on structure.
+
+What categories does your app need?
+
+Common categories:
+
+- colors
+- spacing
+- radius
+- typography (optional)
+
+### Starter scaffold (you fill this in)
 
 ```js
 // theme.js
 
 export const lightTheme = {
   colors: {
-    background: '#ffffff',
-    text: '#111111',
-    primary: '#f4511e',
-    card: '#f9f9f9',
+    // background
+    // text
+    // primary
+    // secondary
+    // card
+    // border
   },
+
   spacing: {
-    sm: 8,
-    md: 16,
-    lg: 24,
+    // sm
+    // md
+    // lg
+  },
+
+  radius: {
+    // sm
+    // md
   }
 };
 
 export const darkTheme = {
-  colors: {
-    background: '#111111',
-    text: '#ffffff',
-    primary: '#ff784e',
-    card: '#1e1e1e',
-  },
-  spacing: {
-    sm: 8,
-    md: 16,
-    lg: 24,
-  }
+  // Mirror the exact same structure as lightTheme
 };
 ```
 
+Important:
+
+- Light and dark themes must have the **exact same structure**.
+- Every repeated value in your demo app should become a token.
+- Do not invent tokens you don’t use.
+
 ---
 
-## Step 2 — Use the Theme Object (No Context Yet)
+## Step 3 — Refactor the Home Screen (10 min)
 
-In a screen:
+### Use a Style Factory Function (Best Practice)
+
+Instead of writing large inline style objects inside JSX, build your styles from the theme using a factory function.
+
+```js
+// styles.js (or inside HomeScreen.js)
+import { StyleSheet } from 'react-native';
+
+export const createStyles = (theme) =>
+  StyleSheet.create({
+    container: {
+      flex: 1,
+      backgroundColor: theme.colors.background,
+      padding: theme.spacing.md,
+    },
+    card: {
+      backgroundColor: theme.colors.card,
+      borderRadius: theme.radius.md,
+      padding: theme.spacing.md,
+    },
+    text: {
+      color: theme.colors.text,
+    },
+    button: {
+      backgroundColor: theme.colors.primary,
+      padding: theme.spacing.sm,
+      borderRadius: theme.radius.sm,
+    }
+  });
+```
+
+Then in `HomeScreen.js`:
 
 ```js
 import { lightTheme } from '../theme';
+import { createStyles } from './styles';
 
-<View style={{ backgroundColor: lightTheme.colors.background }}>
+const theme = lightTheme;
+const styles = createStyles(theme);
 ```
 
-### Activity (10 min)
-
-Refactor the Home screen:
-- Replace hardcoded colors
-- Replace padding values with spacing tokens
-
-Discuss:
-- What improved?
-- What still feels repetitive?
+This keeps your JSX clean and keeps all visual decisions centralized.
 
 ---
 
-# Part 3 — Add Theme Context + Toggle (40 min)
+## Step 4 — Refactor the List Screen (5 min)
 
-Now we make it dynamic.
+Now refactor `ListScreen.js`.
 
-## Step 1 — Create ThemeContext
+Your goal:
 
-Create `ThemeProvider.js`
+- Make list items use the same `card` styling tokens as the Home screen.
+- Make text colors consistent with your theme.
+- Remove ALL repeated style literals.
+
+You should start noticing that:
+
+> Multiple screens are now sharing design decisions.
+
+---
+
+## Step 5 — Reflection (5 min)
+
+Discuss:
+
+- What improved?
+- What still feels repetitive?
+- Which tokens were most useful?
+- What would happen if we changed one color in `theme.js`?
+
+At this point, your theme file should be controlling the visual identity of your demo app.
+
+That is the foundation of scalable design.
+
+---
+
+# Part 3 — Introduce ThemeContext (45 min)
+
+So far, you imported `lightTheme` directly.
+
+That works — but it doesn’t scale.
+
+What if:
+- You want to toggle dark mode?
+- You want different themes per user?
+- You want to avoid importing the theme in every file?
+
+This is where React Context helps.
+
+---
+
+## What is useContext? (Concept Primer)
+
+`useContext` is a React hook that allows components to access shared values without passing props through multiple levels of the component tree.
+
+Normally in React, data flows like this:
+
+Parent → Child → Grandchild → Great‑grandchild
+
+If many components need the same value (like a theme), you would have to “prop drill” that value through every level.
+
+Context solves this by creating a shared channel.
+
+When should you use Context?
+
+Use Context for:
+
+- Theme or design system values
+- Authentication state
+- Global user preferences
+- Locale / language
+- App‑wide configuration
+
+These are values that:
+- Change rarely
+- Are needed in many places
+- Represent global app state
+
+When should you NOT use Context?
+
+Do NOT use Context for:
+
+- Frequently changing UI state (like text input values)
+- Local component state
+- Highly dynamic data lists
+- Large, complex async state (Redux is better for that)
+
+Context is best for stable, global values — not as a replacement for Redux.
+
+In this lesson, we are using Context specifically for theming, which is exactly the kind of problem Context was designed to solve.
+
+---
+
+## Step 1 — Create a ThemeContext
+
+Create a new file: `ThemeContext.js`
 
 ```js
 import React from 'react';
-import { lightTheme, darkTheme } from './theme';
+import { lightTheme } from './theme';
 
-export const ThemeContext = React.createContext();
-
-export function ThemeProvider({ children }) {
-  const [theme, setTheme] = React.useState(lightTheme);
-
-  const toggleTheme = () => {
-    setTheme(prev =>
-      prev === lightTheme ? darkTheme : lightTheme
-    );
-  };
-
-  return (
-    <ThemeContext.Provider value={{ theme, toggleTheme }}>
-      {children}
-    </ThemeContext.Provider>
-  );
-}
+export const ThemeContext = React.createContext(lightTheme);
 ```
 
 ---
 
-## Step 2 — Wrap Your App
+## Step 2 — Wrap Your App with the Provider
 
 In `App.js`:
 
 ```js
-import { ThemeProvider } from './ThemeProvider';
+import { ThemeContext } from './ThemeContext';
+import { lightTheme } from './theme';
 
-export default function App() {
+<ThemeContext.Provider value={lightTheme}>
+  <YourNavigation />
+</ThemeContext.Provider>
+```
+
+---
+
+## Step 3 — Use useContext in a Screen
+
+Earlier in this lesson, you did this:
+
+```js
+import { lightTheme } from '../theme';
+const theme = lightTheme;
+const styles = createStyles(theme);
+```
+
+That tightly couples your screen to a specific theme file.
+
+Now we replace that pattern with Context.
+
+```js
+import React from 'react';
+import { View, Text } from 'react-native';
+import { ThemeContext } from '../ThemeContext';
+import { createStyles } from './styles';
+
+export default function HomeScreen() {
+  const theme = React.useContext(ThemeContext);
+  const styles = createStyles(theme);
+
   return (
-    <ThemeProvider>
-      <RootNav />
-    </ThemeProvider>
+    <View style={styles.container}>
+      <Text style={styles.text}>Home Screen</Text>
+    </View>
   );
 }
 ```
 
+Now the screen does NOT import lightTheme or darkTheme.
+It simply reads whatever theme the Provider supplies.
+
+When the Provider changes, the entire UI updates automatically.
+
 ---
 
-## Step 3 — Consume the Theme
+## Step 4 — Why This Matters
+
+With Context:
+
+- You remove direct imports of theme files.
+- You centralize theme decisions.
+- You prepare for dark mode toggling.
+- You make your app scalable.
+
+This is how professional apps implement theming systems.
+
+---
+
+## Stretch Goal (Optional)
+
+Add a state toggle in `App.js`:
 
 ```js
-import { ThemeContext } from '../ThemeProvider';
-
-const { theme, toggleTheme } = React.useContext(ThemeContext);
-
-<View style={{ backgroundColor: theme.colors.background }}>
+const [mode, setMode] = useState('light');
+const theme = mode === 'light' ? lightTheme : darkTheme;
 ```
 
-Add a button:
+Pass `theme` into the Provider and add a button to toggle modes.
 
-```js
-<Button title="Toggle Theme" onPress={toggleTheme} />
-```
+Watch your entire app change.
 
----
-
-## Active Learning (15 min)
-
-In pairs:
-
-- Add theme support to 2 screens
-- Ensure text, background, and buttons switch correctly
-- No hardcoded colors allowed
+That is the power of a theme system.
 
 ---
 
-# Part 4 — Connect Theme to Navigation (30 min)
+# Part 4 — Connect Theme to Navigation (25 min)
 
-React Navigation supports theming.
+React Navigation has its own theme shape. You can map your theme tokens into NavigationContainer so headers and tab bars match.
 
-In your navigation container:
+In your navigation root (where NavigationContainer lives):
 
 ```js
+import { NavigationContainer } from '@react-navigation/native';
+
 <NavigationContainer
   theme={{
-    dark: theme === darkTheme,
+    dark: false, // update later
     colors: {
       primary: theme.colors.primary,
       background: theme.colors.background,
       card: theme.colors.card,
       text: theme.colors.text,
-      border: '#ccc',
+      border: theme.colors.border ?? '#ccc',
       notification: theme.colors.primary,
-    }
+    },
   }}
 >
+  <TabNavigator />
+</NavigationContainer>
 ```
 
-Now your header and tab bar will respond to theme changes.
+Activity:
+- Make the header and tab bar match your theme.
+- Confirm text remains readable in both modes.
 
 ---
 
-## Activity (10 min)
+# Part 5 — Refactor Challenge (20 min)
 
-- Style the tab bar
-- Style the header
-- Confirm dark mode works across navigation
+Refactor to reduce duplication:
+
+- Remove ALL hardcoded colors.
+- Replace padding values with spacing tokens.
+- Add one extra token group (typography OR shadow OR border widths).
+- Make the List rows reuse the same “card” styles as the Home screen (same border radius, border color, and background).
 
 ---
 
-# Part 5 — System Dark Mode (Optional Extension)
+# Reflection (5 min)
 
-React Native includes:
+- What got easier after tokens?
+- What got easier after Context?
+- What UI broke in dark mode, and why?
+- Where should theme state live?
+
+---
+
+# Bonus — Detect System Dark Mode with `useColorScheme()`
+
+Manual toggles are useful for learning, but real apps often follow the system setting.
+
+React Native includes a built‑in hook:
 
 ```js
 import { useColorScheme } from 'react-native';
 ```
 
+It returns `'light'`, `'dark'`, or `null`, and updates automatically when the system theme changes.
+
+## Use system theme in `App.js`
+
+Instead of keeping a `mode` state, you can do:
+
 ```js
-const scheme = useColorScheme();
+import React from 'react';
+import { useColorScheme } from 'react-native';
+import { ThemeContext } from './ThemeContext';
+import { lightTheme, darkTheme } from './theme';
+
+export default function App() {
+  const scheme = useColorScheme();
+  const theme = scheme === 'dark' ? darkTheme : lightTheme;
+
+  return (
+    <ThemeContext.Provider value={theme}>
+      <YourNavigation />
+    </ThemeContext.Provider>
+  );
+}
 ```
 
-It returns:
+Now your entire app automatically respects system dark mode.
 
-- `"light"`
-- `"dark"`
+## Turn on dark mode in the iOS Simulator
 
-### Challenge
+1. Open the Simulator
+2. Top menu: **Features → Appearance → Dark**
+3. Your app should update immediately
 
-Initialize theme based on system preference.
+If it doesn’t:
+- reload the app, or
+- restart Expo with `npx expo start -c`
 
----
+## Optional Challenge: system default + manual override
 
-# Part 6 — Refactor Challenge (25 min)
+Support BOTH:
+- system theme (default)
+- manual override stored in state (and optionally persisted)
 
-You now have a working theme system.
-
-## Your Task
-
-Refactor:
-
-- Remove ALL hardcoded colors
-- Replace padding values with spacing tokens
-- Add at least one additional design token (ex: borderRadius or typography)
-- Make the List rows reuse the same “card” styles as the Home screen (same border radius, border color, and background).
-
----
-
-# Reflection Questions (10 min)
-
-Discuss:
-
-- Why is theming better than inline styling?
-- Where should theme state live?
-- Should dark mode respect system or user choice?
-- What happens in large teams?
-
----
-
-# Final Project Requirement (New)
-
-Your final project must:
-
-- Use a centralized theme file
-- Have no hardcoded colors in components
-- Support either:
-  - Dark mode toggle
-  - OR system-based dark mode
-
-Bonus:
-- Persist theme preference using AsyncStorage
-
----
-
-# Instructor Notes
-
-This lesson reinforces:
-
-- Context architecture
-- State-driven UI
-- Design systems thinking
-- Separation of concerns
-- Scalable app structure
-
-Encourage students to think of theme as:
-
-> A design API for their application.
-
----
-
-# Optional Advanced Topics
-
-If time allows:
-
-- Dynamic style functions
-- Typography tokens
-- Styled-components pattern
-- Design systems in production apps
-- Theming with React Native Elements or NativeBase
-
----
-
-# End of Lesson
+Logic:
+- if the user chose a theme, use it
+- otherwise fall back to `useColorScheme()`
