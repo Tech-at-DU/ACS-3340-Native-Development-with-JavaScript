@@ -44,7 +44,7 @@ Students by the end of the course will be able to:
 |  7    | Tue, Feb 10 | [Lesson 10 - Tab Bar] | - |
 |  8    | Thr, Feb 12 | [Async and Persistence] | - |
 |  9    | Tue, Feb 17 | [Native Device APIs] | [Assignment 4 Final Project] |
-| 10    | Thr, Feb 19 | - | - |
+| 10    | Thr, Feb 19 | [Theming native] | - |
 | 11    | Tue, Feb 24 |  - [Redux] | - |
 | 12    | Thr, Feb 26 | [Progressive Web Apps] | - |
 | 13    | Tue, Mar  3 | Lab | - |
