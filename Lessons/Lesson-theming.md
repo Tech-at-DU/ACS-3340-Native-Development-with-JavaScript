@@ -13,19 +13,12 @@ By the end of this lesson you will:
 
 ---
 
-# ⏱ Class Plan (2:45)
+# Before starting! 
 
-| Time | Activity |
-|------|----------|
-| 0:00–0:15 | Why Theming Matters (Discussion + Demo) |
-| 0:15–0:45 | Build the Sample App Scaffold (Tabs + UI Elements) |
-| 0:45–1:15 | Build a Theme Object (Tokens) |
-| 1:15–1:55 | Add Theme Context + useContext |
-| 1:55–2:20 | Connect Theme to Navigation |
-| 2:20–2:40 | Refactor Hardcoded Styles (Tokens + Reuse) |
-| 2:40–2:45 | Reflection + Final Project Tie‑In |
+You can choose to apply the ideas here to one of your existing projects, or scaffold a project using the starter code provided below. 
 
----
+If you are using one of your own projects, skip to [Part 1 — Why Theming Matters] below. 
+
 
 # Part 0 — Build a Sample App Scaffold (30 min)
 
