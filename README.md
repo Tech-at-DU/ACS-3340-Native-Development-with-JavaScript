@@ -45,13 +45,14 @@ Students by the end of the course will be able to:
 |  8    | Thr, Feb 12 | [Async and Persistence] | - |
 |  9    | Tue, Feb 17 | [Native Device APIs] | [Assignment 4 Final Project] |
 | 10    | Thr, Feb 19 | [Theming native] | - |
-| 11    | Tue, Feb 24 |  - [Redux] | - |
-| 12    | Thr, Feb 26 | [Progressive Web Apps] | - |
+| 11    | Tue, Feb 24 |  [Architecture and custom hooks] | - |
+| 12    | Thr, Feb 26 | - | - |
 | 13    | Tue, Mar  3 | Lab | - |
 | 14    | Thr, Mar  5 | Progressive Web Apps | - |
 
 [Async and Persistence]: ./Lessons/Lesson-async-and-persistence-challenge.md
 [Theming native]: ./Lessons/Lesson-theming.md
+[Architecture and custom hooks]: ./Lessons/Lesson-refactoring.md
 
 [Lesson 1 - Intro]: Lessons/Lesson-01.mds
 [Lesson 2 - Redux Review]: Lessons/Lesson-02.md
