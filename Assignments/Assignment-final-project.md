@@ -85,7 +85,7 @@ Your app must include:
 - At least one animated interaction
 - Dark mode toggle OR a themed color system
 
-### 7️⃣ Animation
+### 7️⃣ Animation (optional)
 
 Your app must include at least one animation:
 
